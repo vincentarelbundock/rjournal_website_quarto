@@ -1,4 +1,7 @@
 ---
+title: "Survival analysis for cohorts with missing covariate information"
+author: "Hormuzd A. Katki, Steven D. Mark"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

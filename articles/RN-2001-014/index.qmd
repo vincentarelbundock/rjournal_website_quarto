@@ -1,4 +1,7 @@
 ---
+title: "Simulation and analysis of random fields"
+author: "Martin Schlather"
+date: "2001-06-01"
 page-layout: full
 format:
   html:

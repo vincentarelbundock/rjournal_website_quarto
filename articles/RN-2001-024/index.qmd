@@ -1,4 +1,7 @@
 ---
+title: "In search of C/C++ & FORTRAN routines"
+author: "Duncan Temple Lang"
+date: "2001-09-01"
 page-layout: full
 format:
   html:

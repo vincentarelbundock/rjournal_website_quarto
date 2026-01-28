@@ -1,4 +1,7 @@
 ---
+title: "Introducing the bipartite package: Analysing ecological networks"
+author: "Carsten F. Dormann, Bernd Gruber, Jochen Fründ"
+date: "2008-10-01"
 page-layout: full
 format:
   html:

@@ -1,4 +1,7 @@
 ---
+title: "Using Sweave with LyX"
+author: "Gregor Gorjanc"
+date: "2008-05-01"
 page-layout: full
 format:
   html:
