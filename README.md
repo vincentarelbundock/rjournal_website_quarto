@@ -40,14 +40,6 @@ We no longer re-build the full articles (and execute all code) every time we dep
 
 One downside is that the styling of articles rendered a long time ago may not match the latest website theme. In my view, this is a small price to pay for stability and long term maintainability.
 
-# Problem: No search functionality
-
-The current website has no search functionality, making it difficult to find articles on specific topics.
-
-### Proposed solution
-
-Quarto has built-in support.
-
 # Problem: Acceptable submission formats
 
 Authors want to submit articles in a variety of formats.
