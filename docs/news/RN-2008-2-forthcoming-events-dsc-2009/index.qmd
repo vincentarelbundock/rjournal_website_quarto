@@ -1,4 +1,6 @@
 ---
+title: "Forthcoming Events: DSC 2009"
+date: "2008-10-01"
 page-layout: full
 format:
   html:

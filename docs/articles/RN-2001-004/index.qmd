@@ -1,4 +1,7 @@
 ---
+title: "The density of the non-central chi-squared distribution for large values of the noncentrality parameter"
+author: "Peter Dalgaard"
+date: "2001-01-01"
 page-layout: full
 format:
   html:

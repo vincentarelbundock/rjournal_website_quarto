@@ -1,4 +1,7 @@
 ---
+title: "R News Referees 2007"
+author: "John Fox"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

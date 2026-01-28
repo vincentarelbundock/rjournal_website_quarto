@@ -1,4 +1,7 @@
 ---
+title: "R Help Desk"
+author: "Uwe Ligges, John Fox"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

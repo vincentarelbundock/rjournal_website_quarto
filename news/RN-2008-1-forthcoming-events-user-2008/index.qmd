@@ -1,4 +1,7 @@
 ---
+title: "Forthcoming Events: useR! 2008"
+author: "Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

@@ -1,4 +1,7 @@
 ---
+title: "RPVM: Cluster statistical computing in R"
+author: "Michael Na Li, A. J. Rossini"
+date: "2001-09-01"
 page-layout: full
 format:
   html:

@@ -1,4 +1,7 @@
 ---
+title: "Statistical modeling of loss distributions using actuar"
+author: "Vincent Goulet, Mathieu Pigeon"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

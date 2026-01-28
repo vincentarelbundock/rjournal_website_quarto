@@ -1,4 +1,7 @@
 ---
+title: "geoR: A package for geostatistical analysis"
+author: "Paulo J. Ribeiro, Jr., Peter J. Diggle"
+date: "2001-06-01"
 page-layout: full
 format:
   html:

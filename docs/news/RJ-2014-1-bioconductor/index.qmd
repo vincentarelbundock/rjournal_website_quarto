@@ -1,4 +1,7 @@
 ---
+title: "News from the Bioconductor Project"
+author: "The Bioconductor Team"
+date: "2014-06-01"
 page-layout: full
 format:
   html:

@@ -1,4 +1,7 @@
 ---
+title: "Editorial"
+author: "Rob J Hyndman"
+date: "2025-06-01"
 page-layout: full
 format:
   html:

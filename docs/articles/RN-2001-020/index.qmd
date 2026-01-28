@@ -1,4 +1,7 @@
 ---
+title: "Strucchange: Testing for structural change in linear regression relationships"
+author: "Achim Zeileis"
+date: "2001-09-01"
 page-layout: full
 format:
   html:

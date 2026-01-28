@@ -1,46 +1,14 @@
 ---
 title: "Issues"
+description: "All issues of the R Journal."
 page-layout: full
 title-block-banner: true
+listing:
+  contents: "issues/*/index.qmd"
+  type: table
+  sort: "date desc"
+  fields: [date, title]
+  field-display-names:
+    date: "Date"
+    title: "Title"
 ---
-
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-#| results: asis
-
-get_volume <- function(year_num) {
-  if (year_num < 2009) {
-    year_num - 2000  # R News: 2001 = vol 1
-  } else {
-    year_num - 2008  # R Journal: 2009 = vol 1
-  }
-}
-
-# Get all issue directories
-issue_dirs <- list.dirs("issues", recursive = FALSE, full.names = FALSE)
-
-# Sort by year and issue number (descending - newest first)
-issue_order <- order(
-  -as.numeric(sub("-.*", "", issue_dirs)),
-  -as.numeric(sub(".*-", "", issue_dirs))
-)
-issue_dirs <- issue_dirs[issue_order]
-
-# Group by year
-years <- unique(sub("-.*", "", issue_dirs))
-
-for (year in years) {
-  year_num <- as.numeric(year)
-  vol <- get_volume(year_num)
-  cat(sprintf("\n## %s (Volume %s)\n\n", year, vol))
-
-  year_issues <- issue_dirs[grepl(paste0("^", year, "-"), issue_dirs)]
-  for (issue in year_issues) {
-    iss <- as.numeric(sub(".*-", "", issue))
-    url <- sprintf("issues/%s/", issue)
-    cat(sprintf("[Issue %s](%s)\n\n", iss, url))
-  }
-}
-```

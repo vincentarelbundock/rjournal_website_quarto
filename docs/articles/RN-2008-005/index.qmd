@@ -1,4 +1,7 @@
 ---
+title: "Bayesian estimation for parsimonious threshold autoregressive models in R"
+author: "Cathy W. S. Chen, Edward M. H. Lin, F. C. Liu, Richard Gerlach"
+date: "2008-05-01"
 page-layout: full
 format:
   html:

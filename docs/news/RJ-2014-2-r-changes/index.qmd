@@ -1,4 +1,7 @@
 ---
+title: "Changes in R"
+author: "The R Core Team"
+date: "2014-12-01"
 page-layout: full
 format:
   html:

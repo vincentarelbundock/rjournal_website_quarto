@@ -1,4 +1,7 @@
 ---
+title: "Using XML for statistics: The XML package"
+author: "Duncan Temple Lang"
+date: "2001-01-01"
 page-layout: full
 format:
   html:

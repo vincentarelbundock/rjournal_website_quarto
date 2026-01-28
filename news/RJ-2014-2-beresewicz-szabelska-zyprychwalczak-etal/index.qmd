@@ -1,4 +1,7 @@
 ---
+title: "Conference Report: Polish Academic R User Meeting"
+author: "Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski"
+date: "2014-11-30"
 page-layout: full
 format:
   html:

@@ -8,7 +8,7 @@
 
 <meta name="description" content="All news published in the R Journal.">
 
-<title>All news – The R Journal</title>
+<title>All News – The R Journal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -69,8 +71,67 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -135,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title">All news</h1>
+      <h1 class="title">All News</h1>
                   <div>
         <div class="description">
           All news published in the R Journal.
@@ -164,78 +225,791 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2025</h2>
-<p><a href="news/RJ-2025-3-cran/">Changes on CRAN</a> (2025-09-01)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
-<p><a href="news/RJ-2025-3-editorial/">Editorial</a> (2025-09-01)<br><em>Rob J Hyndman</em></p>
-<p><a href="news/RJ-2025-3-rfoundation/">R Foundation News</a> (2025-09-01)<br><em>Torsten Hothorn</em></p>
-<p><a href="news/RJ-2025-2-bioconductor/">Bioconductor Notes, September 2025</a> (2025-06-01)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
-<p><a href="news/RJ-2025-2-cran/">Changes on CRAN</a> (2025-06-01)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
-<p><a href="news/RJ-2025-2-editorial/">Editorial</a> (2025-06-01)<br><em>Rob J Hyndman</em></p>
-<p><a href="news/RJ-2025-2-rfoundation/">R Foundation News</a> (2025-06-01)<br><em>Torsten Hothorn</em></p>
-<p><a href="news/RJ-2025-1-cran/">Changes on CRAN</a> (2025-03-01)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
-<p><a href="news/RJ-2025-1-editorial/">Editorial</a> (2025-03-01)<br><em>Rob J Hyndman</em></p>
-<p><a href="news/RJ-2025-1-rfoundation/">R Foundation News</a> (2025-03-01)<br><em>Torsten Hothorn</em></p>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2014</h2>
-<p><a href="news/RJ-2014-2-beresewicz-szabelska-zyprychwalczak-etal/">Conference Report: Polish Academic R User Meeting</a> (2014-11-30)<br><em>Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski</em></p>
-<p><a href="news/RJ-2014-2-bioconductor/">News from the Bioconductor Project</a> (2014-12-01)<br><em>The Bioconductor Team</em></p>
-<p><a href="news/RJ-2014-2-cran/">Changes on CRAN</a> (2014-12-01)<br><em>Kurt Hornik, Achim Zeileis</em></p>
-<p><a href="news/RJ-2014-2-editorial/">Editorial</a> (2014-12-01)<br><em>Deepayan Sarkar</em></p>
-<p><a href="news/RJ-2014-2-gesmann-tsanakas/">Conference Report: R in Insurance 2014</a> (2014-11-30)<br><em>Markus Gesmann, Andreas Tsanakas</em></p>
-<p><a href="news/RJ-2014-2-r-changes/">Changes in R</a> (2014-12-01)<br><em>The R Core Team</em></p>
-<p><a href="news/RJ-2014-2-r-foundation/">R Foundation News</a> (2014-12-01)<br><em>Martin Mächler, Kurt Hornik</em></p>
-<p><a href="news/RJ-2014-1-bioconductor/">News from the Bioconductor Project</a> (2014-06-01)<br><em>The Bioconductor Team</em></p>
-<p><a href="news/RJ-2014-1-cran/">Changes on CRAN</a> (2014-06-01)<br><em>Kurt Hornik, Achim Zeileis</em></p>
-<p><a href="news/RJ-2014-1-editorial/">Editorial</a> (2014-06-01)<br><em>Deepayan Sarkar</em></p>
-<p><a href="news/RJ-2014-1-r-changes/">Changes in R</a> (2014-06-01)<br><em>The R Core Team</em></p>
-<p><a href="news/RJ-2014-1-r-foundation/">R Foundation News</a> (2014-06-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RJ-2014-1-RJ-2014-016/">RJ 2014 016</a><br></p>
-<p><a href="news/RJ-2014-1-RJ-2014-017/">RJ 2014 017</a><br></p>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2008</h2>
-<p><a href="news/RN-2008-2-bioc/">News from the Bioconductor Project</a> (2008-10-01)<br><em>Bioconductor Team</em></p>
-<p><a href="news/RN-2008-2-changes-in-r-version-280/">Changes in R Version 2.8.0</a> (2008-10-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2008-2-cran/">Changes on CRAN</a> (2008-10-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RN-2008-2-editorial/">Editorial</a> (2008-10-01)<br><em>John Fox</em></p>
-<p><a href="news/RN-2008-2-forthcoming-events-dsc-2009/">Forthcoming Events: DSC 2009</a> (2008-10-01)<br></p>
-<p><a href="news/RN-2008-2-forthcoming-events-user-2009/">Forthcoming Events: useR! 2009</a> (2008-10-01)<br><em>David Causeur, Julie Josse, François Husson, Maela Kloareg, Sébastien Lê, Eric Matzner-Løber, Jérôme Pagès</em></p>
-<p><a href="news/RN-2008-2-foundation/">R Foundation News</a> (2008-10-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RN-2008-2-user-2008/">useR! 2008</a> (2008-10-01)<br><em>Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn</em></p>
-<p><a href="news/RN-2008-1-bioc/">News from the Bioconductor Project</a> (2008-05-01)<br><em>Bioconductor Team</em></p>
-<p><a href="news/RN-2008-1-changes-in-r-version-270/">Changes in R Version 2.7.0</a> (2008-05-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2008-1-cran/">Changes on CRAN</a> (2008-05-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RN-2008-1-editorial/">Editorial</a> (2008-05-01)<br><em>John Fox</em></p>
-<p><a href="news/RN-2008-1-forthcoming-events-user-2008/">Forthcoming Events: useR! 2008</a> (2008-05-01)<br><em>Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn</em></p>
-<p><a href="news/RN-2008-1-foundation/">R Foundation News</a> (2008-05-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RN-2008-1-r-help-desk/">R Help Desk</a> (2008-05-01)<br><em>Uwe Ligges, John Fox</em></p>
-<p><a href="news/RN-2008-1-r-news-referees-2007/">R News Referees 2007</a> (2008-05-01)<br><em>John Fox</em></p>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2001</h2>
-<p><a href="news/RN-2001-3-core/">Changes in R</a> (2001-09-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2001-3-cran/">Changes on CRAN</a> (2001-09-01)<br><em>Kurt Hornik, Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-3-editorial/">Editorial</a> (2001-09-01)<br><em>Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-2-core/">Changes in R</a> (2001-06-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2001-2-cran/">Changes on CRAN</a> (2001-06-01)<br><em>Kurt Hornik, Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-2-editorial/">Editorial</a> (2001-06-01)<br><em>Kurt Hornik, Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-2-niche/">Programmer’s Niche</a> (2001-06-01)<br><em>Bill Venables</em></p>
-<p><a href="news/RN-2001-2-recent-events/">Recent Events</a> (2001-06-01)<br><em>Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-2-spatial-statistics-in-r/">Spatial Statistics in R</a> (2001-06-01)<br><em>Brian D. Ripley</em></p>
-<p><a href="news/RN-2001-1-core/">Changes in R</a> (2001-01-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2001-1-cran/">Changes on CRAN</a> (2001-01-01)<br><em>Kurt Hornik, Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-1-editorial/">Editorial</a> (2001-01-01)<br><em>Kurt Hornik, Friedrich Leisch</em></p>
-<p><a href="news/RN-2001-1-events/">Upcoming Events</a> (2001-01-01)<br><em>Kurt Hornik</em></p>
-<p><a href="news/RN-2001-1-r-resources/">R Resources</a> (2001-01-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2001-1-what-is-r/">What is R?</a> (2001-01-01)<br><em>R Core Team</em></p>
-<p><a href="news/RN-2001-1-writing-articles-for-r-news/">Writing Articles for R News</a> (2001-01-01)<br><em>Friedrich Leisch</em></p>
 
 
-</section>
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+      <option value="" disabled="" selected="" hidden="">Order By</option>
+      <option value="index" data-direction="asc">Default</option>
+      <option value="listing-date-sort" data-direction="asc">
+        Date - Oldest
+      </option>
+      <option value="listing-date-sort" data-direction="desc">
+        Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
+      </option>
+      <option value="listing-author" data-direction="asc">
+        Author
+      </option>
+    </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-date-sort="1756699200000" data-listing-file-modified-sort="1769638637269" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-3-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Uwe Ligges, Achim Zeileis</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-date-sort="1756699200000" data-listing-file-modified-sort="1769638636871" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-3-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Rob J Hyndman</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-date-sort="1756699200000" data-listing-file-modified-sort="1769638636762" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-3-rfoundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Torsten Hothorn</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769638640503" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Bioconductor Notes, September 2025" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-2-bioconductor/index.html" class="title listing-title">Bioconductor Notes, September 2025</a>
+</td>
+<td>
+<span class="listing-author">Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769638637808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-2-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Uwe Ligges, Achim Zeileis</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769638637444" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-2-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Rob J Hyndman</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769638637355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-2-rfoundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Torsten Hothorn</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-date-sort="1740805200000" data-listing-file-modified-sort="1769638638409" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-1-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Uwe Ligges, Achim Zeileis</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-date-sort="1740805200000" data-listing-file-modified-sort="1769638638053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-1-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Rob J Hyndman</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-date-sort="1740805200000" data-listing-file-modified-sort="1769638637953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 1, 2025</span>
+</td>
+<td>
+<a href="./news/RJ-2025-1-rfoundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Torsten Hothorn</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-date-sort="1417410000000" data-listing-file-modified-sort="1769638639309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="News from the Bioconductor Project" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-bioconductor/index.html" class="title listing-title">News from the Bioconductor Project</a>
+</td>
+<td>
+<span class="listing-author">The Bioconductor Team</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-date-sort="1417410000000" data-listing-file-modified-sort="1769638639158" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Achim Zeileis</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-date-sort="1417410000000" data-listing-file-modified-sort="1769638638808" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Deepayan Sarkar</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-date-sort="1417410000000" data-listing-file-modified-sort="1769638638620" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-r-changes/index.html" class="title listing-title">Changes in R</a>
+</td>
+<td>
+<span class="listing-author">The R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-date-sort="1417410000000" data-listing-file-modified-sort="1769638638507" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Dec 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-r-foundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Martin Mächler, Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-date-sort="1417323600000" data-listing-file-modified-sort="1769638639460" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Conference Report: Polish Academic R User Meeting" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Nov 30, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-beresewicz-szabelska-zyprychwalczak-etal/index.html" class="title listing-title">Conference Report: Polish Academic R User Meeting</a>
+</td>
+<td>
+<span class="listing-author">Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-date-sort="1417323600000" data-listing-file-modified-sort="1769638638721" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Conference Report: R in Insurance 2014" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Nov 30, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-2-gesmann-tsanakas/index.html" class="title listing-title">Conference Report: R in Insurance 2014</a>
+</td>
+<td>
+<span class="listing-author">Markus Gesmann, Andreas Tsanakas</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769638640382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="News from the Bioconductor Project" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-bioconductor/index.html" class="title listing-title">News from the Bioconductor Project</a>
+</td>
+<td>
+<span class="listing-author">The Bioconductor Team</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769638640255" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Achim Zeileis</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769638639881" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Deepayan Sarkar</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769638639781" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="Changes in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-r-changes/index.html" class="title listing-title">Changes in R</a>
+</td>
+<td>
+<span class="listing-author">The R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769638639548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="270" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-r-foundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-listing-date-sort="1393650000000" data-listing-file-modified-sort="1769638640533" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66" data-listing-title-sort="Web Technologies Task View" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-RJ-2014-016/index.html" class="title listing-title">Web Technologies Task View</a>
+</td>
+<td>
+<span class="listing-author">Patrick Mair, Scott Chamberlain</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-listing-date-sort="1393650000000" data-listing-file-modified-sort="1769638640540" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="80" data-listing-title-sort="Addendum to ``Statistical Software from a Blind Person's Perspective''" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Mar 1, 2014</span>
+</td>
+<td>
+<a href="./news/RJ-2014-1-RJ-2014-017/index.html" class="title listing-title">Addendum to ``Statistical Software from a Blind Person’s Perspective’’</a>
+</td>
+<td>
+<span class="listing-author">A. Jonathan R. Godfrey, Robert Erhardt</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="News from the Bioconductor Project" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-bioc/index.html" class="title listing-title">News from the Bioconductor Project</a>
+</td>
+<td>
+<span class="listing-author">Bioconductor Team</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636575" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes in R Version 2.8.0" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-changes-in-r-version-280/index.html" class="title listing-title">Changes in R Version 2.8.0</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636574" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">John Fox</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636573" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Forthcoming Events: DSC 2009" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-forthcoming-events-dsc-2009/index.html" class="title listing-title">Forthcoming Events: DSC 2009</a>
+</td>
+<td>
+<span class="listing-author">&nbsp;</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636573" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Forthcoming Events: useR! 2009" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-forthcoming-events-user-2009/index.html" class="title listing-title">Forthcoming Events: useR! 2009</a>
+</td>
+<td>
+<span class="listing-author">David Causeur, Julie Josse, François Husson, Maela Kloareg, Sébastien Lê, Eric Matzner-Løber, Jérôme Pagès</span>
+</td>
+
+</tr>
+
+<tr data-index="30" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636572" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-foundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="31" data-listing-date-sort="1222833600000" data-listing-file-modified-sort="1769638636571" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="useR! 2008" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Oct 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-2-user-2008/index.html" class="title listing-title">useR! 2008</a>
+</td>
+<td>
+<span class="listing-author">Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636580" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="News from the Bioconductor Project" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-bioc/index.html" class="title listing-title">News from the Bioconductor Project</a>
+</td>
+<td>
+<span class="listing-author">Bioconductor Team</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636580" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes in R Version 2.7.0" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-changes-in-r-version-270/index.html" class="title listing-title">Changes in R Version 2.7.0</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636579" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">John Fox</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636578" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Forthcoming Events: useR! 2008" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-forthcoming-events-user-2008/index.html" class="title listing-title">Forthcoming Events: useR! 2008</a>
+</td>
+<td>
+<span class="listing-author">Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="R Foundation News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-foundation/index.html" class="title listing-title">R Foundation News</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="R Help Desk" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-r-help-desk/index.html" class="title listing-title">R Help Desk</a>
+</td>
+<td>
+<span class="listing-author">Uwe Ligges, John Fox</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-listing-date-sort="1209614400000" data-listing-file-modified-sort="1769638636576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="R News Referees 2007" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">May 1, 2008</span>
+</td>
+<td>
+<a href="./news/RN-2008-1-r-news-referees-2007/index.html" class="title listing-title">R News Referees 2007</a>
+</td>
+<td>
+<span class="listing-author">John Fox</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-listing-date-sort="999316800000" data-listing-file-modified-sort="1769638636583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-3-core/index.html" class="title listing-title">Changes in R</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-listing-date-sort="999316800000" data-listing-file-modified-sort="1769638636582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-3-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="42" data-listing-date-sort="999316800000" data-listing-file-modified-sort="1769638636582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Sep 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-3-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="43" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-core/index.html" class="title listing-title">Changes in R</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="44" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636585" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Programmer’s Niche" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-niche/index.html" class="title listing-title">Programmer’s Niche</a>
+</td>
+<td>
+<span class="listing-author">Bill Venables</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Recent Events" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-recent-events/index.html" class="title listing-title">Recent Events</a>
+</td>
+<td>
+<span class="listing-author">Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769638636583" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Spatial Statistics in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jun 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-2-spatial-statistics-in-r/index.html" class="title listing-title">Spatial Statistics in R</a>
+</td>
+<td>
+<span class="listing-author">Brian D. Ripley</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636590" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes in R" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-core/index.html" class="title listing-title">Changes in R</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="50" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Changes on CRAN" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-cran/index.html" class="title listing-title">Changes on CRAN</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="51" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Editorial" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-editorial/index.html" class="title listing-title">Editorial</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik, Friedrich Leisch</span>
+</td>
+
+</tr>
+
+<tr data-index="52" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Upcoming Events" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-events/index.html" class="title listing-title">Upcoming Events</a>
+</td>
+<td>
+<span class="listing-author">Kurt Hornik</span>
+</td>
+
+</tr>
+
+<tr data-index="53" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636588" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="R Resources" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-r-resources/index.html" class="title listing-title">R Resources</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="54" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="What is R?" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-what-is-r/index.html" class="title listing-title">What is R?</a>
+</td>
+<td>
+<span class="listing-author">R Core Team</span>
+</td>
+
+</tr>
+
+<tr data-index="55" data-listing-date-sort="978325200000" data-listing-file-modified-sort="1769638636587" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" data-listing-title-sort="Writing Articles for R News" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">Jan 1, 2001</span>
+</td>
+<td>
+<a href="./news/RN-2001-1-writing-articles-for-r-news/index.html" class="title listing-title">Writing Articles for R News</a>
+</td>
+<td>
+<span class="listing-author">Friedrich Leisch</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,6 +1,6 @@
 ---
 title: "Volume 1, Issue 2"
-date: "2001-01-01"
+date: "2001-06-01"
 page-layout: full
 title-block-banner: true
 toc: true

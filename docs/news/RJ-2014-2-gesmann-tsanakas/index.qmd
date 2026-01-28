@@ -1,4 +1,7 @@
 ---
+title: "Conference Report: R in Insurance 2014"
+author: "Markus Gesmann, Andreas Tsanakas"
+date: "2014-11-30"
 page-layout: full
 format:
   html:

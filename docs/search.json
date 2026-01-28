@@ -116,35 +116,7 @@
     "href": "issues.html",
     "title": "Issues",
     "section": "",
-    "text": "Issue 3\nIssue 2\nIssue 1"
-  },
-  {
-    "objectID": "issues.html#volume-17",
-    "href": "issues.html#volume-17",
-    "title": "Issues",
-    "section": "",
-    "text": "Issue 3\nIssue 2\nIssue 1"
-  },
-  {
-    "objectID": "issues.html#volume-6",
-    "href": "issues.html#volume-6",
-    "title": "Issues",
-    "section": "2014 (Volume 6)",
-    "text": "2014 (Volume 6)\nIssue 2\nIssue 1"
-  },
-  {
-    "objectID": "issues.html#volume-8",
-    "href": "issues.html#volume-8",
-    "title": "Issues",
-    "section": "2008 (Volume 8)",
-    "text": "2008 (Volume 8)\nIssue 2\nIssue 1"
-  },
-  {
-    "objectID": "issues.html#volume-1",
-    "href": "issues.html#volume-1",
-    "title": "Issues",
-    "section": "2001 (Volume 1)",
-    "text": "2001 (Volume 1)\nIssue 3\nIssue 2\nIssue 1"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nVolume 17, Issue 3\n\n\n\n\n\n\nJun 1, 2025\n\n\nVolume 17, Issue 2\n\n\n\n\n\n\nMar 1, 2025\n\n\nVolume 17, Issue 1\n\n\n\n\n\n\nJun 1, 2014\n\n\nVolume 6, Issue 2\n\n\n\n\n\n\nMar 1, 2014\n\n\nVolume 6, Issue 1\n\n\n\n\n\n\nJun 1, 2008\n\n\nVolume 8, Issue 2\n\n\n\n\n\n\nMar 1, 2008\n\n\nVolume 8, Issue 1\n\n\n\n\n\n\nSep 1, 2001\n\n\nVolume 1, Issue 3\n\n\n\n\n\n\nJun 1, 2001\n\n\nVolume 1, Issue 2\n\n\n\n\n\n\nMar 1, 2001\n\n\nVolume 1, Issue 1\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "editors.html",
@@ -807,36 +779,8 @@
   {
     "objectID": "news_all.html",
     "href": "news_all.html",
-    "title": "All news",
+    "title": "All News",
     "section": "",
-    "text": "Changes on CRAN (2025-09-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-09-01)Rob J Hyndman\nR Foundation News (2025-09-01)Torsten Hothorn\nBioconductor Notes, September 2025 (2025-06-01)Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\nChanges on CRAN (2025-06-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-06-01)Rob J Hyndman\nR Foundation News (2025-06-01)Torsten Hothorn\nChanges on CRAN (2025-03-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-03-01)Rob J Hyndman\nR Foundation News (2025-03-01)Torsten Hothorn"
-  },
-  {
-    "objectID": "news_all.html#section",
-    "href": "news_all.html#section",
-    "title": "All news",
-    "section": "",
-    "text": "Changes on CRAN (2025-09-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-09-01)Rob J Hyndman\nR Foundation News (2025-09-01)Torsten Hothorn\nBioconductor Notes, September 2025 (2025-06-01)Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\nChanges on CRAN (2025-06-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-06-01)Rob J Hyndman\nR Foundation News (2025-06-01)Torsten Hothorn\nChanges on CRAN (2025-03-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-03-01)Rob J Hyndman\nR Foundation News (2025-03-01)Torsten Hothorn"
-  },
-  {
-    "objectID": "news_all.html#section-1",
-    "href": "news_all.html#section-1",
-    "title": "All news",
-    "section": "2014",
-    "text": "2014\nConference Report: Polish Academic R User Meeting (2014-11-30)Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski\nNews from the Bioconductor Project (2014-12-01)The Bioconductor Team\nChanges on CRAN (2014-12-01)Kurt Hornik, Achim Zeileis\nEditorial (2014-12-01)Deepayan Sarkar\nConference Report: R in Insurance 2014 (2014-11-30)Markus Gesmann, Andreas Tsanakas\nChanges in R (2014-12-01)The R Core Team\nR Foundation News (2014-12-01)Martin Mächler, Kurt Hornik\nNews from the Bioconductor Project (2014-06-01)The Bioconductor Team\nChanges on CRAN (2014-06-01)Kurt Hornik, Achim Zeileis\nEditorial (2014-06-01)Deepayan Sarkar\nChanges in R (2014-06-01)The R Core Team\nR Foundation News (2014-06-01)Kurt Hornik\nRJ 2014 016\nRJ 2014 017"
-  },
-  {
-    "objectID": "news_all.html#section-2",
-    "href": "news_all.html#section-2",
-    "title": "All news",
-    "section": "2008",
-    "text": "2008\nNews from the Bioconductor Project (2008-10-01)Bioconductor Team\nChanges in R Version 2.8.0 (2008-10-01)R Core Team\nChanges on CRAN (2008-10-01)Kurt Hornik\nEditorial (2008-10-01)John Fox\nForthcoming Events: DSC 2009 (2008-10-01)\nForthcoming Events: useR! 2009 (2008-10-01)David Causeur, Julie Josse, François Husson, Maela Kloareg, Sébastien Lê, Eric Matzner-Løber, Jérôme Pagès\nR Foundation News (2008-10-01)Kurt Hornik\nuseR! 2008 (2008-10-01)Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\nNews from the Bioconductor Project (2008-05-01)Bioconductor Team\nChanges in R Version 2.7.0 (2008-05-01)R Core Team\nChanges on CRAN (2008-05-01)Kurt Hornik\nEditorial (2008-05-01)John Fox\nForthcoming Events: useR! 2008 (2008-05-01)Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\nR Foundation News (2008-05-01)Kurt Hornik\nR Help Desk (2008-05-01)Uwe Ligges, John Fox\nR News Referees 2007 (2008-05-01)John Fox"
-  },
-  {
-    "objectID": "news_all.html#section-3",
-    "href": "news_all.html#section-3",
-    "title": "All news",
-    "section": "2001",
-    "text": "2001\nChanges in R (2001-09-01)R Core Team\nChanges on CRAN (2001-09-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-09-01)Friedrich Leisch\nChanges in R (2001-06-01)R Core Team\nChanges on CRAN (2001-06-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-06-01)Kurt Hornik, Friedrich Leisch\nProgrammer’s Niche (2001-06-01)Bill Venables\nRecent Events (2001-06-01)Friedrich Leisch\nSpatial Statistics in R (2001-06-01)Brian D. Ripley\nChanges in R (2001-01-01)R Core Team\nChanges on CRAN (2001-01-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-01-01)Kurt Hornik, Friedrich Leisch\nUpcoming Events (2001-01-01)Kurt Hornik\nR Resources (2001-01-01)R Core Team\nWhat is R? (2001-01-01)R Core Team\nWriting Articles for R News (2001-01-01)Friedrich Leisch"
+    "text": "Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nAuthor\n\n\n\n\n\n\n\n\nSep 1, 2025\n\n\nChanges on CRAN\n\n\nKurt Hornik, Uwe Ligges, Achim Zeileis\n\n\n\n\n\n\nSep 1, 2025\n\n\nEditorial\n\n\nRob J Hyndman\n\n\n\n\n\n\nSep 1, 2025\n\n\nR Foundation News\n\n\nTorsten Hothorn\n\n\n\n\n\n\nJun 1, 2025\n\n\nBioconductor Notes, September 2025\n\n\nMaria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\n\n\n\n\n\n\nJun 1, 2025\n\n\nChanges on CRAN\n\n\nKurt Hornik, Uwe Ligges, Achim Zeileis\n\n\n\n\n\n\nJun 1, 2025\n\n\nEditorial\n\n\nRob J Hyndman\n\n\n\n\n\n\nJun 1, 2025\n\n\nR Foundation News\n\n\nTorsten Hothorn\n\n\n\n\n\n\nMar 1, 2025\n\n\nChanges on CRAN\n\n\nKurt Hornik, Uwe Ligges, Achim Zeileis\n\n\n\n\n\n\nMar 1, 2025\n\n\nEditorial\n\n\nRob J Hyndman\n\n\n\n\n\n\nMar 1, 2025\n\n\nR Foundation News\n\n\nTorsten Hothorn\n\n\n\n\n\n\nDec 1, 2014\n\n\nNews from the Bioconductor Project\n\n\nThe Bioconductor Team\n\n\n\n\n\n\nDec 1, 2014\n\n\nChanges on CRAN\n\n\nKurt Hornik, Achim Zeileis\n\n\n\n\n\n\nDec 1, 2014\n\n\nEditorial\n\n\nDeepayan Sarkar\n\n\n\n\n\n\nDec 1, 2014\n\n\nChanges in R\n\n\nThe R Core Team\n\n\n\n\n\n\nDec 1, 2014\n\n\nR Foundation News\n\n\nMartin Mächler, Kurt Hornik\n\n\n\n\n\n\nNov 30, 2014\n\n\nConference Report: Polish Academic R User Meeting\n\n\nMaciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski\n\n\n\n\n\n\nNov 30, 2014\n\n\nConference Report: R in Insurance 2014\n\n\nMarkus Gesmann, Andreas Tsanakas\n\n\n\n\n\n\nJun 1, 2014\n\n\nNews from the Bioconductor Project\n\n\nThe Bioconductor Team\n\n\n\n\n\n\nJun 1, 2014\n\n\nChanges on CRAN\n\n\nKurt Hornik, Achim Zeileis\n\n\n\n\n\n\nJun 1, 2014\n\n\nEditorial\n\n\nDeepayan Sarkar\n\n\n\n\n\n\nJun 1, 2014\n\n\nChanges in R\n\n\nThe R Core Team\n\n\n\n\n\n\nJun 1, 2014\n\n\nR Foundation News\n\n\nKurt Hornik\n\n\n\n\n\n\nMar 1, 2014\n\n\nWeb Technologies Task View\n\n\nPatrick Mair, Scott Chamberlain\n\n\n\n\n\n\nMar 1, 2014\n\n\nAddendum to ``Statistical Software from a Blind Person’s Perspective’’\n\n\nA. Jonathan R. Godfrey, Robert Erhardt\n\n\n\n\n\n\nOct 1, 2008\n\n\nNews from the Bioconductor Project\n\n\nBioconductor Team\n\n\n\n\n\n\nOct 1, 2008\n\n\nChanges in R Version 2.8.0\n\n\nR Core Team\n\n\n\n\n\n\nOct 1, 2008\n\n\nChanges on CRAN\n\n\nKurt Hornik\n\n\n\n\n\n\nOct 1, 2008\n\n\nEditorial\n\n\nJohn Fox\n\n\n\n\n\n\nOct 1, 2008\n\n\nForthcoming Events: DSC 2009\n\n\n \n\n\n\n\n\n\nOct 1, 2008\n\n\nForthcoming Events: useR! 2009\n\n\nDavid Causeur, Julie Josse, François Husson, Maela Kloareg, Sébastien Lê, Eric Matzner-Løber, Jérôme Pagès\n\n\n\n\n\n\nOct 1, 2008\n\n\nR Foundation News\n\n\nKurt Hornik\n\n\n\n\n\n\nOct 1, 2008\n\n\nuseR! 2008\n\n\nUwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\n\n\n\n\n\n\nMay 1, 2008\n\n\nNews from the Bioconductor Project\n\n\nBioconductor Team\n\n\n\n\n\n\nMay 1, 2008\n\n\nChanges in R Version 2.7.0\n\n\nR Core Team\n\n\n\n\n\n\nMay 1, 2008\n\n\nChanges on CRAN\n\n\nKurt Hornik\n\n\n\n\n\n\nMay 1, 2008\n\n\nEditorial\n\n\nJohn Fox\n\n\n\n\n\n\nMay 1, 2008\n\n\nForthcoming Events: useR! 2008\n\n\nUwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\n\n\n\n\n\n\nMay 1, 2008\n\n\nR Foundation News\n\n\nKurt Hornik\n\n\n\n\n\n\nMay 1, 2008\n\n\nR Help Desk\n\n\nUwe Ligges, John Fox\n\n\n\n\n\n\nMay 1, 2008\n\n\nR News Referees 2007\n\n\nJohn Fox\n\n\n\n\n\n\nSep 1, 2001\n\n\nChanges in R\n\n\nR Core Team\n\n\n\n\n\n\nSep 1, 2001\n\n\nChanges on CRAN\n\n\nKurt Hornik, Friedrich Leisch\n\n\n\n\n\n\nSep 1, 2001\n\n\nEditorial\n\n\nFriedrich Leisch\n\n\n\n\n\n\nJun 1, 2001\n\n\nChanges in R\n\n\nR Core Team\n\n\n\n\n\n\nJun 1, 2001\n\n\nChanges on CRAN\n\n\nKurt Hornik, Friedrich Leisch\n\n\n\n\n\n\nJun 1, 2001\n\n\nEditorial\n\n\nKurt Hornik, Friedrich Leisch\n\n\n\n\n\n\nJun 1, 2001\n\n\nProgrammer’s Niche\n\n\nBill Venables\n\n\n\n\n\n\nJun 1, 2001\n\n\nRecent Events\n\n\nFriedrich Leisch\n\n\n\n\n\n\nJun 1, 2001\n\n\nSpatial Statistics in R\n\n\nBrian D. Ripley\n\n\n\n\n\n\nJan 1, 2001\n\n\nChanges in R\n\n\nR Core Team\n\n\n\n\n\n\nJan 1, 2001\n\n\nChanges on CRAN\n\n\nKurt Hornik, Friedrich Leisch\n\n\n\n\n\n\nJan 1, 2001\n\n\nEditorial\n\n\nKurt Hornik, Friedrich Leisch\n\n\n\n\n\n\nJan 1, 2001\n\n\nUpcoming Events\n\n\nKurt Hornik\n\n\n\n\n\n\nJan 1, 2001\n\n\nR Resources\n\n\nR Core Team\n\n\n\n\n\n\nJan 1, 2001\n\n\nWhat is R?\n\n\nR Core Team\n\n\n\n\n\n\nJan 1, 2001\n\n\nWriting Articles for R News\n\n\nFriedrich Leisch\n\n\n\n\n\n\nNo matching items"
   }
 ]

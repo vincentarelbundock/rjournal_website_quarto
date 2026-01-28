@@ -1,4 +1,7 @@
 ---
+title: "R Foundation News"
+author: "Kurt Hornik"
+date: "2014-06-01"
 page-layout: full
 format:
   html:

@@ -1,4 +1,7 @@
 ---
+title: "Bioconductor Notes, September 2025"
+author: "Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team"
+date: "2025-06-01"
 page-layout: full
 format:
   html:
