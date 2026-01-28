@@ -1,6 +1,14 @@
 # Shared helpers for article/news conversion scripts
 
 # ============================================================================
+# Libraries
+# ============================================================================
+
+library(knitr)
+library(rmarkdown)
+library(yaml)
+
+# ============================================================================
 # Constants
 # ============================================================================
 
@@ -18,6 +26,45 @@ MONTH_NAMES <- c(
   "October",
   "November",
   "December"
+)
+
+IFRAME_RESIZE_SCRIPT <- c(
+  "```{=html}",
+  "<script>",
+  "  (function() {",
+  "    var iframe = document.querySelector('.paper-frame');",
+  "    if (!iframe) return;",
+  "    var resize = function() {",
+  "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
+  "      if (!doc) return;",
+  "      var body = doc.body;",
+  "      var html = doc.documentElement;",
+  "      var height = Math.max(",
+  "        body ? body.scrollHeight : 0,",
+  "        body ? body.offsetHeight : 0,",
+  "        html ? html.scrollHeight : 0,",
+  "        html ? html.offsetHeight : 0",
+  "      );",
+  "      if (height > 0) {",
+  "        iframe.style.height = height + 'px';",
+  "      }",
+  "    };",
+  "    iframe.addEventListener('load', function() {",
+  "      resize();",
+  "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
+  "      if (!doc) return;",
+  "      if ('ResizeObserver' in window) {",
+  "        var ro = new ResizeObserver(resize);",
+  "        ro.observe(doc.documentElement);",
+  "        if (doc.body) ro.observe(doc.body);",
+  "      } else {",
+  "        setInterval(resize, 500);",
+  "      }",
+  "    });",
+  "    window.addEventListener('resize', resize);",
+  "  })();",
+  "</script>",
+  "```"
 )
 
 # ============================================================================
@@ -455,6 +502,30 @@ build_citation_block <- function(citation, bibtex) {
   lines
 }
 
+build_article_card <- function(ref) {
+  c(
+    "<div class=\"paper-card full-bleed\">",
+    if (nzchar(ref$pdf_name)) {
+      c(
+        "  <p class=\"paper-links\">",
+        "    <i class=\"fa-regular fa-file-pdf\"></i>",
+        sprintf("    <a href=\"%s\">Download PDF</a>", ref$pdf_name),
+        "  </p>"
+      )
+    },
+    if (nzchar(ref$issue_link) && nzchar(ref$issue_label)) {
+      c(
+        "  <p class=\"paper-links\">",
+        "    <i class=\"fa-regular fa-bookmark\"></i>",
+        sprintf("    <a href=\"%s\">%s</a>", ref$issue_link, ref$issue_label),
+        "  </p>"
+      )
+    },
+    build_citation_block(ref$citation, ref$bibtex),
+    "</div>"
+  )
+}
+
 render_embed_html <- function(root_dir, slug, rmd_file) {
   html_file <- file.path(root_dir, paste0(slug, ".html"))
   temp_rmd <- file.path(root_dir, paste0(slug, "-render.Rmd"))
@@ -505,54 +576,17 @@ write_iframe_index <- function(root_dir, slug, title = NULL, author = NULL, date
     "---"
   )
 
-  lines <- c(
-    yaml_lines,
-    "",
+  iframe_block <- c(
     "<div class=\"paper-reader full-bleed\">",
     sprintf(
       "  <iframe class=\"paper-frame\" src=\"%s.html\" title=\"%s\" loading=\"lazy\"></iframe>",
       slug,
       slug
     ),
-    "</div>",
-    "",
-    "```{=html}",
-    "<script>",
-    "  (function() {",
-    "    var iframe = document.querySelector('.paper-frame');",
-    "    if (!iframe) return;",
-    "    var resize = function() {",
-    "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
-    "      if (!doc) return;",
-    "      var body = doc.body;",
-    "      var html = doc.documentElement;",
-    "      var height = Math.max(",
-    "        body ? body.scrollHeight : 0,",
-    "        body ? body.offsetHeight : 0,",
-    "        html ? html.scrollHeight : 0,",
-    "        html ? html.offsetHeight : 0",
-    "      );",
-    "      if (height > 0) {",
-    "        iframe.style.height = height + 'px';",
-    "      }",
-    "    };",
-    "    iframe.addEventListener('load', function() {",
-    "      resize();",
-    "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
-    "      if (!doc) return;",
-    "      if ('ResizeObserver' in window) {",
-    "        var ro = new ResizeObserver(resize);",
-    "        ro.observe(doc.documentElement);",
-    "        if (doc.body) ro.observe(doc.body);",
-    "      } else {",
-    "        setInterval(resize, 500);",
-    "      }",
-    "    });",
-    "    window.addEventListener('resize', resize);",
-    "  })();",
-    "</script>",
-    "```"
+    "</div>"
   )
+
+  lines <- c(yaml_lines, "", iframe_block, "", IFRAME_RESIZE_SCRIPT)
   writeLines(lines, index_file)
   TRUE
 }

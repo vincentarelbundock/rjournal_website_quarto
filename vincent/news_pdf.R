@@ -1,7 +1,5 @@
 # Generate PDF-only index.qmd pages for news without index.qmd
 
-library(yaml)
-
 source("vincent/helpers.R")
 
 write_issue_news_page <- function(issue_dir, issue_id, entry) {

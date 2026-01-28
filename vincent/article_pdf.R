@@ -14,22 +14,27 @@ build_pdf_page <- function(dir_path, slug) {
     return(FALSE)
   }
 
-  qmd_lines <- c(
+  header <- c(
     "---",
     "page-layout: full",
     "format:",
     "  html:",
     "    toc: false",
     "---",
+    ""
+  )
+
+  pdf_embed <- c(
     "",
-    build_citation_block(ref$citation, ref$bibtex),
-    "<div class=\"paper-reader\">",
+    "<div class=\"paper-reader full-bleed\">",
     sprintf(
-      "  <embed src=\"%s\" type=\"application/pdf\">",
+      "  <embed src=\"%s\" type=\"application/pdf\" height=\"955px\" width=\"100%%\">",
       ref$pdf_name
     ),
     "</div>"
   )
+
+  qmd_lines <- c(header, build_article_card(ref), pdf_embed)
 
   writeLines(qmd_lines, qmd_file)
   message("  Created ", qmd_file)

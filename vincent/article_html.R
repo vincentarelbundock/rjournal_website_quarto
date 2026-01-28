@@ -1,49 +1,19 @@
 # Convert all article .Rmd files to embedded HTML pages
 
-library(knitr)
-library(rmarkdown)
-
 source("vincent/helpers.R")
 
 write_article_index <- function(article_dir, slug) {
   index_file <- file.path(article_dir, "index.qmd")
   ref <- build_article_reference(article_dir, slug)
-  lines <- character(0)
 
-  lines <- c(
-    lines,
+  header <- c(
     "---",
     "page-layout: full",
     "---",
-    "",
-    "<div class=\"paper-card full-bleed\">"
+    ""
   )
 
-  if (nchar(ref$pdf_name) > 0) {
-    lines <- c(
-      lines,
-      "  <p class=\"paper-links\">",
-      "    <i class=\"fa-regular fa-file-pdf\"></i>",
-      sprintf("    <a href=\"%s\">Download PDF</a>", ref$pdf_name),
-      "  </p>"
-    )
-  }
-
-  if (nchar(ref$issue_link) > 0 && nchar(ref$issue_label) > 0) {
-    lines <- c(
-      lines,
-      "  <p class=\"paper-links\">",
-      "    <i class=\"fa-regular fa-bookmark\"></i>",
-      sprintf("    <a href=\"%s\">%s</a>", ref$issue_link, ref$issue_label),
-      "  </p>"
-    )
-  }
-
-  lines <- c(lines, build_citation_block(ref$citation, ref$bibtex))
-
-  lines <- c(
-    lines,
-    "</div>",
+  iframe_block <- c(
     "",
     "<div class=\"paper-reader full-bleed\">",
     sprintf(
@@ -52,99 +22,74 @@ write_article_index <- function(article_dir, slug) {
       slug
     ),
     "</div>",
-    "",
-    "```{=html}",
-    "<script>",
-    "  (function() {",
-    "    var iframe = document.querySelector('.paper-frame');",
-    "    if (!iframe) return;",
-    "    var resize = function() {",
-    "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
-    "      if (!doc) return;",
-    "      var body = doc.body;",
-    "      var html = doc.documentElement;",
-    "      var height = Math.max(",
-    "        body ? body.scrollHeight : 0,",
-    "        body ? body.offsetHeight : 0,",
-    "        html ? html.scrollHeight : 0,",
-    "        html ? html.offsetHeight : 0",
-    "      );",
-    "      if (height > 0) {",
-    "        iframe.style.height = height + 'px';",
-    "      }",
-    "    };",
-    "    iframe.addEventListener('load', function() {",
-    "      resize();",
-    "      var doc = iframe.contentDocument || iframe.contentWindow.document;",
-    "      if (!doc) return;",
-    "      if ('ResizeObserver' in window) {",
-    "        var ro = new ResizeObserver(resize);",
-    "        ro.observe(doc.documentElement);",
-    "        if (doc.body) ro.observe(doc.body);",
-    "      } else {",
-    "        setInterval(resize, 500);",
-    "      }",
-    "    });",
-    "    window.addEventListener('resize', resize);",
-    "  })();",
-    "</script>",
-    "```"
+    ""
   )
 
+  lines <- c(header, build_article_card(ref), iframe_block, IFRAME_RESIZE_SCRIPT)
   writeLines(lines, index_file)
   TRUE
 }
 
+process_article <- function(article_dir) {
+  slug <- basename(article_dir)
+  rmd_file <- file.path(article_dir, paste0(slug, ".Rmd"))
+
+  if (!file.exists(rmd_file)) {
+    return("skipped")
+  }
+
+  message("Processing ", slug, "...")
+
+  # R News articles use PDF-only index
+
+  if (grepl("^RN-", slug)) {
+    html_file <- file.path(article_dir, paste0(slug, ".html"))
+    index_file <- file.path(article_dir, "index.qmd")
+    unlink(c(index_file, html_file)[file.exists(c(index_file, html_file))])
+    if (create_pdf_index(article_dir, slug)) {
+      return("converted")
+    }
+    return("skipped")
+  }
+
+  render_embed_html(article_dir, slug, rmd_file)
+  write_article_index(article_dir, slug)
+  "converted"
+}
+
+# Main
 article_dirs <- list.dirs("articles", recursive = FALSE, full.names = TRUE)
-# article_dirs <- article_dirs[grepl("^RJ-2024-", basename(article_dirs))]
 article_dirs <- sort(article_dirs, decreasing = TRUE)
+
+results <- list()
 errors <- character(0)
-converted <- 0
-skipped <- 0
 
 for (article_dir in article_dirs) {
   slug <- basename(article_dir)
-  rmd_file <- file.path(article_dir, paste0(slug, ".Rmd"))
-  if (!file.exists(rmd_file)) {
-    skipped <- skipped + 1
-    next
-  }
-
-  html_file <- file.path(article_dir, paste0(slug, ".html"))
-  index_file <- file.path(article_dir, "index.qmd")
-  temp_rmd <- file.path(article_dir, paste0(slug, "-render.Rmd"))
-
-  tryCatch(
-    {
-      message("Processing ", slug, "...")
-      created <- character(0)
-      if (grepl("^RN-", slug)) {
-        unlink(c(index_file, html_file)[file.exists(c(index_file, html_file))])
-        if (create_pdf_index(article_dir, slug)) {
-          converted <- converted + 1
-          next
-        }
-      }
-      render_embed_html(article_dir, slug, rmd_file)
-      created <- c(created, html_file)
-      write_article_index(article_dir, slug)
-      created <- c(created, index_file)
-      converted <- converted + 1
-    },
+  status <- tryCatch(
+    process_article(article_dir),
     error = function(e) {
       message("  Error: ", slug, ": ", e$message)
-      cleanup <- c(created, temp_rmd)
-      if (length(cleanup) > 0) {
-        unlink(cleanup[file.exists(cleanup)], recursive = TRUE, force = TRUE)
-      }
+      # Cleanup on error
+      temp_rmd <- file.path(article_dir, paste0(slug, "-render.Rmd"))
+      html_file <- file.path(article_dir, paste0(slug, ".html"))
+      index_file <- file.path(article_dir, "index.qmd")
+      cleanup <- c(temp_rmd, html_file, index_file)
+      unlink(cleanup[file.exists(cleanup)], recursive = TRUE, force = TRUE)
       errors <<- c(errors, slug)
-    })
+      "error"
+    }
+  )
+  results[[slug]] <- status
 }
 
+# Report
+tab <- table(unlist(results))
 message("Done!")
-message("  Converted: ", converted)
-message("  Skipped:   ", skipped)
+message("  Converted: ", tab["converted"] %||% 0)
+message("  Skipped:   ", tab["skipped"] %||% 0)
 message("  Errors:    ", length(errors))
+
 if (length(errors) > 0) {
   message("  Failed:")
   for (slug in errors) {

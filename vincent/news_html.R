@@ -1,9 +1,5 @@
 # Convert all news .Rmd files to embedded HTML pages
 
-library(knitr)
-library(rmarkdown)
-library(yaml)
-
 source("vincent/helpers.R")
 
 news_dirs <- list.dirs("news", recursive = FALSE, full.names = TRUE)

@@ -8,8 +8,6 @@
 # Output: Writes .yml files directly to issues/{year}-{num}/ folders
 # Note: Issues that already have .yml files are skipped
 
-library(yaml)
-
 source("vincent/helpers.R")
 
 # ============================================================================
