@@ -1,0 +1,45 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "**/*.qmd"
+    - "!**/*.Rmd"
+  resources:
+    - articles
+    - news
+    - resources
+
+website:
+  title: "The R Journal"
+  description: "The R Journal is a peer-reviewed, open-access scientific journal, published by The R Foundation."
+  site-url: https://journal.r-project.org/
+  navbar:
+    logo: resources/rlogo.png
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "Current"
+        href: issues/2025-3/
+      - text: "Issues"
+        href: issues.qmd
+      - text: "News"
+        href: news_all.qmd
+      - text: "Submit"
+        href: submissions.qmd
+      - text: "Contribute"
+        href: contribute.qmd
+      - text: "Editorial board"
+        href: editors.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+execute:
+  freeze: false # never re-render during project render

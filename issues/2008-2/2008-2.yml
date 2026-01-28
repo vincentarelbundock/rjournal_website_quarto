@@ -1,0 +1,95 @@
+issue: 2008-2
+year: 2008
+volume: 8
+num: 2
+month: June
+articles:
+- heading: Contributed Research Articles
+- slug: RN-2008-009
+  title: An introduction to rggobi
+  author:
+  - Hadley
+  - Wickham
+  - Michael
+  - Lawrence
+  - Duncan Temple
+  - Lang
+  - Deborah F.
+  - Swayne
+  pages:
+  - 3
+  - 7
+- slug: RN-2008-010
+  title: "Introducing the bipartite package: Analysing ecological networks"
+  author:
+  - Carsten F.
+  - Dormann
+  - Bernd
+  - Gruber
+  - Jochen
+  - Fründ
+  pages:
+  - 8
+  - 11
+- slug: RN-2008-011
+  title: "The profileModel R package: Profiling objectives for models with linear predictors"
+  author:
+  - Ioannis
+  - Kosmidis
+  pages:
+  - 12
+  - 18
+- slug: RN-2008-012
+  title: An introduction to text mining in R
+  author:
+  - Ingo
+  - Feinerer
+  pages:
+  - 19
+  - 22
+- slug: RN-2008-013
+  title: "Animation: A package for statistical animations"
+  author:
+  - Yihui
+  - Xie
+  - Xiaoyue
+  - Cheng
+  pages:
+  - 23
+  - 27
+- slug: RN-2008-014
+  title: The VGAM package
+  author:
+  - Thomas W.
+  - Yee
+  pages:
+  - 28
+  - 39
+- slug: RN-2008-015
+  title: Comparing non-identical objects
+  author:
+  - Paul
+  - Murrell
+  pages:
+  - 40
+  - 47
+- slug: RN-2008-016
+  title: "Mvna: An R package for the Nelson-Aalen estimator in multistate models"
+  author:
+  - A.
+  - Allignol
+  - J.
+  - Beyersmann
+  - M.
+  - Schumacher
+  pages:
+  - 48
+  - 50
+- slug: RN-2008-017
+  title: "Programmers’ Niche: The Y of R"
+  author:
+  - Vince
+  - Carey
+  pages:
+  - 51
+  - 53

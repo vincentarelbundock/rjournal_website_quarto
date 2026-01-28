@@ -1,0 +1,125 @@
+issue: 2025-2
+year: 2025
+volume: 17
+num: 2
+month: June
+articles:
+- slug: RJ-2025-2-editorial
+  title: Editorial
+  author:
+  - Rob J Hyndman
+  pages: 3
+- heading: Contributed Research Articles
+- slug: RJ-2025-011
+  title: The CRAN Task View Initiative
+  author:
+  - Achim Zeileis
+  - Roger Bivand
+  - Dirk Eddelbuettel
+  - Kurt Hornik
+  - Julia Piaskowski
+  - Nathalie Vialaneix
+  pages:
+  - 4
+  - 14
+- slug: RJ-2025-012
+  title: "boinet: An R Package for Bayesian Optimal Interval Design for Dose Finding Based on Both Efficacy and Toxicity Outcomes"
+  author:
+  - Yusuke Yamaguchi
+  - Kentaro Takeda
+  - Kazushi Maruo
+  pages:
+  - 15
+  - 34
+- slug: RJ-2025-013
+  title: Partitioned Local Depth (PaLD) Community Analyses in R
+  author:
+  - Lucy D'Agostino McGowan
+  - Katherine Moore
+  - Kenneth S. Berenhaut
+  pages:
+  - 35
+  - 55
+- slug: RJ-2025-014
+  title: Student t-Lévy regression model in yuima
+  author:
+  - Hiroki Masuda
+  - Lorenzo Mercuri
+  - Yuma Uehara
+  pages:
+  - 56
+  - 83
+- slug: RJ-2025-015
+  title: "Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling"
+  author:
+  - Kevin Horan
+  - Katarina Domijan
+  - Chris Brunsdon
+  pages:
+  - 84
+  - 108
+- slug: RJ-2025-016
+  title: "rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank"
+  author:
+  - Selcuk Korkmaz
+  - Bilge Eren Yamasan
+  pages:
+  - 109
+  - 145
+- slug: RJ-2025-017
+  title: "rqPen: An R Package for Penalized Quantile Regression"
+  author:
+  - Ben Sherwood
+  - Shaobo Li
+  - Adam Maidman
+  pages:
+  - 146
+  - 175
+- slug: RJ-2025-019
+  title: "bartcs: An R Package for Bayesian Nonparametric Adjustment for Confounding"
+  author:
+  - Yeonghoon Yoo
+  - Chanmin Kim (corresponding author)
+  pages:
+  - 176
+  - 206
+- slug: RJ-2025-020
+  title: "MSmix: An R Package for clustering partial rankings via mixtures of Mallows Models with Spearman distance"
+  author:
+  - Marta Crispino
+  - Cristina Mollica
+  - Lucia Modugno
+  pages:
+  - 206
+  - 231
+- slug: RJ-2025-018
+  title: "CvmortalityMult: Cross-Validation for Multi-Population Mortality Models"
+  author:
+  - David Atance
+  - Ana Debón
+  pages:
+  - 231
+  - 258
+- heading: News and Notes
+- slug: RJ-2025-2-bioconductor
+  title: Bioconductor Notes, September 2025
+  author:
+  - Maria Doyle, Bioconductor Community Manager
+  - Bioconductor Core Developer Team
+  pages:
+  - 258
+  - 261
+- slug: RJ-2025-2-cran
+  title: Changes on CRAN
+  author:
+  - Kurt Hornik
+  - Uwe Ligges
+  - Achim Zeileis
+  pages:
+  - 262
+  - 263
+- slug: RJ-2025-2-rfoundation
+  title: R Foundation News
+  author:
+  - Torsten Hothorn
+  pages: 264

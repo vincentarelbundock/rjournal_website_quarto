@@ -1,0 +1,25 @@
+---
+title: "Addendum to ``Statistical Software from a Blind Person's Perspective''"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">A. Jonathan R. Godfrey, Robert Erhardt, "Addendum to ``Statistical Software from a Blind Person's Perspective''", R Journal, 2014, 6(1), 182</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2014-1-RJ-2014-017,
+  author = {A. Jonathan R. Godfrey and Robert Erhardt},
+  title = {Addendum to ``Statistical Software from a Blind Person's Perspective''},
+  journal = {R Journal},
+  year = {2014},
+  volume = {6},
+  issue = {1},
+  pages = {182},
+  note = {https://journal.r-project.org/news/RJ-2014-1-RJ-2014-017/}
+}
+  </code></pre>
+</details>
+<embed src="../../issues/2014-1/RJ-2014-1.pdf" type="application/pdf" height="955px" width="100%">

@@ -1,0 +1,33 @@
+---
+title: "All articles"
+description: "All articles accepted into the R Journal."
+page-layout: full
+title-block-banner: true
+---
+
+```{r}
+#| echo: false
+#| results: asis
+
+# List all article directories
+article_dirs <- list.dirs("articles", recursive = FALSE, full.names = FALSE)
+
+# Sort by article ID (descending - newest first)
+article_dirs <- sort(article_dirs, decreasing = TRUE)
+
+# Group by year
+years <- unique(sub("-.*", "", sub("RJ-", "", article_dirs)))
+
+for (year in years) {
+  cat(sprintf("\n## %s\n\n", year))
+  year_articles <- article_dirs[grepl(paste0("RJ-", year, "-"), article_dirs)]
+  for (art_id in year_articles) {
+    pdf_path <- sprintf("articles/%s/%s.pdf", art_id, art_id)
+    if (file.exists(pdf_path)) {
+      cat(sprintf("[%s](%s)\n\n", art_id, pdf_path))
+    } else {
+      cat(sprintf("%s\n\n", art_id))
+    }
+  }
+}
+```

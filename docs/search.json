@@ -1,0 +1,842 @@
+[
+  {
+    "objectID": "submissions.html",
+    "href": "submissions.html",
+    "title": "How to submit your article",
+    "section": "",
+    "text": "Articles for the R Journal should be no more than 20 pages, on topics of interest to the R community. Articles must not be published or submitted for publication elsewhere. See our guidelines for papers about R packages. Papers must be fully reproducible, and all code and data must be made available (publicly if we publish your submission)."
+  },
+  {
+    "objectID": "submissions.html#creating-your-article",
+    "href": "submissions.html#creating-your-article",
+    "title": "How to submit your article",
+    "section": "Creating your article",
+    "text": "Creating your article\n\nRmarkdown using rjtools\nThe rjtools package has a template to create the files needed for a submission in the form required by the R Journal.\nCreate your article using the create_article() function. Knitting the Rmd will generate both an HTML and PDF format of your paper.\nAs far as possible, do not use specific HTML and LaTeX codes within your Rmd file. If you do need to write code specific to the HTML or PDF output, you can use knitr::is_html_output() and knitr::is_latex_output() to conditionally produce a particular output.\nCreative uses of interactive content in HTML formatted articles is encouraged. This will require conditional evaluation of code chunks with appropriate re-captioning, and conditional inline reference links. Interactive plots should be produced with a manageable file size (aim for under 10Mb) which may require small data examples.\nFigures and tables should have alt-text in chunk specifications, to assist with accessibility.\nTitles and abstract should be in plain text, with the abstract no more than 250 words.\nEnsure that R outputs are from an evaluation of R code rather than manually entering the outputs in the Rmd file.\n\n\nRmarkdown using rticles\nThe rticles::rjournal_article output format has been deprecated in favour of rjtools. Please use rjtools instead of rticles.\n\n\nLaTeX format\nWe strongly encourage you to use Rmarkdown with the rjtools package. It makes the submission more reproducible, and makes it easier to render your article in both HTML and PDF formats.\nFor now, we still accept submissions written in LaTeX, but they will be processed more slowly.\nIf you do use LaTeX, you must use the LaTeX template. Instructions on using this template are provided in the LaTeX author guide. LaTeX submissions that do not follow these guidelines will be rejected without review.\nThe rjtools check functions described below can also be applied to check your files prior to submission.\n\n\nbib files\nWhether you use Rmarkdown or LaTeX, your references need to be contained in a .bib file. Please do not send us enormous bib files containing many references that you do not cite. Your submitted bib file should contain only the references actually cited in your paper. Please also check that all references fields are properly formatted. To preserve capitalization, wrap words such as {R} or package names in braces. Do not wrap all titles in braces, as this overrides the journal’s reference style."
+  },
+  {
+    "objectID": "submissions.html#checking-your-article",
+    "href": "submissions.html#checking-your-article",
+    "title": "How to submit your article",
+    "section": "Checking your article",
+    "text": "Checking your article\nThe rjtools package has a number of functions which can help you check that your article is ready to submit. These include:\n\ninitial_check_article() does multiple checks on the files in your paper submission folder\n\ncheck_wrappers() that the files RJournal.tex and RJournal.pdf are present\ncheck_filenames() file names are consistent and as requested\ncheck_unnecessary_files() that there are no extra files than those necessary and requested\ncheck_cover_letter() there is a cover letter with the files to be submitted\ncheck_title() that the title is in title case\ncheck_section() that section headings are in sentence case\ncheck_spelling() does a spell-check\ncheck_proposed_pkg() package is available on CRAN or Bioconductor\ncheck_packages_available() additionally referenced packaged are also available on CRA or Bioconductor\n\nEach of these can also be run individually."
+  },
+  {
+    "objectID": "submissions.html#submitting-your-article",
+    "href": "submissions.html#submitting-your-article",
+    "title": "How to submit your article",
+    "section": "Submitting your article",
+    "text": "Submitting your article\nTo submit an article to the R Journal, you will need to complete this form.\nYour files will need to be uploaded in a zip file that should contain:\n\nThe article in .pdf format.\nFiles to build the article. If we can’t build the article from the source files (e.g., .Rmd, .tex, .bib, .sty and figure files), it will be sent back to you.\nFiles to reproduce the results, including R scripts, and data. If we can’t reproduce the results, it will be sent back to you.\nA motivating letter that describes why your paper is suitable for consideration by the R Journal.\nOther supplementary files that contain additional technical details or examples.\nA list of R packages needed to reproduce the submission. This can be in the form of a file _Rpackages.txt with a list of packages, one per line.\n\nYou may have problems submitting if the size of your submission zip file is more than 10Mb. If you have large data files, you can make them available on an alternative site and provide the links in the paper.\nPlease ensure that the submission can be reproduced in a timely manner, perhaps by reducing the example data size. If a submission cannot be reproduced in a reasonable time (less than 10 minutes), it will be sent back to you. For very computationally intensive methods, it is recommended that you include scripts to generate intermediate outputs, and that your main paper use these outputs rather than re-running the full computations. That way, we can see the full reproducible workflow, but the review process is not delayed by long computation times.\nIf you have problems, please contact the Editor-in-Chief at r-journal@r-project.org.\nRe-submissions and revisions to articles should be submitted in the same way. When providing a re-submission or revision, you will need to enter the identifier of the original submission in the last field of the submission form."
+  },
+  {
+    "objectID": "submissions.html#after-submitting-your-article",
+    "href": "submissions.html#after-submitting-your-article",
+    "title": "How to submit your article",
+    "section": "After submitting your article",
+    "text": "After submitting your article\nOnce you have submitted an article, the editorial board will go through the following steps.\n\nDecide if your submission is technically in the correct format. In particular:\n\nare all the requested files there and of the correct format?\ndoes the reproducibility code run?\nis all code used open source and available via CRAN or BioConductor?\nare all the data files (if any) in an open, non-proprietary format?\n\nIf the technical test is passed, it is decided whether the submission is amenable for peer review:\n\nis the topic within scope?\nis the paper properly organized?\nis the writing style suitable for review?\n\nIf the submission passes the second test, it will be sent out for review. This process might take several months. You will receive one or more reviews, possibly with notes from one of the (associate) editors, and a verdict. There are four possible verdicts:\n\nAccepted Your paper will be published in the R Journal. You will be asked to upload a final version that will be proof-read and you will receive a print proof before publication.\nMinor revisions The paper can be accepted conditional on a number of smaller revisions in the manuscript and/or the code. You are expected to fix these issues within three months, and resubmit along with a letter where you describe, point-by-point, how the comments of the reviewers have been addressed. The paper will not be reviewed again by peer reviewers, but the editor will check whether the points have been sufficiently addressed.\nMajor revisions The manuscript and/or the code need major updates before the manuscript can be reconsidered. You are expected to fix the issues within three months, and resubmit along with a letter where you describe, point-by-point how the comments of the reviewers have been addressed. The paper will be send back to the reviewers for a second round of review, which may result in any verdict.\nReject Your paper is found to be unsuited for publication in the R Journal. No resubmission is allowed.\n\n\n\nNote on special issue articles\nSpecial issues may be created to cover topics of interest to the R community, or based on papers presented at an R conference.\nPlease contact the Editor-in-Chief at r-journal@r-project.org if you would like to propose a special issue."
+  },
+  {
+    "objectID": "news/RJ-2014-1-RJ-2014-017/index.html",
+    "href": "news/RJ-2014-1-RJ-2014-017/index.html",
+    "title": "Addendum to ``Statistical Software from a Blind Person’s Perspective’’",
+    "section": "",
+    "text": "A. Jonathan R. Godfrey, Robert Erhardt, “Addendum to Statistical Software from a Blind Person's Perspective''\", R Journal, 2014, 6(1), 182&lt;/div&gt; &lt;details class=\"paper-bibtex\"&gt;   &lt;summary&gt;BibTeX&lt;/summary&gt;   &lt;pre&gt;&lt;code class=\"language-bibtex\"&gt; @article{RJ-2014-1-RJ-2014-017,   author = {A. Jonathan R. Godfrey and Robert Erhardt},   title = {Addendum toStatistical Software from a Blind Person’s Perspective’’}, journal = {R Journal}, year = {2014}, volume = {6}, issue = {1}, pages = {182}, note = {https://journal.r-project.org/news/RJ-2014-1-RJ-2014-017/} }"
+  },
+  {
+    "objectID": "issues/2025-3/index.html",
+    "href": "issues/2025-3/index.html",
+    "title": "Volume 17, Issue 3",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished September 2025"
+  },
+  {
+    "objectID": "issues/2025-3/index.html#table-of-contents",
+    "href": "issues/2025-3/index.html#table-of-contents",
+    "title": "Volume 17, Issue 3",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nEditorial (p. 3)Rob J Hyndman\n\nContributed Research Articles\nlsirm12pl: An R Package for the Latent Space Item Response Model (pp. 4-29)Dongyoung Go, Gwanghee Kim, Jina Park, Junyong Park, Minjeong Jeon, Ick Hoon Jin\nConverting LaTeX Legacy R Journal Articles into R Markdown Articles using texor and rebib (pp. 30-42)Abhishek Ulayil, Dianne Cook, Heather Turner, Mitchell O’Hara-Wild, Christophe Dervieux\nFeature-Based Time-Series Analysis in R using the Theft Ecosystem (pp. 43-68)Trent Henderson, Ben D. Fulcher\nQTE.RD: An R Package for Quantile Treatment Effects in Regression-Discontinuity Designs (pp. 69-88)Zhongjun Qu, Jungmo Yoon\nBoundaryStats: An R Package to Calculate Boundary Overlap Statistics (pp. 89-99)Amy Luo\nR package GofCens: Goodness-of-Fit Methods for Right-Censored Data (pp. 100-124)Mireia Besalú, Klaus Langohr, Matilde Francisco, Arnau Garcia-Fernández, Guadalupe Gómez Melis\nmoonboot: An R Package Implementing m-out-of-n Bootstrap Methods (pp. 125-137)Christoph Dalitz, Felix Lögler\nRgof and R2sample: Testing and Benchmarking for the Univariate Goodness-of-Fit and Two-Sample Problems (pp. 138-161)Wolfgang Rolke\nRendering LaTeX in R (pp. 162-187)Paul Murrell\nlqmix: an R Package for Longitudinal Data Analysis via Linear Quantile Mixtures (pp. 188-211)Marco Alfó, Maria Francesca Marino, Maria Giovanna Ranalli, Nicola Salvati\nExploring Image Analysis in R: Applications and Advancements (pp. 212-260)Tim Brauckhoff, Julius Rublack, Stefan Rödiger\n\n\nNews and Notes\nChanges on CRAN (pp. 261-262)Kurt Hornik, Uwe Ligges, Achim Zeileis\nR Foundation News (p. 263)Torsten Hothorn"
+  },
+  {
+    "objectID": "issues/2025-1/index.html",
+    "href": "issues/2025-1/index.html",
+    "title": "Volume 17, Issue 1",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished March 2025"
+  },
+  {
+    "objectID": "issues/2025-1/index.html#table-of-contents",
+    "href": "issues/2025-1/index.html#table-of-contents",
+    "title": "Volume 17, Issue 1",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nEditorial (pp. 3-4)Rob J Hyndman\n\nContributed Research Articles\nSIREN: A Hybrid CFA-EFA R Package for Controlling Acquiescence in Restricted Factorial Solutions (pp. 5-23)David Navarro-Gonzalez, Pere J. Ferrando, Fabia Morales-Vives, Ana Hernandez-Dorado\nRandom Forests for Time-Fixed and Time-Dependent Predictors: The DynForest R Package (pp. 24-46)Anthony Devaux, Cécile Proust-Lima, Robin Genuer\nLCCR: An R Package for Inference on Latent Class Models for Capture-Recapture Data with Covariates (pp. 47-66)Francesco Bartolucci, Antonio Forcina\nspheresmooth: An R Package for Penalized Piecewise Geodesic Curve Fitting on a Sphere (pp. 67-87)Jae-Hwan Jhong, Seyoung Lee, Ja-Yong Koo, Kwan-Young Bak\nSpace-Time Smoothing of Survey Outcomes using the R Package SUMMER (pp. 88-107)Zehang Richard Li, Bryan D Martin, Tracy Qi Dong, Geir-Arne Fuglstad, Jessica Godwin, John Paige, Andrea Riebler, Samuel J Clark, Jon Wakefield\nlatrend: A Framework for Clustering Longitudinal Data (pp. 108-135)Niek Den Teuling, Steffen Pauws, Edwin van den Heuvel\nStructured Bayesian Regression Tree Models for Estimating Distributed Lag Effects: The R Package dlmtree (pp. 136-159)Seongwon Im, Ander Wilson, Daniel Mork\nCDsampling: An R Package for Constrained D-Optimal Sampling in Paid Research Studies (pp. 160-179)Yifei Huang, Liping Tong, Jie Yang\npanelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R (pp. 180-199)Carles Bretó, Jesse Wheeler, Aaron A. King, Edward L. Ionides\nSimEngine: A Modular Framework for Statistical Simulations in R (pp. 200-220)Avi Kenny, Charles J. Wolock\n\n\nNews and Notes\nChanges on CRAN (pp. 221-222)Kurt Hornik, Uwe Ligges, Achim Zeileis\nR Foundation News (p. 223)Torsten Hothorn"
+  },
+  {
+    "objectID": "issues/2014-1/index.html",
+    "href": "issues/2014-1/index.html",
+    "title": "Volume 6, Issue 1",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished June 2014"
+  },
+  {
+    "objectID": "issues/2014-1/index.html#table-of-contents",
+    "href": "issues/2014-1/index.html#table-of-contents",
+    "title": "Volume 6, Issue 1",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nEditorial (p. 3)Deepayan Sarkar\n\nContributed Research Articles\nTaming PITCHf/x Data with XML2R and pitchRx (p. 5)Carson Sievert\nA Multiscale Test of Spatial Stationarity for Textured (p. 20)Matthew A. Nunes, Sarah L. Taylor, Idris A. Eckley\nStratified Weibull Regression Model for Interval-Censored (p. 31)Xiangdong Gu, David Shapiro, Michael D. Hughes and\nbrainR: Interactive 3 and 4D Images of High Resolution (p. 41)John Muschelli, Elizabeth Sweeney, Ciprian Crainiceanu\nThe RWiener Package: an R Package Providing Distribution (p. 49)Dominik Wabersich, Joachim Vandekerckhove\nPivotalR: A Package for Machine Learning on Big Data (p. 57)Hai Qian\nrotations: An R Package for SO(3) Data (p. 68)Bryan Stanfill, Heike Hofmann, Ulrike Genschel\nROSE: a Package for Binary Imbalanced Learning (p. 79)Nicola Lunardon, Giovanna Menardi, Nicola Torelli\ninvestr: An R Package for Inverse Estimation (p. 90)Brandon M. Greenwell, Christine M. Schubert Kabban\nRankcluster: An R Package for Clustering Multivariate (p. 101)Julien Jacques, Quentin Grimonprez, Christophe\nThe stringdist Package for Approximate String Matching (p. 111)Mark P.J. van der Loo\nRStorm: Developing and Testing Streaming Algorithms in R (p. 123)Maurits Kaptein\nThe gridSVG Package (p. 133)Paul Murrell, Simon Potter\nMRCV: A Package for Analyzing Categorical Variables with (p. 144)Natalie A. Koziol, Christopher R. Bilder\nArchiving Reproducible Research with R and Dataverse (p. 151)Thomas J. Leeper\noligoMask: A Framework for Assessing and Removing the Effect (p. 159)Daniel Bottomly, Beth Wilmot, Shannon K. McWeeney\nsgr: A Package for Simulating Conditional Fake Ordinal Data (p. 164)Luigi Lombardi, Massimiliano Pastore\nWeb Technologies Task View (p. 178)Patrick Mair, Scott Chamberlain\nAddendum to ``Statistical Software from a Blind Person’s (p. 182)A. Jonathan R. Godfrey, Robert Erhardt\n\n\nNews and Notes\nNews from the Bioconductor Project (pp. 184-185)The Bioconductor Team\nChanges on CRAN (pp. 186-220)Kurt Hornik, Achim Zeileis\nChanges in R (pp. 221-235)The R Core Team\nR Foundation News (p. 183)Kurt Hornik\nRJ 2014 016\nRJ 2014 017"
+  },
+  {
+    "objectID": "issues/2008-1/index.html",
+    "href": "issues/2008-1/index.html",
+    "title": "Volume 8, Issue 1",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished March 2008"
+  },
+  {
+    "objectID": "issues/2008-1/index.html#table-of-contents",
+    "href": "issues/2008-1/index.html#table-of-contents",
+    "title": "Volume 8, Issue 1",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\nContributed Research Articles\nUsing Sweave with LyX (pp. 2-9)Gregor, Gorjanc\nTrade costs (pp. 10-13)Jeff, Enos, David, Kane, Arjun Ravi, Narayan, Aaron, Schwartz, Daniel, Suo, Luyi, Zhao\nSurvival analysis for cohorts with missing covariate information (pp. 14-19)Hormuzd A., Katki, Steven D., Mark\nSegmented: An R package to fit regression models with broken-line relationships (pp. 20-25)Vito M. R., Muggeo\nBayesian estimation for parsimonious threshold autoregressive models in R (pp. 26-33)Cathy W. S., Chen, Edward M. H., Lin, F. C., Liu, Richard, Gerlach\nStatistical modeling of loss distributions using actuar (pp. 34-40)Vincent, Goulet, Mathieu, Pigeon\nProgrammers’ Niche: Multivariate polynomials in r (pp. 41-45)Robin K. S., Hankin\nR Help Desk: How can I avoid this loop or make it faster? (pp. 46-50)Uwe, Ligges, John, Fox"
+  },
+  {
+    "objectID": "issues/2001-2/index.html",
+    "href": "issues/2001-2/index.html",
+    "title": "Volume 1, Issue 2",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished June 2001"
+  },
+  {
+    "objectID": "issues/2001-2/index.html#table-of-contents",
+    "href": "issues/2001-2/index.html#table-of-contents",
+    "title": "Volume 1, Issue 2",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\nContributed Research Articles\nDate-time classes (pp. 8-11)Brian D., Ripley, Kurt, Hornik\nInstalling R under Windows (pp. 11-14)Brian D., Ripley\ngeoR: A package for geostatistical analysis (pp. 14-18)Paulo J., Ribeiro, Jr., Peter J., Diggle\nSimulation and analysis of random fields (pp. 18-20)Martin, Schlather\nMgcv: GAMs and generalized ridge regression for R (pp. 20-25)Simon N., Wood\nWhat’s the point of “tensor”? (pp. 26-27)Jonathan, Rougier\nOn multivariate t and Gauß probabilities in R (pp. 27-29)Torsten, Hothorn, Frank, Bretz, Alan, Genz"
+  },
+  {
+    "objectID": "issues.html",
+    "href": "issues.html",
+    "title": "Issues",
+    "section": "",
+    "text": "Issue 3\nIssue 2\nIssue 1"
+  },
+  {
+    "objectID": "issues.html#volume-17",
+    "href": "issues.html#volume-17",
+    "title": "Issues",
+    "section": "",
+    "text": "Issue 3\nIssue 2\nIssue 1"
+  },
+  {
+    "objectID": "issues.html#volume-6",
+    "href": "issues.html#volume-6",
+    "title": "Issues",
+    "section": "2014 (Volume 6)",
+    "text": "2014 (Volume 6)\nIssue 2\nIssue 1"
+  },
+  {
+    "objectID": "issues.html#volume-8",
+    "href": "issues.html#volume-8",
+    "title": "Issues",
+    "section": "2008 (Volume 8)",
+    "text": "2008 (Volume 8)\nIssue 2\nIssue 1"
+  },
+  {
+    "objectID": "issues.html#volume-1",
+    "href": "issues.html#volume-1",
+    "title": "Issues",
+    "section": "2001 (Volume 1)",
+    "text": "2001 (Volume 1)\nIssue 3\nIssue 2\nIssue 1"
+  },
+  {
+    "objectID": "editors.html",
+    "href": "editors.html",
+    "title": "Editorial board",
+    "section": "",
+    "text": "Emi Tanaka, Australian National University, Australia. r-journal@r-project.org"
+  },
+  {
+    "objectID": "editors.html#editor-in-chief",
+    "href": "editors.html#editor-in-chief",
+    "title": "Editorial board",
+    "section": "",
+    "text": "Emi Tanaka, Australian National University, Australia. r-journal@r-project.org"
+  },
+  {
+    "objectID": "editors.html#executive-editors",
+    "href": "editors.html#executive-editors",
+    "title": "Editorial board",
+    "section": "Executive editors",
+    "text": "Executive editors\n\nVincent Arel-Bundock, University of Montreal, Canada\nRob Hyndman, Monash University, Australia.\nEmily Zabor, Case Western Reserve University, Cleveland Clinic and Taussig Cancer Institute, USA."
+  },
+  {
+    "objectID": "editors.html#associate-editors",
+    "href": "editors.html#associate-editors",
+    "title": "Editorial board",
+    "section": "Associate editors",
+    "text": "Associate editors\n\nRafael de Andrade Moral, Maynooth University, Ireland\nDavid Ardia, HEC Montréal, Canada\nRasmus Bååth, Lund University, Sweden\nMaciej Beręsewicz, Poznań University of Economics and Business, Poland\nPrzemek Biecek, University of Warsaw, Poland\nKevin Burke, University of Limerick, Ireland\nMine Çetinkaya-Rundel, Duke University, USA\nXiaoyue Cheng, University of Nebraska, USA\nLucy D’Agostino McGowan, Wake Forest University, USA\nKatarina Domijan, Maynooth University, Ireland\nThomas Fung, Macquarie University, Australia\nIsabella Gollini, University College Dublin, Ireland\nJouni Helske, University of Turku, Finland\nMichael Kane, Yale University, USA\nYanfei Kang, Beihang University, China\nSelçuk Korkmaz, Trakya University, Turkey\nAlexander Kowarik, Statistics Austria, Austria\nUrsula Laa, BOKU Vienna, Austria\nRobin Lovelace, University of Leeds, UK\nAdam Loy, Carleton College, USA\nThomas Nagler, LMU Munich, Germany\nChristoph Sax, Cynkra, Switzerland\nThiyanga Talagala, University of Sri Jayewardenepura, Sri Lanka\nMatthias Templ, University of Applied Sciences and Arts Northwestern Switzerland, Switzerland\nValentin Todorov, UNIDO, Austria\nSusan Vanderplas, University of Nebraska, USA\nXiaoqian Wang, Monash University, Australia\nWenjie Wang, Eli Lilly and Company, USA\nTomasz Woźniak, University of Melbourne, Australia\nJulia Wrobel, Emory University, USA"
+  },
+  {
+    "objectID": "editors.html#technical-editor",
+    "href": "editors.html#technical-editor",
+    "title": "Editorial board",
+    "section": "Technical editor",
+    "text": "Technical editor\n\nAbhishek Ulayil, India"
+  },
+  {
+    "objectID": "editors.html#editorial-advisory-board",
+    "href": "editors.html#editorial-advisory-board",
+    "title": "Editorial board",
+    "section": "Editorial advisory board",
+    "text": "Editorial advisory board\n\nHenrik Bengtssen, University of California, San Francisco, USA\nGabriela de Quiroz, Chief Data Scientist, IBM, USA\nMichael Kane, Yale University, USA\nRebecca Killick, Lancaster University, UK"
+  },
+  {
+    "objectID": "editors.html#governance",
+    "href": "editors.html#governance",
+    "title": "Editorial board",
+    "section": "Governance",
+    "text": "Governance\nThe R Journal is run under the auspices of the R Foundation, and editors of the Journal are appointed by the R Foundation board."
+  },
+  {
+    "objectID": "editors.html#past-editors-in-chief",
+    "href": "editors.html#past-editors-in-chief",
+    "title": "Editorial board",
+    "section": "Past Editors-in-Chief",
+    "text": "Past Editors-in-Chief\nVince Carey (2009), Peter Dalgaard (2010), Heather Turner (2011), Martyn Plummer (2012), Hadley Wickham (2013), Deepayan Sarkar (2014), Bettina Grün (2015), Michael Lawrence (2016), Roger Bivand (2017), John Verzani (2018), Norman Matloff (2019), Michael Kane (2020), Dianne Cook (2021), Catherine Hurley (2022), Simon Urbanek (2023), Mark van der Loo (2024), Rob Hyndman (2025)"
+  },
+  {
+    "objectID": "editors.html#past-associate-editors",
+    "href": "editors.html#past-associate-editors",
+    "title": "Editorial board",
+    "section": "Past Associate Editors",
+    "text": "Past Associate Editors\n\nRomain Lesur, INSEE, France (2024)\nEaro Wang (2020-2022)\nBeth Atkinson (2020-2022)\nKieran Healy (2021-2022)\nElizabeth Sweeney (2021-2023)\nLouis Aslett (2021-2023)\nPrzemek Biecek (2021-2023)\nPriyanga Dilini Talagala (2021-2023)\nSimone Blomberg (2021-2022)\nMark van der Loo (2021-2022)\nEmi Tanaka (2022-2023)\nEmily Zabor (2020-2024)\nNicholas Tierney (2021-2024)\nChris Brunsdon (2022-2024)\nRomain Lesur (2024)\nIvan Svetunkov (2024)"
+  },
+  {
+    "objectID": "articles/RJ-2025-031/index.html",
+    "href": "articles/RJ-2025-031/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nChristoph Dalitz, Felix Lögler, “moonboot: An R Package Implementing m-out-of-n Bootstrap Methods”, R Journal, 2025, 17(3), 125-137, https://doi.org/10.32614/RJ-2025-031\n\n\n\nBibTeX\n\n\n@article{RJ-2025-031,\n  author = {Christoph Dalitz and Felix Lögler},\n  title = {moonboot: An R Package Implementing m-out-of-n Bootstrap Methods},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {125-137},\n  note = {https://journal.r-project.org/articles/RJ-2025-031/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-029/index.html",
+    "href": "articles/RJ-2025-029/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nMarco Alfó, Maria Francesca Marino, Maria Giovanna Ranalli, Nicola Salvati, “lqmix: an R Package for Longitudinal Data Analysis via Linear Quantile Mixtures”, R Journal, 2025, 17(3), 188-211, https://doi.org/10.32614/RJ-2025-029\n\n\n\nBibTeX\n\n\n@article{RJ-2025-029,\n  author = {Marco Alfó and Maria Francesca Marino and Maria Giovanna Ranalli and Nicola Salvati},\n  title = {lqmix: an R Package for Longitudinal Data Analysis via Linear Quantile Mixtures},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {188-211},\n  note = {https://journal.r-project.org/articles/RJ-2025-029/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-027/index.html",
+    "href": "articles/RJ-2025-027/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nWolfgang Rolke, “Rgof and R2sample: Testing and Benchmarking for the Univariate Goodness-of-Fit and Two-Sample Problems”, R Journal, 2025, 17(3), 138-161, https://doi.org/10.32614/RJ-2025-027\n\n\n\nBibTeX\n\n\n@article{RJ-2025-027,\n  author = {Wolfgang Rolke},\n  title = {Rgof and R2sample: Testing and Benchmarking for the Univariate Goodness-of-Fit and Two-Sample Problems},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {138-161},\n  note = {https://journal.r-project.org/articles/RJ-2025-027/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-025/index.html",
+    "href": "articles/RJ-2025-025/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Amy Luo, “BoundaryStats: An R Package to Calculate Boundary Overlap Statistics”, R Journal, 2025, 17(3), 89-99, https://doi.org/10.32614/RJ-2025-025\n\n\n\nBibTeX\n\n\n@article{RJ-2025-025,\n  author = {Amy Luo},\n  title = {BoundaryStats: An R Package to Calculate Boundary Overlap Statistics},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {89-99},\n  note = {https://journal.r-project.org/articles/RJ-2025-025/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-023/index.html",
+    "href": "articles/RJ-2025-023/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nTrent Henderson, Ben D. Fulcher, “Feature-Based Time-Series Analysis in R using the Theft Ecosystem”, R Journal, 2025, 17(3), 43-68, https://doi.org/10.32614/RJ-2025-023\n\n\n\nBibTeX\n\n\n@article{RJ-2025-023,\n  author = {Trent Henderson and Ben D. Fulcher},\n  title = {Feature-Based Time-Series Analysis in R using the Theft Ecosystem},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {43-68},\n  note = {https://journal.r-project.org/articles/RJ-2025-023/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-021/index.html",
+    "href": "articles/RJ-2025-021/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nDongyoung Go, Gwanghee Kim, Jina Park, Junyong Park, Minjeong Jeon, Ick Hoon Jin, “lsirm12pl: An R Package for the Latent Space Item Response Model”, R Journal, 2025, 17(3), 4-29, https://doi.org/10.32614/RJ-2025-021\n\n\n\nBibTeX\n\n\n@article{RJ-2025-021,\n  author = {Dongyoung Go and Gwanghee Kim and Jina Park and Junyong Park and Minjeong Jeon and Ick Hoon Jin},\n  title = {lsirm12pl: An R Package for the Latent Space Item Response Model},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {4-29},\n  note = {https://journal.r-project.org/articles/RJ-2025-021/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-019/index.html",
+    "href": "articles/RJ-2025-019/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nYeonghoon Yoo, Chanmin Kim (corresponding author), “bartcs: An R Package for Bayesian Nonparametric Adjustment for Confounding”, R Journal, 2025, 17(2), 176-206, https://doi.org/10.32614/RJ-2025-019\n\n\n\nBibTeX\n\n\n@article{RJ-2025-019,\n  author = {Yeonghoon Yoo and Chanmin Kim (corresponding author)},\n  title = {bartcs: An R Package for Bayesian Nonparametric Adjustment for Confounding},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {176-206},\n  note = {https://journal.r-project.org/articles/RJ-2025-019/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-017/index.html",
+    "href": "articles/RJ-2025-017/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nBen Sherwood, Shaobo Li, Adam Maidman, “rqPen: An R Package for Penalized Quantile Regression”, R Journal, 2025, 17(2), 146-175, https://doi.org/10.32614/RJ-2025-017\n\n\n\nBibTeX\n\n\n@article{RJ-2025-017,\n  author = {Ben Sherwood and Shaobo Li and Adam Maidman},\n  title = {rqPen: An R Package for Penalized Quantile Regression},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {146-175},\n  note = {https://journal.r-project.org/articles/RJ-2025-017/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-015/index.html",
+    "href": "articles/RJ-2025-015/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nKevin Horan, Katarina Domijan, Chris Brunsdon, “Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling”, R Journal, 2025, 17(2), 84-108, https://doi.org/10.32614/RJ-2025-015\n\n\n\nBibTeX\n\n\n@article{RJ-2025-015,\n  author = {Kevin Horan and Katarina Domijan and Chris Brunsdon},\n  title = {Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {84-108},\n  note = {https://journal.r-project.org/articles/RJ-2025-015/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-013/index.html",
+    "href": "articles/RJ-2025-013/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nLucy D’Agostino McGowan, Katherine Moore, Kenneth S. Berenhaut, “Partitioned Local Depth (PaLD) Community Analyses in R”, R Journal, 2025, 17(2), 35-55, https://doi.org/10.32614/RJ-2025-013\n\n\n\nBibTeX\n\n\n@article{RJ-2025-013,\n  author = {Lucy D'Agostino McGowan and Katherine Moore and Kenneth S. Berenhaut},\n  title = {Partitioned Local Depth (PaLD) Community Analyses in R},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {35-55},\n  note = {https://journal.r-project.org/articles/RJ-2025-013/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-011/index.html",
+    "href": "articles/RJ-2025-011/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nAchim Zeileis, Roger Bivand, Dirk Eddelbuettel, Kurt Hornik, Julia Piaskowski, Nathalie Vialaneix, “The CRAN Task View Initiative”, R Journal, 2025, 17(2), 4-14, https://doi.org/10.32614/RJ-2025-011\n\n\n\nBibTeX\n\n\n@article{RJ-2025-011,\n  author = {Achim Zeileis and Roger Bivand and Dirk Eddelbuettel and Kurt Hornik and Julia Piaskowski and Nathalie Vialaneix},\n  title = {The CRAN Task View Initiative},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {4-14},\n  note = {https://journal.r-project.org/articles/RJ-2025-011/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-009/index.html",
+    "href": "articles/RJ-2025-009/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nCarles Bretó, Jesse Wheeler, Aaron A. King, Edward L. Ionides, “panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R”, R Journal, 2025, 17(1), 180-199, https://doi.org/10.32614/RJ-2025-009\n\n\n\nBibTeX\n\n\n@article{RJ-2025-009,\n  author = {Carles Bretó and Jesse Wheeler and Aaron A. King and Edward L. Ionides},\n  title = {panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {180-199},\n  note = {https://journal.r-project.org/articles/RJ-2025-009/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-007/index.html",
+    "href": "articles/RJ-2025-007/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nSeongwon Im, Ander Wilson, Daniel Mork, “Structured Bayesian Regression Tree Models for Estimating Distributed Lag Effects: The R Package dlmtree”, R Journal, 2025, 17(1), 136-159, https://doi.org/10.32614/RJ-2025-007\n\n\n\nBibTeX\n\n\n@article{RJ-2025-007,\n  author = {Seongwon Im and Ander Wilson and Daniel Mork},\n  title = {Structured Bayesian Regression Tree Models for Estimating Distributed Lag Effects: The R Package dlmtree},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {136-159},\n  note = {https://journal.r-project.org/articles/RJ-2025-007/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-005/index.html",
+    "href": "articles/RJ-2025-005/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Zehang Richard Li, Bryan D Martin, Tracy Qi Dong, Geir-Arne Fuglstad, Jessica Godwin, John Paige, Andrea Riebler, Samuel J Clark, Jon Wakefield, “Space-Time Smoothing of Survey Outcomes using the R Package SUMMER”, R Journal, 2025, 17(1), 88-107, https://doi.org/10.32614/RJ-2025-005\n\n\n\nBibTeX\n\n\n@article{RJ-2025-005,\n  author = {Zehang Richard Li and Bryan D Martin and Tracy Qi Dong and Geir-Arne Fuglstad and Jessica Godwin and John Paige and Andrea Riebler and Samuel J Clark and Jon Wakefield},\n  title = {Space-Time Smoothing of Survey Outcomes using the R Package SUMMER},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {88-107},\n  note = {https://journal.r-project.org/articles/RJ-2025-005/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-003/index.html",
+    "href": "articles/RJ-2025-003/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nFrancesco Bartolucci, Antonio Forcina, “LCCR: An R Package for Inference on Latent Class Models for Capture-Recapture Data with Covariates”, R Journal, 2025, 17(1), 47-66, https://doi.org/10.32614/RJ-2025-003\n\n\n\nBibTeX\n\n\n@article{RJ-2025-003,\n  author = {Francesco Bartolucci and Antonio Forcina},\n  title = {LCCR: An R Package for Inference on Latent Class Models for Capture-Recapture Data with Covariates},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {47-66},\n  note = {https://journal.r-project.org/articles/RJ-2025-003/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-001/index.html",
+    "href": "articles/RJ-2025-001/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nDavid Navarro-Gonzalez, Pere J. Ferrando, Fabia Morales-Vives, Ana Hernandez-Dorado, “SIREN: A Hybrid CFA-EFA R Package for Controlling Acquiescence in Restricted Factorial Solutions”, R Journal, 2025, 17(1), 5-23, https://doi.org/10.32614/RJ-2025-001\n\n\n\nBibTeX\n\n\n@article{RJ-2025-001,\n  author = {David Navarro-Gonzalez and Pere J. Ferrando and Fabia Morales-Vives and Ana Hernandez-Dorado},\n  title = {SIREN: A Hybrid CFA-EFA R Package for Controlling Acquiescence in Restricted Factorial Solutions},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {5-23},\n  note = {https://journal.r-project.org/articles/RJ-2025-001/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-032/index.html",
+    "href": "articles/RJ-2014-032/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nAiora Zabala, “qmethod: A Package to Explore Human Perspectives Using Q Methodology”, R Journal, 2015, 6(2), 163-173, https://doi.org/10.32614/RJ-2014-032\n\n\n\nBibTeX\n\n\n@article{RJ-2014-032,\n  author = {Aiora Zabala},\n  title = {qmethod: A Package to Explore Human Perspectives Using Q Methodology},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {163-173},\n  note = {https://journal.r-project.org/articles/RJ-2014-032/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-030/index.html",
+    "href": "articles/RJ-2014-030/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nRune Hoff, Jon Michael Gran, Daniel Farewell, “Farewell’s Linear Increments Model for Missing Data: The FLIM Package”, R Journal, 2015, 6(2), 137-150, https://doi.org/10.32614/RJ-2014-030\n\n\n\nBibTeX\n\n\n@article{RJ-2014-030,\n  author = {Rune Hoff and Jon Michael Gran and Daniel Farewell},\n  title = {Farewell's Linear Increments Model for Missing Data: The FLIM Package},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {137-150},\n  note = {https://journal.r-project.org/articles/RJ-2014-030/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-028/index.html",
+    "href": "articles/RJ-2014-028/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nPaola Rebora, Agus Salim, Marie Reilly, “bshazard: A Flexible Tool for Nonparametric Smoothing of the Hazard Function”, R Journal, 2015, 6(2), 114-122, https://doi.org/10.32614/RJ-2014-028\n\n\n\nBibTeX\n\n\n@article{RJ-2014-028,\n  author = {Paola Rebora and Agus Salim and Marie Reilly},\n  title = {bshazard: A Flexible Tool for Nonparametric Smoothing of the Hazard Function},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {114-122},\n  note = {https://journal.r-project.org/articles/RJ-2014-028/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-026/index.html",
+    "href": "articles/RJ-2014-026/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nJohn Hughes, “ngspatial: A Package for Fitting the Centered Autologistic and Sparse Spatial Generalized Linear Mixed Models for Areal Data”, R Journal, 2015, 6(2), 81-95, https://doi.org/10.32614/RJ-2014-026\n\n\n\nBibTeX\n\n\n@article{RJ-2014-026,\n  author = {John Hughes},\n  title = {ngspatial: A Package for Fitting the Centered Autologistic and Sparse Spatial Generalized Linear Mixed Models for Areal Data},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {81-95},\n  note = {https://journal.r-project.org/articles/RJ-2014-026/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-024/index.html",
+    "href": "articles/RJ-2014-024/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nDane R. Van Domelen, W. Stephen Pittard, “Flexible R Functions for Processing Accelerometer Data, with Emphasis on NHANES 2003–2006”, R Journal, 2015, 6(2), 52-62, https://doi.org/10.32614/RJ-2014-024\n\n\n\nBibTeX\n\n\n@article{RJ-2014-024,\n  author = {Dane R. Van Domelen and W. Stephen Pittard},\n  title = {Flexible R Functions for Processing Accelerometer Data, with Emphasis on NHANES 2003--2006},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {52-62},\n  note = {https://journal.r-project.org/articles/RJ-2014-024/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-022/index.html",
+    "href": "articles/RJ-2014-022/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nJonathan Zhang, Nancy Heckman, Davor Cubranic, Joel G. Kingsolver, J.S. Marron, Travis L. Gaydos, “Prinsimp”, R Journal, 2014, 6(2), 27-42, https://doi.org/10.32614/RJ-2014-022\n\n\n\nBibTeX\n\n\n@article{RJ-2014-022,\n  author = {Jonathan Zhang and Nancy Heckman and Davor Cubranic and Joel G. Kingsolver and J.S. Marron and Travis L. Gaydos},\n  title = {Prinsimp},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {27-42},\n  note = {https://journal.r-project.org/articles/RJ-2014-022/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-020/index.html",
+    "href": "articles/RJ-2014-020/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nAndrea Stocco, “Coordinate-Based Meta-Analysis of fMRI Studies with R”, R Journal, 2014, 6(2), 5-15, https://doi.org/10.32614/RJ-2014-020\n\n\n\nBibTeX\n\n\n@article{RJ-2014-020,\n  author = {Andrea Stocco},\n  title = {Coordinate-Based Meta-Analysis of fMRI Studies with R},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {5-15},\n  note = {https://journal.r-project.org/articles/RJ-2014-020/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-018/index.html",
+    "href": "articles/RJ-2014-018/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nDaniel Bottomly, Beth Wilmot, Shannon K. McWeeney, “oligoMask: A Framework for Assessing and Removing the Effect of Genetic Variants on Microarray Probes”, R Journal, 2014, 6(1), 159-163, https://doi.org/10.32614/RJ-2014-018\n\n\n\nBibTeX\n\n\n@article{RJ-2014-018,\n  author = {Daniel Bottomly and Beth Wilmot and Shannon K. McWeeney},\n  title = {oligoMask: A Framework for Assessing and Removing the Effect of Genetic Variants on Microarray Probes},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {159-163},\n  note = {https://journal.r-project.org/articles/RJ-2014-018/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-016/index.html",
+    "href": "articles/RJ-2014-016/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nPatrick Mair, Scott Chamberlain, “Web Technologies Task View”, R Journal, 2014, 6(1), 178-181, https://doi.org/10.32614/RJ-2014-016\n\n\n\nBibTeX\n\n\n@article{RJ-2014-016,\n  author = {Patrick Mair and Scott Chamberlain},\n  title = {Web Technologies Task View},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {178-181},\n  note = {https://journal.r-project.org/articles/RJ-2014-016/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-014/index.html",
+    "href": "articles/RJ-2014-014/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nNatalie A. Koziol, Christopher R. Bilder, “MRCV: A Package for Analyzing Categorical Variables with Multiple Response Options”, R Journal, 2014, 6(1), 144-150, https://doi.org/10.32614/RJ-2014-014\n\n\n\nBibTeX\n\n\n@article{RJ-2014-014,\n  author = {Natalie A. Koziol and Christopher R. Bilder},\n  title = {MRCV: A Package for Analyzing Categorical Variables with Multiple Response Options},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {144-150},\n  note = {https://journal.r-project.org/articles/RJ-2014-014/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-012/index.html",
+    "href": "articles/RJ-2014-012/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nMaurits Kaptein, “RStorm: Developing and Testing Streaming Algorithms in R”, R Journal, 2014, 6(1), 123-132, https://doi.org/10.32614/RJ-2014-012\n\n\n\nBibTeX\n\n\n@article{RJ-2014-012,\n  author = {Maurits Kaptein},\n  title = {RStorm: Developing and Testing Streaming Algorithms in R},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {123-132},\n  note = {https://journal.r-project.org/articles/RJ-2014-012/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-010/index.html",
+    "href": "articles/RJ-2014-010/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nJulien Jacques, Quentin Grimonprez, Christophe Biernacki, “Rankcluster: An R Package for Clustering Multivariate Partial Rankings”, R Journal, 2014, 6(1), 101-110, https://doi.org/10.32614/RJ-2014-010\n\n\n\nBibTeX\n\n\n@article{RJ-2014-010,\n  author = {Julien Jacques and Quentin Grimonprez and Christophe Biernacki},\n  title = {Rankcluster: An R Package for Clustering Multivariate Partial Rankings},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {101-110},\n  note = {https://journal.r-project.org/articles/RJ-2014-010/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-008/index.html",
+    "href": "articles/RJ-2014-008/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nNicola Lunardon, Giovanna Menardi, Nicola Torelli, “ROSE: A Package for Binary Imbalanced Learning”, R Journal, 2014, 6(1), 79-89, https://doi.org/10.32614/RJ-2014-008\n\n\n\nBibTeX\n\n\n@article{RJ-2014-008,\n  author = {Nicola Lunardon and Giovanna Menardi and Nicola Torelli},\n  title = {ROSE: A Package for Binary Imbalanced Learning},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {79-89},\n  note = {https://journal.r-project.org/articles/RJ-2014-008/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-006/index.html",
+    "href": "articles/RJ-2014-006/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nHai Qian, “PivotalR: A Package for Machine Learning on Big Data”, R Journal, 2014, 6(1), 57-67, https://doi.org/10.32614/RJ-2014-006\n\n\n\nBibTeX\n\n\n@article{RJ-2014-006,\n  author = {Hai Qian},\n  title = {PivotalR: A Package for Machine Learning on Big Data},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {57-67},\n  note = {https://journal.r-project.org/articles/RJ-2014-006/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-004/index.html",
+    "href": "articles/RJ-2014-004/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nJohn Muschelli, Elizabeth Sweeney, Ciprian Crainiceanu, “brainR: Interactive 3 and 4D Images of High Resolution Neuroimage Data”, R Journal, 2014, 6(1), 41-48, https://doi.org/10.32614/RJ-2014-004\n\n\n\nBibTeX\n\n\n@article{RJ-2014-004,\n  author = {John Muschelli and Elizabeth Sweeney and Ciprian Crainiceanu},\n  title = {brainR: Interactive 3 and 4D Images of High Resolution Neuroimage Data},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {41-48},\n  note = {https://journal.r-project.org/articles/RJ-2014-004/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-002/index.html",
+    "href": "articles/RJ-2014-002/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nMatthew A. Nunes, Sarah L. Taylor, Idris A. Eckley, “A Multiscale Test of Spatial Stationarity for Textured Images in R”, R Journal, 2014, 6(1), 20-30, https://doi.org/10.32614/RJ-2014-002\n\n\n\nBibTeX\n\n\n@article{RJ-2014-002,\n  author = {Matthew A. Nunes and Sarah L. Taylor and Idris A. Eckley},\n  title = {A Multiscale Test of Spatial Stationarity for Textured Images in R},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {20-30},\n  note = {https://journal.r-project.org/articles/RJ-2014-002/}\n}"
+  },
+  {
+    "objectID": "articles.html#section",
+    "href": "articles.html#section",
+    "title": "All articles",
+    "section": "2025",
+    "text": "2025\nRJ-2025-031\nRJ-2025-030\nRJ-2025-029\nRJ-2025-028\nRJ-2025-027\nRJ-2025-026\nRJ-2025-025\nRJ-2025-024\nRJ-2025-023\nRJ-2025-022\nRJ-2025-021\nRJ-2025-020\nRJ-2025-019\nRJ-2025-018\nRJ-2025-017\nRJ-2025-016\nRJ-2025-015\nRJ-2025-014\nRJ-2025-013\nRJ-2025-012\nRJ-2025-011\nRJ-2025-010\nRJ-2025-009\nRJ-2025-008\nRJ-2025-007\nRJ-2025-006\nRJ-2025-005\nRJ-2025-004\nRJ-2025-003\nRJ-2025-002\nRJ-2025-001"
+  },
+  {
+    "objectID": "articles.html#section-1",
+    "href": "articles.html#section-1",
+    "title": "All articles",
+    "section": "2014",
+    "text": "2014\nRJ-2014-033\nRJ-2014-032\nRJ-2014-031\nRJ-2014-030\nRJ-2014-029\nRJ-2014-028\nRJ-2014-027\nRJ-2014-026\nRJ-2014-025\nRJ-2014-024\nRJ-2014-023\nRJ-2014-022\nRJ-2014-021\nRJ-2014-020\nRJ-2014-019\nRJ-2014-018\nRJ-2014-017\nRJ-2014-016\nRJ-2014-015\nRJ-2014-014\nRJ-2014-013\nRJ-2014-012\nRJ-2014-011\nRJ-2014-010\nRJ-2014-009\nRJ-2014-008\nRJ-2014-007\nRJ-2014-006\nRJ-2014-005\nRJ-2014-004\nRJ-2014-003\nRJ-2014-002\nRJ-2014-001"
+  },
+  {
+    "objectID": "R_package_guidelines.html",
+    "href": "R_package_guidelines.html",
+    "title": "Papers about R packages",
+    "section": "",
+    "text": "Most papers in the R Journal describe an R package. Here are some suggestions (and some requirements) to help you get your paper accepted for publication.\n\nWrite for a wide audience\nThe R community intersects with many scientific and professional communities. This means that you can not expect all readers to be familiar with the jargon in your field.\n\n\nFocus on the software, not on the method\nThe R Journal is primarily a software journal. This means that methodology behind a package needs only to be described to the point necessary to understand what the package does. In almost all cases, the underlying methods will be discussed in detail in other papers, which you should cite. We strongly encourage authors to focus on software-related issues such as:\n\nDesign considerations\n\nWhy does the package have this particular interface?\nWhich user did you have in mind for the package as it was developed? An expert R programmer? A novice? A data analyst with a background in a certain field?\nDid you adhere to a certain design standard? Why?\n\nPerformance and limitations\n\nIs the package parallelized?\nCan you say something about how use of resources (time, memory) scales with input?\nAre there any limits to its use? What is the typical use case?\n\nImportant implementation details\n\nHave you chose a certain object model, such as S4/S3/R6/S7? Why?\nAny considerations regarding dependencies?\n\n\n\n\nStructure of a typical paper describing a package\nA typical paper would contain the following elements.\n\nAn introduction for a wide audience, describing the context of the problem addressed by the package, any existing solutions or competitor packages, and the gap filled by the package.\nIf needed, a conceptual description of the methodology, followed by (more important) the main drivers behind the design of the package.\nA description of the typical workflow of the package.\nPossibly, a detailed use case, demonstrating more options.\nA section with technical details regarding implementation or theory.\nDiscussion and conclusion.\n\n\n\nRequirements for consideration\n\nThe package must be available on CRAN or Bioconductor.\nThe content of the package should be substantial and would likely be of significant interest and use within the R community.\nThe accompanying paper should clearly demonstrate the use of the package and its advantages over any competing packages or existing approaches.\nThe package must include unit tests to verify functionality.\nEach user-facing function must be fully documented with all terms and arguments explained, and examples provided.\nInclude a vignette describing a full workflow or example analysis.\nUse a version control system (e.g., GitHub, GitLab, BitBucket, R-Forge).\nAvoid unnecessary dependencies.\n\n\n\nRecommended best practices\nIn addition, we strongly recommend that package authors follow common R package conventions, including but not limited to:\n\nOffer a bug reporting mechanism, such as GitHub issues.\nThe package interface and functions are designed with the user, and a typical user workflow in mind.\nUse a consistent naming scheme for functions (e.g., snake_case or camelCase), with meaningful and descriptive function names.\nFollow a consistent code style, such as the tidyverse or Google style guides. A code formatter such as Air or styler can help enforce consistent style.\nUse object-oriented programming where appropriate (e.g., define plot() or print() S3 methods for custom classes).\nUse message() or warning() instead of cat() or print() within functions (except in print methods).\nAvoid reading or writing files unless essential to the package’s purpose.\nUse TRUE and FALSE explicitly; avoid T and F as values or variable names.\nIf the package contains data, include a data-raw directory with code for data generation or cleaning.\nMake documentation available on a standalone website online (e.g., via pkgdown).\n\n\n\nAdditional resources\nTo learn about best practices in R package development, authors are encouraged to consult these resources:\n\nWriting R extensions\nR Packages\nThe rOpenSci development guide"
+  },
+  {
+    "objectID": "articles/RJ-2014-001/index.html",
+    "href": "articles/RJ-2014-001/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nCarson Sievert, “Taming PITCHf/x Data with XML2R and pitchRx”, R Journal, 2014, 6(1), 5-19, https://doi.org/10.32614/RJ-2014-001\n\n\n\nBibTeX\n\n\n@article{RJ-2014-001,\n  author = {Carson Sievert},\n  title = {Taming PITCHf/x Data with XML2R and pitchRx},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {5-19},\n  note = {https://journal.r-project.org/articles/RJ-2014-001/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-003/index.html",
+    "href": "articles/RJ-2014-003/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nXiangdong Gu, David Shapiro, Michael D. Hughes, Raji Balasubramanian, “Stratified Weibull Regression Model for Interval-Censored Data”, R Journal, 2014, 6(1), 31-40, https://doi.org/10.32614/RJ-2014-003\n\n\n\nBibTeX\n\n\n@article{RJ-2014-003,\n  author = {Xiangdong Gu and David Shapiro and Michael D. Hughes and Raji Balasubramanian},\n  title = {Stratified Weibull Regression Model for Interval-Censored Data},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {31-40},\n  note = {https://journal.r-project.org/articles/RJ-2014-003/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-005/index.html",
+    "href": "articles/RJ-2014-005/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nDominik Wabersich, Joachim Vandekerckhove, “The RWiener Package: an R Package Providing Distribution Functions for the Wiener Diffusion Model”, R Journal, 2014, 6(1), 49-56, https://doi.org/10.32614/RJ-2014-005\n\n\n\nBibTeX\n\n\n@article{RJ-2014-005,\n  author = {Dominik Wabersich and Joachim Vandekerckhove},\n  title = {The RWiener Package: an R Package Providing Distribution Functions for the Wiener Diffusion Model},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {49-56},\n  note = {https://journal.r-project.org/articles/RJ-2014-005/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-007/index.html",
+    "href": "articles/RJ-2014-007/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nBryan Stanfill, Heike Hofmann, Ulrike Genschel, “rotations: An R Package for SO(3) Data”, R Journal, 2014, 6(1), 68-78, https://doi.org/10.32614/RJ-2014-007\n\n\n\nBibTeX\n\n\n@article{RJ-2014-007,\n  author = {Bryan Stanfill and Heike Hofmann and Ulrike Genschel},\n  title = {rotations: An R Package for SO(3) Data},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {68-78},\n  note = {https://journal.r-project.org/articles/RJ-2014-007/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-009/index.html",
+    "href": "articles/RJ-2014-009/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nBrandon M. Greenwell, Christine M. Schubert Kabban, “investr: An R Package for Inverse Estimation”, R Journal, 2014, 6(1), 90-100, https://doi.org/10.32614/RJ-2014-009\n\n\n\nBibTeX\n\n\n@article{RJ-2014-009,\n  author = {Brandon M. Greenwell and Christine M. Schubert Kabban},\n  title = {investr: An R Package for Inverse Estimation},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {90-100},\n  note = {https://journal.r-project.org/articles/RJ-2014-009/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-011/index.html",
+    "href": "articles/RJ-2014-011/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nMark P.J. van der Loo, “The stringdist Package for Approximate String Matching”, R Journal, 2014, 6(1), 111-122, https://doi.org/10.32614/RJ-2014-011\n\n\n\nBibTeX\n\n\n@article{RJ-2014-011,\n  author = {Mark P.J. van der Loo},\n  title = {The stringdist Package for Approximate String Matching},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {111-122},\n  note = {https://journal.r-project.org/articles/RJ-2014-011/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-013/index.html",
+    "href": "articles/RJ-2014-013/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nPaul Murrell, Simon Potter, “The gridSVG Package”, R Journal, 2014, 6(1), 133-143, https://doi.org/10.32614/RJ-2014-013\n\n\n\nBibTeX\n\n\n@article{RJ-2014-013,\n  author = {Paul Murrell and Simon Potter},\n  title = {The gridSVG Package},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {133-143},\n  note = {https://journal.r-project.org/articles/RJ-2014-013/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-015/index.html",
+    "href": "articles/RJ-2014-015/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nThomas J. Leeper, “Archiving Reproducible Research with R and Dataverse”, R Journal, 2014, 6(1), 151-158, https://doi.org/10.32614/RJ-2014-015\n\n\n\nBibTeX\n\n\n@article{RJ-2014-015,\n  author = {Thomas J. Leeper},\n  title = {Archiving Reproducible Research with R and Dataverse},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {151-158},\n  note = {https://journal.r-project.org/articles/RJ-2014-015/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-017/index.html",
+    "href": "articles/RJ-2014-017/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nA. Jonathan R. Godfrey, Robert Erhardt, “Addendum to”Statistical Software from a Blind Person’s Perspective”“, R Journal, 2014, 6(1), 182, https://doi.org/10.32614/RJ-2014-017\n\n\n\nBibTeX\n\n\n@article{RJ-2014-017,\n  author = {A. Jonathan R. Godfrey and Robert Erhardt},\n  title = {Addendum to \"Statistical Software from a Blind Person's Perspective\"},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {182},\n  note = {https://journal.r-project.org/articles/RJ-2014-017/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-019/index.html",
+    "href": "articles/RJ-2014-019/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 1\n\n\nLuigi Lombardi, Massimiliano Pastore, “sgr: A Package for Simulating Conditional Fake Ordinal Data”, R Journal, 2014, 6(1), 164-177, https://doi.org/10.32614/RJ-2014-019\n\n\n\nBibTeX\n\n\n@article{RJ-2014-019,\n  author = {Luigi Lombardi and Massimiliano Pastore},\n  title = {sgr: A Package for Simulating Conditional Fake Ordinal Data},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {164-177},\n  note = {https://journal.r-project.org/articles/RJ-2014-019/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-021/index.html",
+    "href": "articles/RJ-2014-021/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nJimmy Oh, “Automatic Conversion of Tables to LongForm Dataframes”, R Journal, 2014, 6(2), 16-26, https://doi.org/10.32614/RJ-2014-021\n\n\n\nBibTeX\n\n\n@article{RJ-2014-021,\n  author = {Jimmy Oh},\n  title = {Automatic Conversion of Tables to LongForm Dataframes},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {16-26},\n  note = {https://journal.r-project.org/articles/RJ-2014-021/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-023/index.html",
+    "href": "articles/RJ-2014-023/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nMichael J. Grayling, “phaseR: An R Package for Phase Plane Analysis of Autonomous ODE Systems”, R Journal, 2014, 6(2), 43-51, https://doi.org/10.32614/RJ-2014-023\n\n\n\nBibTeX\n\n\n@article{RJ-2014-023,\n  author = {Michael J. Grayling},\n  title = {phaseR: An R Package for Phase Plane Analysis of Autonomous ODE Systems},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {43-51},\n  note = {https://journal.r-project.org/articles/RJ-2014-023/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-025/index.html",
+    "href": "articles/RJ-2014-025/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nKieran Alden, Mark Read, Paul Andrews, Jon Timmis, Mark Coles, “Applying spartan to Understand Parameter Uncertainty in Simulations”, R Journal, 2014, 6(2), 63-80, https://doi.org/10.32614/RJ-2014-025\n\n\n\nBibTeX\n\n\n@article{RJ-2014-025,\n  author = {Kieran Alden and Mark Read and Paul Andrews and Jon Timmis and Mark Coles},\n  title = {Applying spartan to Understand Parameter Uncertainty in Simulations},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {63-80},\n  note = {https://journal.r-project.org/articles/RJ-2014-025/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-027/index.html",
+    "href": "articles/RJ-2014-027/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nIrene Castro-Conde, Jacobo de Uña-Álvarez, “sgof: An R Package for Multiple Testing Problems”, R Journal, 2014, 6(2), 96-113, https://doi.org/10.32614/RJ-2014-027\n\n\n\nBibTeX\n\n\n@article{RJ-2014-027,\n  author = {Irene Castro-Conde and Jacobo de Uña-Álvarez},\n  title = {sgof: An R Package for Multiple Testing Problems},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {2},\n  pages = {96-113},\n  note = {https://journal.r-project.org/articles/RJ-2014-027/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-029/index.html",
+    "href": "articles/RJ-2014-029/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nBen Dêivide de Oliveira Batista, Daniel Furtado Ferreira, “SMR: An R Package for Computing the Externally Studentized Normal Midrange Distribution”, R Journal, 2015, 6(2), 123-136, https://doi.org/10.32614/RJ-2014-029\n\n\n\nBibTeX\n\n\n@article{RJ-2014-029,\n  author = {Ben Dêivide de Oliveira Batista and Daniel Furtado Ferreira},\n  title = {SMR: An R Package for Computing the Externally Studentized Normal Midrange Distribution},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {123-136},\n  note = {https://journal.r-project.org/articles/RJ-2014-029/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-031/index.html",
+    "href": "articles/RJ-2014-031/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nSelcuk Korkmaz, Dincer Goksuluk, Gokmen Zararsiz, “MVN: An R Package for Assessing Multivariate Normality”, R Journal, 2015, 6(2), 151-162, https://doi.org/10.32614/RJ-2014-031\n\n\n\nBibTeX\n\n\n@article{RJ-2014-031,\n  author = {Selcuk Korkmaz and Dincer Goksuluk and Gokmen Zararsiz},\n  title = {MVN: An R Package for Assessing Multivariate Normality},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {151-162},\n  note = {https://journal.r-project.org/articles/RJ-2014-031/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2014-033/index.html",
+    "href": "articles/RJ-2014-033/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 6, Issue 2\n\n\nFang Liu, “gset: An R Package for Exact Sequential Test of Equivalence Hypothesis Based on Bivariate Non-Central t-Statistics”, R Journal, 2015, 6(2), 174-184, https://doi.org/10.32614/RJ-2014-033\n\n\n\nBibTeX\n\n\n@article{RJ-2014-033,\n  author = {Fang Liu},\n  title = {gset: An R Package for Exact Sequential Test of Equivalence Hypothesis Based on Bivariate Non-Central t-Statistics},\n  journal = {R Journal},\n  year = {2015},\n  volume = {6},\n  issue = {2},\n  pages = {174-184},\n  note = {https://journal.r-project.org/articles/RJ-2014-033/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-002/index.html",
+    "href": "articles/RJ-2025-002/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nAnthony Devaux, Cécile Proust-Lima, Robin Genuer, “Random Forests for Time-Fixed and Time-Dependent Predictors: The DynForest R Package”, R Journal, 2025, 17(1), 24-46, https://doi.org/10.32614/RJ-2025-002\n\n\n\nBibTeX\n\n\n@article{RJ-2025-002,\n  author = {Anthony Devaux and Cécile Proust-Lima and Robin Genuer},\n  title = {Random Forests for Time-Fixed and Time-Dependent Predictors: The DynForest R Package},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {24-46},\n  note = {https://journal.r-project.org/articles/RJ-2025-002/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-004/index.html",
+    "href": "articles/RJ-2025-004/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nJae-Hwan Jhong, Seyoung Lee, Ja-Yong Koo, Kwan-Young Bak, “spheresmooth: An R Package for Penalized Piecewise Geodesic Curve Fitting on a Sphere”, R Journal, 2025, 17(1), 67-87, https://doi.org/10.32614/RJ-2025-004\n\n\n\nBibTeX\n\n\n@article{RJ-2025-004,\n  author = {Jae-Hwan Jhong and Seyoung Lee and Ja-Yong Koo and Kwan-Young Bak},\n  title = {spheresmooth: An R Package for Penalized Piecewise Geodesic Curve Fitting on a Sphere},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {67-87},\n  note = {https://journal.r-project.org/articles/RJ-2025-004/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-006/index.html",
+    "href": "articles/RJ-2025-006/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Niek Den Teuling, Steffen Pauws, Edwin van den Heuvel, “latrend: A Framework for Clustering Longitudinal Data”, R Journal, 2025, 17(1), 108-135, https://doi.org/10.32614/RJ-2025-006\n\n\n\nBibTeX\n\n\n@article{RJ-2025-006,\n  author = {Den Teuling Niek and Steffen Pauws and Edwin van den Heuvel},\n  title = {latrend: A Framework for Clustering Longitudinal Data},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {108-135},\n  note = {https://journal.r-project.org/articles/RJ-2025-006/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-008/index.html",
+    "href": "articles/RJ-2025-008/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nYifei Huang, Liping Tong, Jie Yang, “CDsampling: An R Package for Constrained D-Optimal Sampling in Paid Research Studies”, R Journal, 2025, 17(1), 160-179, https://doi.org/10.32614/RJ-2025-008\n\n\n\nBibTeX\n\n\n@article{RJ-2025-008,\n  author = {Yifei Huang and Liping Tong and Jie Yang},\n  title = {CDsampling: An R Package for Constrained D-Optimal Sampling in Paid Research Studies},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {160-179},\n  note = {https://journal.r-project.org/articles/RJ-2025-008/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-010/index.html",
+    "href": "articles/RJ-2025-010/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 1\n\n\nAvi Kenny, Charles J. Wolock, “SimEngine: A Modular Framework for Statistical Simulations in R”, R Journal, 2025, 17(1), 200-220, https://doi.org/10.32614/RJ-2025-010\n\n\n\nBibTeX\n\n\n@article{RJ-2025-010,\n  author = {Avi Kenny and Charles J. Wolock},\n  title = {SimEngine: A Modular Framework for Statistical Simulations in R},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {1},\n  pages = {200-220},\n  note = {https://journal.r-project.org/articles/RJ-2025-010/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-012/index.html",
+    "href": "articles/RJ-2025-012/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nYusuke Yamaguchi, Kentaro Takeda, Kazushi Maruo, “boinet: An R Package for Bayesian Optimal Interval Design for Dose Finding Based on Both Efficacy and Toxicity Outcomes”, R Journal, 2025, 17(2), 15-34, https://doi.org/10.32614/RJ-2025-012\n\n\n\nBibTeX\n\n\n@article{RJ-2025-012,\n  author = {Yusuke Yamaguchi and Kentaro Takeda and Kazushi Maruo},\n  title = {boinet: An R Package for Bayesian Optimal Interval Design for Dose Finding Based on Both Efficacy and Toxicity Outcomes},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {15-34},\n  note = {https://journal.r-project.org/articles/RJ-2025-012/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-014/index.html",
+    "href": "articles/RJ-2025-014/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nHiroki Masuda, Lorenzo Mercuri, Yuma Uehara, “Student t-Lévy regression model in yuima”, R Journal, 2025, 17(2), 56-83, https://doi.org/10.32614/RJ-2025-014\n\n\n\nBibTeX\n\n\n@article{RJ-2025-014,\n  author = {Hiroki Masuda and Lorenzo Mercuri and Yuma Uehara},\n  title = {Student t-Lévy regression model in yuima},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {56-83},\n  note = {https://journal.r-project.org/articles/RJ-2025-014/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-016/index.html",
+    "href": "articles/RJ-2025-016/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Selcuk Korkmaz, Bilge Eren Yamasan, “rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank”, R Journal, 2025, 17(2), 109-145, https://doi.org/10.32614/RJ-2025-016\n\n\n\nBibTeX\n\n\n@article{RJ-2025-016,\n  author = {Selcuk Korkmaz and Bilge Eren Yamasan},\n  title = {rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {109-145},\n  note = {https://journal.r-project.org/articles/RJ-2025-016/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-018/index.html",
+    "href": "articles/RJ-2025-018/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nDavid Atance, Ana Debón, “CvmortalityMult: Cross-Validation for Multi-Population Mortality Models”, R Journal, 2025, 17(2), 231-258, https://doi.org/10.32614/RJ-2025-018\n\n\n\nBibTeX\n\n\n@article{RJ-2025-018,\n  author = {David Atance and Ana Debón},\n  title = {CvmortalityMult: Cross-Validation for Multi-Population Mortality Models},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {231-258},\n  note = {https://journal.r-project.org/articles/RJ-2025-018/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-020/index.html",
+    "href": "articles/RJ-2025-020/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 2\n\n\nMarta Crispino, Cristina Mollica, Lucia Modugno, “MSmix: An R Package for clustering partial rankings via mixtures of Mallows Models with Spearman distance”, R Journal, 2025, 17(2), 206-231, https://doi.org/10.32614/RJ-2025-020\n\n\n\nBibTeX\n\n\n@article{RJ-2025-020,\n  author = {Marta Crispino and Cristina Mollica and Lucia Modugno},\n  title = {MSmix: An R Package for clustering partial rankings via mixtures of Mallows Models with Spearman distance},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {2},\n  pages = {206-231},\n  note = {https://journal.r-project.org/articles/RJ-2025-020/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-022/index.html",
+    "href": "articles/RJ-2025-022/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nAbhishek Ulayil, Dianne Cook, Heather Turner, Mitchell O’Hara-Wild, Christophe Dervieux, “Converting LaTeX Legacy R Journal Articles into R Markdown Articles using texor and rebib”, R Journal, 2025, 17(3), 30-42, https://doi.org/10.32614/RJ-2025-022\n\n\n\nBibTeX\n\n\n@article{RJ-2025-022,\n  author = {Abhishek Ulayil and Dianne Cook and Heather Turner and Mitchell O'Hara-Wild and Christophe Dervieux},\n  title = {Converting LaTeX Legacy R Journal Articles into R Markdown Articles using texor and rebib},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {30-42},\n  note = {https://journal.r-project.org/articles/RJ-2025-022/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-024/index.html",
+    "href": "articles/RJ-2025-024/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nZhongjun Qu, Jungmo Yoon, “QTE.RD: An R Package for Quantile Treatment Effects in Regression-Discontinuity Designs”, R Journal, 2025, 17(3), 69-88, https://doi.org/10.32614/RJ-2025-024\n\n\n\nBibTeX\n\n\n@article{RJ-2025-024,\n  author = {Zhongjun Qu and Jungmo Yoon},\n  title = {QTE.RD: An R Package for Quantile Treatment Effects in Regression-Discontinuity Designs},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {69-88},\n  note = {https://journal.r-project.org/articles/RJ-2025-024/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-026/index.html",
+    "href": "articles/RJ-2025-026/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nMireia Besalú, Klaus Langohr, Matilde Francisco, Arnau Garcia-Fernández, Guadalupe Gómez Melis, “R package GofCens: Goodness-of-Fit Methods for Right-Censored Data”, R Journal, 2025, 17(3), 100-124, https://doi.org/10.32614/RJ-2025-026\n\n\n\nBibTeX\n\n\n@article{RJ-2025-026,\n  author = {Mireia Besalú and Klaus Langohr and Matilde Francisco and Arnau Garcia-Fernández and Guadalupe Gómez Melis},\n  title = {R package GofCens: Goodness-of-Fit Methods for Right-Censored Data},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {100-124},\n  note = {https://journal.r-project.org/articles/RJ-2025-026/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-028/index.html",
+    "href": "articles/RJ-2025-028/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Paul Murrell, “Rendering LaTeX in R”, R Journal, 2025, 17(3), 162-187, https://doi.org/10.32614/RJ-2025-028\n\n\n\nBibTeX\n\n\n@article{RJ-2025-028,\n  author = {Paul Murrell},\n  title = {Rendering LaTeX in R},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {162-187},\n  note = {https://journal.r-project.org/articles/RJ-2025-028/}\n}"
+  },
+  {
+    "objectID": "articles/RJ-2025-030/index.html",
+    "href": "articles/RJ-2025-030/index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "Download PDF\n\n\n Volume 17, Issue 3\n\n\nTim Brauckhoff, Julius Rublack, Stefan Rödiger, “Exploring Image Analysis in R: Applications and Advancements”, R Journal, 2025, 17(3), 212-260, https://doi.org/10.32614/RJ-2025-030\n\n\n\nBibTeX\n\n\n@article{RJ-2025-030,\n  author = {Tim Brauckhoff and Julius Rublack and Stefan Rödiger},\n  title = {Exploring Image Analysis in R: Applications and Advancements},\n  journal = {R Journal},\n  year = {2025},\n  volume = {17},\n  issue = {3},\n  pages = {212-260},\n  note = {https://journal.r-project.org/articles/RJ-2025-030/}\n}"
+  },
+  {
+    "objectID": "contribute.html",
+    "href": "contribute.html",
+    "title": "Contribute to The R Journal",
+    "section": "",
+    "text": "If you would like to report a problem with a published paper, whether it is your own or not, you can contact the managing editor, or create an issue on the Github site. This is the same approach that can be used to make suggestions.\nIf it is your own paper, and you know how to fix the problem, you would be welcome to make a pull request with the fix."
+  },
+  {
+    "objectID": "contribute.html#report-problems",
+    "href": "contribute.html#report-problems",
+    "title": "Contribute to The R Journal",
+    "section": "",
+    "text": "If you would like to report a problem with a published paper, whether it is your own or not, you can contact the managing editor, or create an issue on the Github site. This is the same approach that can be used to make suggestions.\nIf it is your own paper, and you know how to fix the problem, you would be welcome to make a pull request with the fix."
+  },
+  {
+    "objectID": "contribute.html#reviewers",
+    "href": "contribute.html#reviewers",
+    "title": "Contribute to The R Journal",
+    "section": "Reviewers",
+    "text": "Reviewers\nWe are keen to welcome new reviewers for the R Journal. If you would like to volunteer to review articles, please complete this form. You should be an experienced R user, preferably a package developer, with prior experience in publishing scholarly work."
+  },
+  {
+    "objectID": "contribute.html#associate-editors",
+    "href": "contribute.html#associate-editors",
+    "title": "Contribute to The R Journal",
+    "section": "Associate Editors",
+    "text": "Associate Editors\nIf you are interested in becoming an Associate Editor, you should directly contact the managing editor, along with a list of keywords that describe your expertise chosen from the list provided by rjtools::keywords. You should be experienced at developing R packages, and have significant prior experience in publishing scholarly work. Associate editors handle 2-4 articles per month, managing obtaining reviews, and writing a summary of the reviews for the Editor.\nWe are particularly interested in recruiting Associate Editors with expertise in the following areas:\n\nBiological and medical data\nSpatial statistics and spatio-temporal modelling"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The R Journal",
+    "section": "",
+    "text": "The R Journal is a peer-reviewed, open-access scientific journal, published by The R Foundation. It features short- to medium-length articles (up to 20 pages) covering topics of interest to users and developers of R. For example, description and implementation details of R packages, surveys or reviews of R software related to a particular area, applications of R software or descriptions of teaching resources related to R.\nAll submissions must primarily be about R packages and R programming. Submissions that involve R calling other software will be considered provided: (a) the other software is open source and free to use; (b) is widely used; and (c) there is a clear justification for using it rather than a native R implementation. Occasional exceptions may be made if (a) is not satisfied, provided there is no viable open source alternative.\nThe R Journal reaches a wide audience and has a thorough review process. It has a generally increasing SJR impact factor. Papers are expected to be concise, clearly written, not too technical, clearly related to R, and follow reproducible practices. Additional technical details and examples could be included as supplementary material. Authors of refereed articles should take care to:"
+  },
+  {
+    "objectID": "index.html#article-types",
+    "href": "index.html#article-types",
+    "title": "The R Journal",
+    "section": "Article types",
+    "text": "Article types\nThe R Journal accepts a variety of article topics including:\n\nPackages: Details of contributed R packages that are available on CRAN or Bioconductor, that go beyond a package vignette. This includes providing the broader context, implementation details, applications or examples of use, with the purpose being to make the work relevant to a wider readership than only the package users. The paper might explain the novelty in implementation and use of R, introduce new data structures or general architectures that could be re-usable for other R projects. Note that both the paper and the code will be reviewed. See our guidelines for papers about R packages.\nReviews and proposals: surveying and discussing challenges and opportunities of potential importance for the broader R community, including proposals and proof-of-concept implementations.\nComparisons and benchmarking: of implementations in base-R and contributed packages with each other, and where relevant with implementations in other software systems.\nApplications: demonstrating how new or existing techniques can be applied in an area of current interest using R, providing a fresh view of such analyses in R that is of benefit beyond the specific application.\nSpecial issue articles: papers associated with a conference like R Medicine, or possibly a collection of papers on a particular topic of interest."
+  },
+  {
+    "objectID": "index.html#history",
+    "href": "index.html#history",
+    "title": "The R Journal",
+    "section": "History",
+    "text": "History\nThe R Journal was established in 2009, superseding the R News. For historical purposes it also includes a news section, that includes items from R Core, updates from CRAN and Bioconductor, foRwards activities and conference reports."
+  },
+  {
+    "objectID": "issues/2001-1/index.html",
+    "href": "issues/2001-1/index.html",
+    "title": "Volume 1, Issue 1",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished March 2001"
+  },
+  {
+    "objectID": "issues/2001-1/index.html#table-of-contents",
+    "href": "issues/2001-1/index.html#table-of-contents",
+    "title": "Volume 1, Issue 1",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\nContributed Research Articles\nUnder new memory management (pp. 10-11)Luke, Tierney\nOn exact rank tests in R (pp. 11-12)Torsten, Hothorn\nPorting R to the Macintosh (p. 13)Stefano M., Iacus\nThe density of the non-central chi-squared distribution for large values of the noncentrality parameter (pp. 14-15)Peter, Dalgaard\nConnections (pp. 16-17)Brian D., Ripley\nUsing databases with R (pp. 18-20)Brian D., Ripley\nRcgi 4: Making web statistics even easier (pp. 20-21)M. J., Ray\nOmegahat packages for R (pp. 21-24)John M., Chambers, Duncan Temple, Lang\nUsing XML for statistics: The XML package (pp. 24-27)Duncan Temple, Lang\nProgrammer’s Niche (pp. 27-30)Bill, Venables"
+  },
+  {
+    "objectID": "issues/2001-3/index.html",
+    "href": "issues/2001-3/index.html",
+    "title": "Volume 1, Issue 3",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished September 2001"
+  },
+  {
+    "objectID": "issues/2001-3/index.html#table-of-contents",
+    "href": "issues/2001-3/index.html#table-of-contents",
+    "title": "Volume 1, Issue 3",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\nContributed Research Articles\nPorting R to Darwin/X11 and Mac OS X (pp. 2-4)Jan, Leeuw\nRPVM: Cluster statistical computing in R (pp. 4-7)Michael Na, Li, A. J., Rossini\nStrucchange: Testing for structural change in linear regression relationships (pp. 8-11)Achim, Zeileis\nProgrammer’s Niche: Macros in R (pp. 11-13)Thomas, Lumley\nMore on spatial data (pp. 13-17)Roger, Bivand\nObject-oriented programming in R (pp. 17-19)John M., Chambers, Duncan Temple, Lang\nIn search of C/C++ & FORTRAN routines (pp. 20-23)Duncan Temple, Lang\nSupport vector machines (pp. 23-26)David, Meyer\nA primer on the R-Tcl/Tk package (pp. 27-31)Peter, Dalgaard\nWle: A package for robust statistics using weighted likelihood (pp. 32-38)Claudio, Agostinelli"
+  },
+  {
+    "objectID": "issues/2008-2/index.html",
+    "href": "issues/2008-2/index.html",
+    "title": "Volume 8, Issue 2",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished June 2008"
+  },
+  {
+    "objectID": "issues/2008-2/index.html#table-of-contents",
+    "href": "issues/2008-2/index.html#table-of-contents",
+    "title": "Volume 8, Issue 2",
+    "section": "Table of Contents",
+    "text": "Table of Contents\n\nContributed Research Articles\nAn introduction to rggobi (pp. 3-7)Hadley, Wickham, Michael, Lawrence, Duncan Temple, Lang, Deborah F., Swayne\nIntroducing the bipartite package: Analysing ecological networks (pp. 8-11)Carsten F., Dormann, Bernd, Gruber, Jochen, Fründ\nThe profileModel R package: Profiling objectives for models with linear predictors (pp. 12-18)Ioannis, Kosmidis\nAn introduction to text mining in R (pp. 19-22)Ingo, Feinerer\nAnimation: A package for statistical animations (pp. 23-27)Yihui, Xie, Xiaoyue, Cheng\nThe VGAM package (pp. 28-39)Thomas W., Yee\nComparing non-identical objects (pp. 40-47)Paul, Murrell\nMvna: An R package for the Nelson-Aalen estimator in multistate models (pp. 48-50)A., Allignol, J., Beyersmann, M., Schumacher\nProgrammers’ Niche: The Y of R (pp. 51-53)Vince, Carey"
+  },
+  {
+    "objectID": "issues/2014-2/index.html",
+    "href": "issues/2014-2/index.html",
+    "title": "Volume 6, Issue 2",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished December 2014"
+  },
+  {
+    "objectID": "issues/2014-2/index.html#table-of-contents",
+    "href": "issues/2014-2/index.html#table-of-contents",
+    "title": "Volume 6, Issue 2",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nEditorial (p. 3)Deepayan Sarkar\n\nContributed Research Articles\nCoordinate-Based Meta-Analysis of fMRI Studies with R (p. 5)Andrea Stocco\nAutomatic Conversion of Tables to LongForm Dataframes (p. 16)Jimmy Oh\nPrinsimp (p. 27)Jonathan Zhang, Nancy Heckman, Davor Cubranic, Joel\nphaseR: An R Package for Phase Plane Analysis of Autonomous (p. 43)Michael J. Grayling\nFlexible R Functions for Processing Accelerometer Data, with (p. 52)Dane R. Van Domelen, W. Stephen Pittard\nApplying spartan to Understand Parameter Uncertainty in (p. 63)Kieran Alden, Mark Read, Paul S Andrews, Jon Timmis\nngspatial: A Package for Fitting the Centered Autologistic (p. 81)John Hughes\nsgof: An R Package for Multiple Testing Problems (p. 96)Irene Castro-Conde, Jacobo de Uña-Álvarez\nbshazard: A Flexible Tool for Nonparametric Smoothing of the (p. 114)Paola Rebora, Agus Salim, Marie Reilly\nSMR: An R package for computing the externally studentized (p. 123)Ben Dêivide Oliveira Batista, Daniel Furtado Ferreira\nFarewell’s Linear Increments Model for Missing Data: The (p. 137)Rune Hoff, Jon Michael Gran, Daniel Farewell\nMVN: An R Package for Assessing Multivariate Normality (p. 151)Selcuk Korkmaz, Dincer Goksuluk, Gokmen Zararsiz\nqmethod: A Package to Explore Human Perspectives Using Q (p. 163)Aiora Zabala\ngset: An R Package for Exact Sequential Test of Equivalence (p. 174)Fang Liu\n\n\nNews and Notes\nConference Report: Polish Academic R User Meeting (pp. 187-189)Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski\nNews from the Bioconductor Project (pp. 227-228)The Bioconductor Team\nChanges on CRAN (pp. 192-223)Kurt Hornik, Achim Zeileis\nConference Report: R in Insurance 2014 (pp. 185-186)Markus Gesmann, Andreas Tsanakas\nChanges in R (pp. 224-226)The R Core Team\nR Foundation News (pp. 190-191)Martin Mächler, Kurt Hornik"
+  },
+  {
+    "objectID": "issues/2025-2/index.html",
+    "href": "issues/2025-2/index.html",
+    "title": "Volume 17, Issue 2",
+    "section": "",
+    "text": "Download Complete Issue (PDF)\n\n\nPublished June 2025"
+  },
+  {
+    "objectID": "issues/2025-2/index.html#table-of-contents",
+    "href": "issues/2025-2/index.html#table-of-contents",
+    "title": "Volume 17, Issue 2",
+    "section": "Table of Contents",
+    "text": "Table of Contents\nEditorial (p. 3)Rob J Hyndman\n\nContributed Research Articles\nThe CRAN Task View Initiative (pp. 4-14)Achim Zeileis, Roger Bivand, Dirk Eddelbuettel, Kurt Hornik, Julia Piaskowski, Nathalie Vialaneix\nboinet: An R Package for Bayesian Optimal Interval Design for Dose Finding Based on Both Efficacy and Toxicity Outcomes (pp. 15-34)Yusuke Yamaguchi, Kentaro Takeda, Kazushi Maruo\nPartitioned Local Depth (PaLD) Community Analyses in R (pp. 35-55)Lucy D’Agostino McGowan, Katherine Moore, Kenneth S. Berenhaut\nStudent t-Lévy regression model in yuima (pp. 56-83)Hiroki Masuda, Lorenzo Mercuri, Yuma Uehara\nSfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling (pp. 84-108)Kevin Horan, Katarina Domijan, Chris Brunsdon\nrPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank (pp. 109-145)Selcuk Korkmaz, Bilge Eren Yamasan\nrqPen: An R Package for Penalized Quantile Regression (pp. 146-175)Ben Sherwood, Shaobo Li, Adam Maidman\nbartcs: An R Package for Bayesian Nonparametric Adjustment for Confounding (pp. 176-206)Yeonghoon Yoo, Chanmin Kim (corresponding author)\nMSmix: An R Package for clustering partial rankings via mixtures of Mallows Models with Spearman distance (pp. 206-231)Marta Crispino, Cristina Mollica, Lucia Modugno\nCvmortalityMult: Cross-Validation for Multi-Population Mortality Models (pp. 231-258)David Atance, Ana Debón\n\n\nNews and Notes\nBioconductor Notes, September 2025 (pp. 258-261)Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\nChanges on CRAN (pp. 262-263)Kurt Hornik, Uwe Ligges, Achim Zeileis\nR Foundation News (p. 264)Torsten Hothorn"
+  },
+  {
+    "objectID": "news/RJ-2014-1-RJ-2014-016/index.html",
+    "href": "news/RJ-2014-1-RJ-2014-016/index.html",
+    "title": "Web Technologies Task View",
+    "section": "",
+    "text": "Patrick Mair, Scott Chamberlain, “Web Technologies Task View”, R Journal, 2014, 6(1), 178-181\n\n\n\nBibTeX\n\n\n@article{RJ-2014-1-RJ-2014-016,\n  author = {Patrick Mair and Scott Chamberlain},\n  title = {Web Technologies Task View},\n  journal = {R Journal},\n  year = {2014},\n  volume = {6},\n  issue = {1},\n  pages = {178-181},\n  note = {https://journal.r-project.org/news/RJ-2014-1-RJ-2014-016/}\n}"
+  },
+  {
+    "objectID": "news_all.html",
+    "href": "news_all.html",
+    "title": "All news",
+    "section": "",
+    "text": "Changes on CRAN (2025-09-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-09-01)Rob J Hyndman\nR Foundation News (2025-09-01)Torsten Hothorn\nBioconductor Notes, September 2025 (2025-06-01)Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\nChanges on CRAN (2025-06-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-06-01)Rob J Hyndman\nR Foundation News (2025-06-01)Torsten Hothorn\nChanges on CRAN (2025-03-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-03-01)Rob J Hyndman\nR Foundation News (2025-03-01)Torsten Hothorn"
+  },
+  {
+    "objectID": "news_all.html#section",
+    "href": "news_all.html#section",
+    "title": "All news",
+    "section": "",
+    "text": "Changes on CRAN (2025-09-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-09-01)Rob J Hyndman\nR Foundation News (2025-09-01)Torsten Hothorn\nBioconductor Notes, September 2025 (2025-06-01)Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team\nChanges on CRAN (2025-06-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-06-01)Rob J Hyndman\nR Foundation News (2025-06-01)Torsten Hothorn\nChanges on CRAN (2025-03-01)Kurt Hornik, Uwe Ligges, Achim Zeileis\nEditorial (2025-03-01)Rob J Hyndman\nR Foundation News (2025-03-01)Torsten Hothorn"
+  },
+  {
+    "objectID": "news_all.html#section-1",
+    "href": "news_all.html#section-1",
+    "title": "All news",
+    "section": "2014",
+    "text": "2014\nConference Report: Polish Academic R User Meeting (2014-11-30)Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski\nNews from the Bioconductor Project (2014-12-01)The Bioconductor Team\nChanges on CRAN (2014-12-01)Kurt Hornik, Achim Zeileis\nEditorial (2014-12-01)Deepayan Sarkar\nConference Report: R in Insurance 2014 (2014-11-30)Markus Gesmann, Andreas Tsanakas\nChanges in R (2014-12-01)The R Core Team\nR Foundation News (2014-12-01)Martin Mächler, Kurt Hornik\nNews from the Bioconductor Project (2014-06-01)The Bioconductor Team\nChanges on CRAN (2014-06-01)Kurt Hornik, Achim Zeileis\nEditorial (2014-06-01)Deepayan Sarkar\nChanges in R (2014-06-01)The R Core Team\nR Foundation News (2014-06-01)Kurt Hornik\nRJ 2014 016\nRJ 2014 017"
+  },
+  {
+    "objectID": "news_all.html#section-2",
+    "href": "news_all.html#section-2",
+    "title": "All news",
+    "section": "2008",
+    "text": "2008\nNews from the Bioconductor Project (2008-10-01)Bioconductor Team\nChanges in R Version 2.8.0 (2008-10-01)R Core Team\nChanges on CRAN (2008-10-01)Kurt Hornik\nEditorial (2008-10-01)John Fox\nForthcoming Events: DSC 2009 (2008-10-01)\nForthcoming Events: useR! 2009 (2008-10-01)David Causeur, Julie Josse, François Husson, Maela Kloareg, Sébastien Lê, Eric Matzner-Løber, Jérôme Pagès\nR Foundation News (2008-10-01)Kurt Hornik\nuseR! 2008 (2008-10-01)Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\nNews from the Bioconductor Project (2008-05-01)Bioconductor Team\nChanges in R Version 2.7.0 (2008-05-01)R Core Team\nChanges on CRAN (2008-05-01)Kurt Hornik\nEditorial (2008-05-01)John Fox\nForthcoming Events: useR! 2008 (2008-05-01)Uwe Ligges, Achim Zeileis, Claus Weihs, Gerd Kopp, Friedrich Leisch, Torsten Hothorn\nR Foundation News (2008-05-01)Kurt Hornik\nR Help Desk (2008-05-01)Uwe Ligges, John Fox\nR News Referees 2007 (2008-05-01)John Fox"
+  },
+  {
+    "objectID": "news_all.html#section-3",
+    "href": "news_all.html#section-3",
+    "title": "All news",
+    "section": "2001",
+    "text": "2001\nChanges in R (2001-09-01)R Core Team\nChanges on CRAN (2001-09-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-09-01)Friedrich Leisch\nChanges in R (2001-06-01)R Core Team\nChanges on CRAN (2001-06-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-06-01)Kurt Hornik, Friedrich Leisch\nProgrammer’s Niche (2001-06-01)Bill Venables\nRecent Events (2001-06-01)Friedrich Leisch\nSpatial Statistics in R (2001-06-01)Brian D. Ripley\nChanges in R (2001-01-01)R Core Team\nChanges on CRAN (2001-01-01)Kurt Hornik, Friedrich Leisch\nEditorial (2001-01-01)Kurt Hornik, Friedrich Leisch\nUpcoming Events (2001-01-01)Kurt Hornik\nR Resources (2001-01-01)R Core Team\nWhat is R? (2001-01-01)R Core Team\nWriting Articles for R News (2001-01-01)Friedrich Leisch"
+  }
+]

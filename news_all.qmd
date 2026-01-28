@@ -1,0 +1,109 @@
+---
+title: "All news"
+description: "All news published in the R Journal."
+page-layout: full
+title-block-banner: true
+---
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+
+library(yaml)
+
+# List all news directories
+news_dirs <- list.dirs("news", recursive = FALSE, full.names = FALSE)
+
+# Extract year and issue from news ID (e.g., RJ-2022-1-cran or RN-2001-1-cran -> 2022/2001, 1)
+get_year <- function(x) {
+  match <- regmatches(x, regexec("R[JN]-(\\d{4})", x))[[1]]
+  if (length(match) > 1) as.numeric(match[2]) else NA
+}
+
+get_issue <- function(x) {
+  match <- regmatches(x, regexec("R[JN]-\\d{4}-(\\d+)", x))[[1]]
+  if (length(match) > 1) as.numeric(match[2]) else NA
+}
+
+# Sort by year (descending), then issue (descending)
+years <- sapply(news_dirs, get_year)
+issues <- sapply(news_dirs, get_issue)
+order_idx <- order(-years, -issues, news_dirs)
+news_dirs <- news_dirs[order_idx]
+
+# Group by year
+unique_years <- unique(sapply(news_dirs, get_year))
+unique_years <- unique_years[!is.na(unique_years)]
+unique_years <- sort(unique_years, decreasing = TRUE)
+
+for (year in unique_years) {
+  cat(sprintf("\n## %s\n\n", year))
+
+  year_news <- news_dirs[sapply(news_dirs, get_year) == year]
+
+  for (news_id in year_news) {
+    # Try to read metadata from .Rmd file
+    rmd_file <- file.path("news", news_id, paste0(news_id, ".Rmd"))
+
+    title <- NULL
+    authors <- NULL
+    date <- NULL
+
+    if (file.exists(rmd_file)) {
+      lines <- readLines(rmd_file, warn = FALSE)
+      yaml_end <- which(lines == "---")[2]
+      if (!is.na(yaml_end) && yaml_end > 2) {
+        tryCatch({
+          meta <- yaml.load(paste(lines[2:(yaml_end-1)], collapse = "\n"))
+          title <- meta$title
+          date <- meta$date
+
+          # Extract author names
+          if (!is.null(meta$author)) {
+            if (is.list(meta$author)) {
+              author_names <- sapply(meta$author, function(a) {
+                if (is.list(a)) a$name else a
+              })
+              authors <- paste(author_names, collapse = ", ")
+            } else {
+              authors <- paste(meta$author, collapse = ", ")
+            }
+          }
+        }, error = function(e) NULL)
+      }
+    }
+
+    # Fallback for title
+    if (is.null(title)) {
+      title <- gsub("^R[JN]-\\d{4}-\\d+-", "", news_id)
+      title <- gsub("-", " ", title)
+      title <- tools::toTitleCase(title)
+    }
+
+    # Build the entry
+    index_path <- sprintf("news/%s/index.qmd", news_id)
+    pdf_path <- sprintf("news/%s/%s.pdf", news_id, news_id)
+
+    if (file.exists(index_path)) {
+      cat(sprintf("[%s](news/%s/)", title, news_id))
+    } else if (file.exists(pdf_path)) {
+      cat(sprintf("[%s](%s)", title, pdf_path))
+    } else {
+      cat(sprintf("**%s**", title))
+    }
+
+    if (!is.null(date) && !is.na(date)) {
+      cat(sprintf(" (%s)", date))
+    }
+
+    cat("<br>")
+
+    if (!is.null(authors) && length(authors) == 1 && nchar(authors) > 0) {
+      cat(sprintf("*%s*", authors))
+    }
+
+    cat("\n\n")
+  }
+}
+```

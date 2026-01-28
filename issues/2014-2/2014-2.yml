@@ -1,0 +1,146 @@
+issue: 2014-2
+year: 2014
+volume: 6
+num: 2
+month: December
+articles:
+- slug: RJ-2014-2-editorial
+  title: Editorial
+  author:
+  - Deepayan Sarkar
+  pages: 3
+- heading: Contributed Research Articles
+- slug: RJ-2014-020
+  title: Coordinate-Based Meta-Analysis of fMRI Studies with R
+  author:
+  - Andrea Stocco
+  pages: 5
+- slug: RJ-2014-021
+  title: Automatic Conversion of Tables to LongForm Dataframes
+  author:
+  - Jimmy Oh
+  pages: 16
+- slug: RJ-2014-022
+  title: Prinsimp
+  author:
+  - Jonathan Zhang
+  - Nancy Heckman
+  - Davor Cubranic
+  - Joel
+  pages: 27
+- slug: RJ-2014-023
+  title: "phaseR: An R Package for Phase Plane Analysis of Autonomous"
+  author:
+  - Michael J. Grayling
+  pages: 43
+- slug: RJ-2014-024
+  title: Flexible R Functions for Processing Accelerometer Data, with
+  author:
+  - Dane R. Van Domelen
+  - W. Stephen Pittard
+  pages: 52
+- slug: RJ-2014-025
+  title: Applying spartan to Understand Parameter Uncertainty in
+  author:
+  - Kieran Alden
+  - Mark Read
+  - Paul S Andrews
+  - Jon Timmis
+  pages: 63
+- slug: RJ-2014-026
+  title: "ngspatial: A Package for Fitting the Centered Autologistic"
+  author:
+  - John Hughes
+  pages: 81
+- slug: RJ-2014-027
+  title: "sgof: An R Package for Multiple Testing Problems"
+  author:
+  - Irene Castro-Conde
+  - Jacobo de Uña-Álvarez
+  pages: 96
+- slug: RJ-2014-028
+  title: "bshazard: A Flexible Tool for Nonparametric Smoothing of the"
+  author:
+  - Paola Rebora
+  - Agus Salim
+  - Marie Reilly
+  pages: 114
+- slug: RJ-2014-029
+  title: "SMR: An R package for computing the externally studentized"
+  author:
+  - Ben Dêivide Oliveira Batista
+  - Daniel Furtado Ferreira
+  pages: 123
+- slug: RJ-2014-030
+  title: "Farewell's Linear Increments Model for Missing Data: The"
+  author:
+  - Rune Hoff
+  - Jon Michael Gran
+  - Daniel Farewell
+  pages: 137
+- slug: RJ-2014-031
+  title: "MVN: An R Package for Assessing Multivariate Normality"
+  author:
+  - Selcuk Korkmaz
+  - Dincer Goksuluk
+  - Gokmen Zararsiz
+  pages: 151
+- slug: RJ-2014-032
+  title: "qmethod: A Package to Explore Human Perspectives Using Q"
+  author:
+  - Aiora Zabala
+  pages: 163
+- slug: RJ-2014-033
+  title: "gset: An R Package for Exact Sequential Test of Equivalence"
+  author:
+  - Fang Liu
+  pages: 174
+- heading: News and Notes
+- slug: RJ-2014-2-beresewicz-szabelska-zyprychwalczak-etal
+  title: "Conference Report: Polish Academic R User Meeting"
+  author:
+  - Maciej Beręsewicz
+  - Alicja Szabelska
+  - Joanna Zyprych-Walczak
+  - Łukasz Wawrowski
+  pages:
+  - 187
+  - 189
+- slug: RJ-2014-2-bioconductor
+  title: News from the Bioconductor Project
+  author:
+  - The Bioconductor Team
+  pages:
+  - 227
+  - 228
+- slug: RJ-2014-2-cran
+  title: Changes on CRAN
+  author:
+  - Kurt Hornik
+  - Achim Zeileis
+  pages:
+  - 192
+  - 223
+- slug: RJ-2014-2-gesmann-tsanakas
+  title: "Conference Report: R in Insurance 2014"
+  author:
+  - Markus Gesmann
+  - Andreas Tsanakas
+  pages:
+  - 185
+  - 186
+- slug: RJ-2014-2-r-changes
+  title: Changes in R
+  author:
+  - The R Core Team
+  pages:
+  - 224
+  - 226
+- slug: RJ-2014-2-r-foundation
+  title: R Foundation News
+  author:
+  - Martin Mächler
+  - Kurt Hornik
+  pages:
+  - 190
+  - 191

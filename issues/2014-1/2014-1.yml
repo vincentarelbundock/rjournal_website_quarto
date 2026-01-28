@@ -1,0 +1,160 @@
+issue: 2014-1
+year: 2014
+volume: 6
+num: 1
+month: June
+articles:
+- slug: RJ-2014-1-editorial
+  title: Editorial
+  author:
+  - Deepayan Sarkar
+  pages: 3
+- heading: Contributed Research Articles
+- slug: RJ-2014-001
+  title: Taming PITCHf/x Data with XML2R and pitchRx
+  author:
+  - Carson Sievert
+  pages: 5
+- slug: RJ-2014-002
+  title: A Multiscale Test of Spatial Stationarity for Textured
+  author:
+  - Matthew A. Nunes
+  - Sarah L. Taylor
+  - Idris A. Eckley
+  pages: 20
+- slug: RJ-2014-003
+  title: Stratified Weibull Regression Model for Interval-Censored
+  author:
+  - Xiangdong Gu
+  - David Shapiro
+  - Michael D. Hughes and
+  pages: 31
+- slug: RJ-2014-004
+  title: "brainR: Interactive 3 and 4D Images of High Resolution"
+  author:
+  - John Muschelli
+  - Elizabeth Sweeney
+  - Ciprian Crainiceanu
+  pages: 41
+- slug: RJ-2014-005
+  title: "The RWiener Package: an R Package Providing Distribution"
+  author:
+  - Dominik Wabersich
+  - Joachim Vandekerckhove
+  pages: 49
+- slug: RJ-2014-006
+  title: "PivotalR: A Package for Machine Learning on Big Data"
+  author:
+  - Hai Qian
+  pages: 57
+- slug: RJ-2014-007
+  title: "rotations: An R Package for SO(3) Data"
+  author:
+  - Bryan Stanfill
+  - Heike Hofmann
+  - Ulrike Genschel
+  pages: 68
+- slug: RJ-2014-008
+  title: "ROSE: a Package for Binary Imbalanced Learning"
+  author:
+  - Nicola Lunardon
+  - Giovanna Menardi
+  - Nicola Torelli
+  pages: 79
+- slug: RJ-2014-009
+  title: "investr: An R Package for Inverse Estimation"
+  author:
+  - Brandon M. Greenwell
+  - Christine M. Schubert Kabban
+  pages: 90
+- slug: RJ-2014-010
+  title: "Rankcluster: An R Package for Clustering Multivariate"
+  author:
+  - Julien Jacques
+  - Quentin Grimonprez
+  - Christophe
+  pages: 101
+- slug: RJ-2014-011
+  title: The stringdist Package for Approximate String Matching
+  author:
+  - Mark P.J. van der Loo
+  pages: 111
+- slug: RJ-2014-012
+  title: "RStorm: Developing and Testing Streaming Algorithms in R"
+  author:
+  - Maurits Kaptein
+  pages: 123
+- slug: RJ-2014-013
+  title: The gridSVG Package
+  author:
+  - Paul Murrell
+  - Simon Potter
+  pages: 133
+- slug: RJ-2014-014
+  title: "MRCV: A Package for Analyzing Categorical Variables with"
+  author:
+  - Natalie A. Koziol
+  - Christopher R. Bilder
+  pages: 144
+- slug: RJ-2014-015
+  title: Archiving Reproducible Research with R and Dataverse
+  author:
+  - Thomas J. Leeper
+  pages: 151
+- slug: RJ-2014-018
+  title: "oligoMask: A Framework for Assessing and Removing the Effect"
+  author:
+  - Daniel Bottomly
+  - Beth Wilmot
+  - Shannon K. McWeeney
+  pages: 159
+- slug: RJ-2014-019
+  title: "sgr: A Package for Simulating Conditional Fake Ordinal Data"
+  author:
+  - Luigi Lombardi
+  - Massimiliano Pastore
+  pages: 164
+- slug: RJ-2014-016
+  title: Web Technologies Task View
+  author:
+  - Patrick Mair
+  - Scott Chamberlain
+  pages: 178
+- slug: RJ-2014-017
+  title: Addendum to ``Statistical Software from a Blind Person's
+  author:
+  - A. Jonathan R. Godfrey
+  - Robert Erhardt
+  pages: 182
+- heading: News and Notes
+- slug: RJ-2014-1-bioconductor
+  title: News from the Bioconductor Project
+  author:
+  - The Bioconductor Team
+  pages:
+  - 184
+  - 185
+- slug: RJ-2014-1-cran
+  title: Changes on CRAN
+  author:
+  - Kurt Hornik
+  - Achim Zeileis
+  pages:
+  - 186
+  - 220
+- slug: RJ-2014-1-r-changes
+  title: Changes in R
+  author:
+  - The R Core Team
+  pages:
+  - 221
+  - 235
+- slug: RJ-2014-1-r-foundation
+  title: R Foundation News
+  author:
+  - Kurt Hornik
+  pages: 183
+- slug: RJ-2014-1-RJ-2014-016
+  title: RJ 2014 016
+- slug: RJ-2014-1-RJ-2014-017
+  title: RJ 2014 017

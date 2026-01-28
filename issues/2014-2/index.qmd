@@ -1,0 +1,64 @@
+---
+title: "Volume 6, Issue 2"
+date: "2014-01-01"
+page-layout: full
+title-block-banner: true
+toc: true
+---
+
+<div class="paper-card full-bleed">
+  <p class="paper-links">
+    <i class="fa-regular fa-file-pdf"></i>
+    <a href="RJ-2014-2.pdf">Download Complete Issue (PDF)</a>
+  </p>
+  <div class="paper-citation">Published December 2014</div>
+</div>
+
+## Table of Contents
+
+[Editorial](../../news/RJ-2014-2-editorial/) (p. 3)<br>*Deepayan Sarkar*
+
+### Contributed Research Articles
+
+[Coordinate-Based Meta-Analysis of fMRI Studies with R](../../articles/RJ-2014-020/) (p. 5)<br>*Andrea Stocco*
+
+[Automatic Conversion of Tables to LongForm Dataframes](../../articles/RJ-2014-021/) (p. 16)<br>*Jimmy Oh*
+
+[Prinsimp](../../articles/RJ-2014-022/) (p. 27)<br>*Jonathan Zhang, Nancy Heckman, Davor Cubranic, Joel*
+
+[phaseR: An R Package for Phase Plane Analysis of Autonomous](../../articles/RJ-2014-023/) (p. 43)<br>*Michael J. Grayling*
+
+[Flexible R Functions for Processing Accelerometer Data, with](../../articles/RJ-2014-024/) (p. 52)<br>*Dane R. Van Domelen, W. Stephen Pittard*
+
+[Applying spartan to Understand Parameter Uncertainty in](../../articles/RJ-2014-025/) (p. 63)<br>*Kieran Alden, Mark Read, Paul S Andrews, Jon Timmis*
+
+[ngspatial: A Package for Fitting the Centered Autologistic](../../articles/RJ-2014-026/) (p. 81)<br>*John Hughes*
+
+[sgof: An R Package for Multiple Testing Problems](../../articles/RJ-2014-027/) (p. 96)<br>*Irene Castro-Conde, Jacobo de Uña-Álvarez*
+
+[bshazard: A Flexible Tool for Nonparametric Smoothing of the](../../articles/RJ-2014-028/) (p. 114)<br>*Paola Rebora, Agus Salim, Marie Reilly*
+
+[SMR: An R package for computing the externally studentized](../../articles/RJ-2014-029/) (p. 123)<br>*Ben Dêivide Oliveira Batista, Daniel Furtado Ferreira*
+
+[Farewell's Linear Increments Model for Missing Data: The](../../articles/RJ-2014-030/) (p. 137)<br>*Rune Hoff, Jon Michael Gran, Daniel Farewell*
+
+[MVN: An R Package for Assessing Multivariate Normality](../../articles/RJ-2014-031/) (p. 151)<br>*Selcuk Korkmaz, Dincer Goksuluk, Gokmen Zararsiz*
+
+[qmethod: A Package to Explore Human Perspectives Using Q](../../articles/RJ-2014-032/) (p. 163)<br>*Aiora Zabala*
+
+[gset: An R Package for Exact Sequential Test of Equivalence](../../articles/RJ-2014-033/) (p. 174)<br>*Fang Liu*
+
+### News and Notes
+
+[Conference Report: Polish Academic R User Meeting](../../news/RJ-2014-2-beresewicz-szabelska-zyprychwalczak-etal/) (pp. 187-189)<br>*Maciej Beręsewicz, Alicja Szabelska, Joanna Zyprych-Walczak, Łukasz Wawrowski*
+
+[News from the Bioconductor Project](../../news/RJ-2014-2-bioconductor/) (pp. 227-228)<br>*The Bioconductor Team*
+
+[Changes on CRAN](../../news/RJ-2014-2-cran/) (pp. 192-223)<br>*Kurt Hornik, Achim Zeileis*
+
+[Conference Report: R in Insurance 2014](../../news/RJ-2014-2-gesmann-tsanakas/) (pp. 185-186)<br>*Markus Gesmann, Andreas Tsanakas*
+
+[Changes in R](../../news/RJ-2014-2-r-changes/) (pp. 224-226)<br>*The R Core Team*
+
+[R Foundation News](../../news/RJ-2014-2-r-foundation/) (pp. 190-191)<br>*Martin Mächler, Kurt Hornik*
+

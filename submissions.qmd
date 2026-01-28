@@ -1,0 +1,105 @@
+---
+title: "How to submit your article"
+page-layout: full
+title-block-banner: true
+---
+
+Articles for the R Journal should be no more than 20 pages, on topics of interest to the R community. Articles must not be published or submitted for publication elsewhere. See our [guidelines for papers about R packages](R_package_guidelines.html). Papers must be fully reproducible, and all code and data must be made available (publicly if we publish your submission).
+
+## Creating your article
+
+### Rmarkdown using rjtools
+
+The [rjtools](https://rjournal.github.io/rjtools/) package has a template to create the files needed for a submission in the form required by the R Journal.
+
+Create your article using the `create_article()` function. Knitting the Rmd will generate both an HTML and PDF format of your paper.
+
+As far as possible, do not use specific HTML and LaTeX codes within your Rmd file. If you do need to write code specific to the HTML or PDF output, you can use `knitr::is_html_output()` and `knitr::is_latex_output()` to conditionally produce a particular output.
+
+Creative uses of interactive content in HTML formatted articles is encouraged. This will require conditional evaluation of code chunks with appropriate re-captioning, and conditional inline reference links. Interactive plots should be produced with a manageable file size (aim for under 10Mb) which may require small data examples.
+
+Figures and tables should have alt-text in chunk specifications, to assist with accessibility.
+
+Titles and abstract should be in plain text, with the abstract no more than 250 words.
+
+Ensure that R outputs are from an evaluation of R code rather than manually entering the outputs in the Rmd file.
+
+### Rmarkdown using rticles
+
+The `rticles::rjournal_article` output format has been deprecated in favour of `rjtools`. Please use `rjtools` instead of `rticles`.
+
+### LaTeX format
+
+We strongly encourage you to use Rmarkdown with the `rjtools` package. It makes the submission more reproducible, and makes it easier to render your article in both HTML and PDF formats.
+
+For now, we still accept submissions written in LaTeX, but they will be processed more slowly.
+
+If you do use LaTeX, you must use the [LaTeX template](https://github.com/rjournal/share/raw/refs/heads/master/RJtemplate.zip). Instructions on using this template are provided in the [LaTeX author guide](https://github.com/rjournal/share/raw/refs/heads/master/author-guide.pdf). LaTeX submissions that do not follow these guidelines will be rejected without review.
+
+The `rjtools` check functions described below can also be applied to check your files prior to submission.
+
+### bib files
+
+Whether you use Rmarkdown or LaTeX, your references need to be contained in a `.bib` file. Please do not send us enormous bib files containing many references that you do not cite. Your submitted bib file should contain only the references actually cited in your paper. Please also check that all references fields are properly formatted. To preserve capitalization, wrap words such as `{R}` or package names in braces. Do not wrap all titles in braces, as this overrides the journal's reference style.
+
+## Checking your article
+
+The `rjtools` package has a number of functions which can help you check that your article is ready to submit. These include:
+
+- `initial_check_article()` does multiple checks on the files in your paper submission folder
+    - `check_wrappers()` that the files RJournal.tex and RJournal.pdf are present
+    - `check_filenames()` file names are consistent and as requested
+    - `check_unnecessary_files()` that there are no extra files than those necessary and requested
+    - `check_cover_letter()` there is a cover letter with the files to be submitted
+    - `check_title()` that the title is in title case
+    - `check_section()` that section headings are in sentence case
+    - `check_spelling()` does a spell-check
+    - `check_proposed_pkg()` package is available on CRAN or Bioconductor
+    - `check_packages_available()` additionally referenced packaged are also available on CRA or Bioconductor
+- Each of these can also be run individually.
+
+## Submitting your article
+
+To submit an article to the R Journal, you will need to complete [this form](https://forms.gle/Eqkf6cFJM3mjuxZUA).
+
+Your files will need to be uploaded in a zip file that should contain:
+
+- The article in `.pdf` format.
+- Files to build the article. If we can't build the article from the source files (e.g., `.Rmd`, `.tex`, `.bib`, `.sty` and figure files), it will be sent back to you.
+- Files to reproduce the results, including R scripts, and data. If we can't reproduce the results, it will be sent back to you.
+- A motivating letter that describes why your paper is suitable for consideration by the R Journal.
+- Other supplementary files that contain additional technical details or examples.
+- A list of R packages needed to reproduce the submission. This can be in the form of a file `_Rpackages.txt` with a list of packages, one per line.
+
+You may have problems submitting if the size of your submission zip file is more than 10Mb. If you have large data files, you can make them available on an alternative site and provide the links in the paper.
+
+Please ensure that the submission can be reproduced in a timely manner, perhaps by reducing the example data size. If a submission cannot be reproduced in a reasonable time (*less than 10 minutes*), it will be sent back to you. For very computationally intensive methods, it is recommended that you include scripts to generate intermediate outputs, and that your main paper use these outputs rather than re-running the full computations. That way, we can see the full reproducible workflow, but the review process is not delayed by long computation times.
+
+If you have problems, please contact the Editor-in-Chief at <r-journal@r-project.org>.
+
+Re-submissions and revisions to articles should be submitted in the same way. When providing a re-submission or revision, you will need to **enter the identifier of the original submission** in the last field of the submission form.
+
+## After submitting your article
+
+Once you have submitted an article, the editorial board will go through the following steps.
+
+1. Decide if your submission is technically in the correct format. In particular:
+    - are all the requested files there and of the correct format?
+    - does the reproducibility code run?
+    - is all code used open source and available via CRAN or BioConductor?
+    - are all the data files (if any) in an open, non-proprietary format?
+2. If the technical test is passed, it is decided whether the submission is amenable for peer review:
+    - is the topic within scope?
+    - is the paper properly organized?
+    - is the writing style suitable for review?
+3. If the submission passes the second test, it will be sent out for review. This process might take several months. You will receive one or more reviews, possibly with notes from one of the (associate) editors, and a _verdict_. There are four possible verdicts:
+    - **Accepted** Your paper will be published in the R Journal. You will be asked to upload a final version that will be proof-read and you will receive a print proof before publication.
+    - **Minor revisions** The paper can be accepted conditional on a number of smaller revisions in the manuscript and/or the code. You are expected to fix these issues within three months, and resubmit along with a letter where you describe, point-by-point, how the comments of the reviewers have been addressed. The paper will not be reviewed again by peer reviewers, but the editor will check whether the points have been sufficiently addressed.
+    - **Major revisions** The manuscript and/or the code need major updates before the manuscript can be reconsidered. You are expected to fix the issues within three months, and resubmit along with a letter where you describe, point-by-point how the comments of the reviewers have been addressed. The paper will be send back to the reviewers for a second round of review, which may result in any verdict.
+    - **Reject** Your paper is found to be unsuited for publication in the R Journal. No resubmission is allowed.
+
+### Note on special issue articles
+
+Special issues may be created to cover topics of interest to the R community, or based on papers presented at an R conference.
+
+Please contact the Editor-in-Chief at <r-journal@r-project.org> if you would like to propose a special issue.

@@ -1,0 +1,71 @@
+---
+page-layout: full
+---
+
+<div class="paper-card full-bleed">
+  <p class="paper-links">
+    <i class="fa-regular fa-file-pdf"></i>
+    <a href="RJ-2014-003.pdf">Download PDF</a>
+  </p>
+  <p class="paper-links">
+    <i class="fa-regular fa-bookmark"></i>
+    <a href="../../issues/2014-1/">Volume 6, Issue 1</a>
+  </p>
+<div class="paper-citation">Xiangdong Gu, David Shapiro, Michael D. Hughes, Raji Balasubramanian, "Stratified Weibull Regression Model for Interval-Censored Data", R Journal, 2014, 6(1), 31-40, https://doi.org/10.32614/RJ-2014-003</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2014-003,
+  author = {Xiangdong Gu and David Shapiro and Michael D. Hughes and Raji Balasubramanian},
+  title = {Stratified Weibull Regression Model for Interval-Censored Data},
+  journal = {R Journal},
+  year = {2014},
+  volume = {6},
+  issue = {1},
+  pages = {31-40},
+  note = {https://journal.r-project.org/articles/RJ-2014-003/}
+}
+  </code></pre>
+</details>
+</div>
+
+<div class="paper-reader full-bleed">
+  <iframe class="paper-frame" src="RJ-2014-003.html" title="RJ-2014-003" loading="lazy"></iframe>
+</div>
+
+```{=html}
+<script>
+  (function() {
+    var iframe = document.querySelector('.paper-frame');
+    if (!iframe) return;
+    var resize = function() {
+      var doc = iframe.contentDocument || iframe.contentWindow.document;
+      if (!doc) return;
+      var body = doc.body;
+      var html = doc.documentElement;
+      var height = Math.max(
+        body ? body.scrollHeight : 0,
+        body ? body.offsetHeight : 0,
+        html ? html.scrollHeight : 0,
+        html ? html.offsetHeight : 0
+      );
+      if (height > 0) {
+        iframe.style.height = height + 'px';
+      }
+    };
+    iframe.addEventListener('load', function() {
+      resize();
+      var doc = iframe.contentDocument || iframe.contentWindow.document;
+      if (!doc) return;
+      if ('ResizeObserver' in window) {
+        var ro = new ResizeObserver(resize);
+        ro.observe(doc.documentElement);
+        if (doc.body) ro.observe(doc.body);
+      } else {
+        setInterval(resize, 500);
+      }
+    });
+    window.addEventListener('resize', resize);
+  })();
+</script>
+```

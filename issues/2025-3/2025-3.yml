@@ -1,0 +1,125 @@
+issue: 2025-3
+year: 2025
+volume: 17
+num: 3
+month: September
+articles:
+- slug: RJ-2025-3-editorial
+  title: Editorial
+  author:
+  - Rob J Hyndman
+  pages: 3
+- heading: Contributed Research Articles
+- slug: RJ-2025-021
+  title: "lsirm12pl: An R Package for the Latent Space Item Response Model"
+  author:
+  - Dongyoung Go
+  - Gwanghee Kim
+  - Jina Park
+  - Junyong Park
+  - Minjeong Jeon
+  - Ick Hoon Jin
+  pages:
+  - 4
+  - 29
+- slug: RJ-2025-022
+  title: Converting LaTeX Legacy R Journal Articles into R Markdown Articles using texor and rebib
+  author:
+  - Abhishek Ulayil
+  - Dianne Cook
+  - Heather Turner
+  - Mitchell O'Hara-Wild
+  - Christophe Dervieux
+  pages:
+  - 30
+  - 42
+- slug: RJ-2025-023
+  title: Feature-Based Time-Series Analysis in R using the Theft Ecosystem
+  author:
+  - Trent Henderson
+  - Ben D. Fulcher
+  pages:
+  - 43
+  - 68
+- slug: RJ-2025-024
+  title: "QTE.RD: An R Package for Quantile Treatment Effects in Regression-Discontinuity Designs"
+  author:
+  - Zhongjun Qu
+  - Jungmo Yoon
+  pages:
+  - 69
+  - 88
+- slug: RJ-2025-025
+  title: "BoundaryStats: An R Package to Calculate Boundary Overlap Statistics"
+  author:
+  - Amy Luo
+  pages:
+  - 89
+  - 99
+- slug: RJ-2025-026
+  title: "R package GofCens: Goodness-of-Fit Methods for Right-Censored Data"
+  author:
+  - Mireia Besalú
+  - Klaus Langohr
+  - Matilde Francisco
+  - Arnau Garcia-Fernández
+  - Guadalupe Gómez Melis
+  pages:
+  - 100
+  - 124
+- slug: RJ-2025-031
+  title: "moonboot: An R Package Implementing m-out-of-n Bootstrap Methods"
+  author:
+  - Christoph Dalitz
+  - Felix Lögler
+  pages:
+  - 125
+  - 137
+- slug: RJ-2025-027
+  title: "Rgof and R2sample: Testing and Benchmarking for the Univariate Goodness-of-Fit and Two-Sample Problems"
+  author:
+  - Wolfgang Rolke
+  pages:
+  - 138
+  - 161
+- slug: RJ-2025-028
+  title: Rendering LaTeX in R
+  author:
+  - Paul Murrell
+  pages:
+  - 162
+  - 187
+- slug: RJ-2025-029
+  title: "lqmix: an R Package for Longitudinal Data Analysis via Linear Quantile Mixtures"
+  author:
+  - Marco Alfó
+  - Maria Francesca Marino
+  - Maria Giovanna Ranalli
+  - Nicola Salvati
+  pages:
+  - 188
+  - 211
+- slug: RJ-2025-030
+  title: "Exploring Image Analysis in R: Applications and Advancements"
+  author:
+  - Tim Brauckhoff
+  - Julius Rublack
+  - Stefan Rödiger
+  pages:
+  - 212
+  - 260
+- heading: News and Notes
+- slug: RJ-2025-3-cran
+  title: Changes on CRAN
+  author:
+  - Kurt Hornik
+  - Uwe Ligges
+  - Achim Zeileis
+  pages:
+  - 261
+  - 262
+- slug: RJ-2025-3-rfoundation
+  title: R Foundation News
+  author:
+  - Torsten Hothorn
+  pages: 263

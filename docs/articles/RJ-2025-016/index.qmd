@@ -1,0 +1,26 @@
+---
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">Selcuk Korkmaz, Bilge Eren Yamasan, "rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank", R Journal, 2025, 17(2), 109-145, https://doi.org/10.32614/RJ-2025-016</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2025-016,
+  author = {Selcuk Korkmaz and Bilge Eren Yamasan},
+  title = {rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank},
+  journal = {R Journal},
+  year = {2025},
+  volume = {17},
+  issue = {2},
+  pages = {109-145},
+  note = {https://journal.r-project.org/articles/RJ-2025-016/}
+}
+  </code></pre>
+</details>
+<div class="paper-reader">
+  <embed src="RJ-2025-016.pdf" type="application/pdf">
+</div>

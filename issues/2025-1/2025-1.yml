@@ -1,0 +1,126 @@
+issue: 2025-1
+year: 2025
+volume: 17
+num: 1
+month: March
+articles:
+- slug: RJ-2025-1-editorial
+  title: Editorial
+  author:
+  - Rob J Hyndman
+  pages:
+  - 3
+  - 4
+- heading: Contributed Research Articles
+- slug: RJ-2025-001
+  title: "SIREN: A Hybrid CFA-EFA R Package for Controlling Acquiescence in Restricted Factorial Solutions"
+  author:
+  - David Navarro-Gonzalez
+  - Pere J. Ferrando
+  - Fabia Morales-Vives
+  - Ana Hernandez-Dorado
+  pages:
+  - 5
+  - 23
+- slug: RJ-2025-002
+  title: "Random Forests for Time-Fixed and Time-Dependent Predictors: The DynForest R Package"
+  author:
+  - Anthony Devaux
+  - Cécile Proust-Lima
+  - Robin Genuer
+  pages:
+  - 24
+  - 46
+- slug: RJ-2025-003
+  title: "LCCR: An R Package for Inference on Latent Class Models for Capture-Recapture Data with Covariates"
+  author:
+  - Francesco Bartolucci
+  - Antonio Forcina
+  pages:
+  - 47
+  - 66
+- slug: RJ-2025-004
+  title: "spheresmooth: An R Package for Penalized Piecewise Geodesic Curve Fitting on a Sphere"
+  author:
+  - Jae-Hwan Jhong
+  - Seyoung Lee
+  - Ja-Yong Koo
+  - Kwan-Young Bak
+  pages:
+  - 67
+  - 87
+- slug: RJ-2025-005
+  title: Space-Time Smoothing of Survey Outcomes using the R Package SUMMER
+  author:
+  - Zehang Richard Li
+  - Bryan D Martin
+  - Tracy Qi Dong
+  - Geir-Arne Fuglstad
+  - Jessica Godwin
+  - John Paige
+  - Andrea Riebler
+  - Samuel J Clark
+  - Jon Wakefield
+  pages:
+  - 88
+  - 107
+- slug: RJ-2025-006
+  title: "latrend: A Framework for Clustering Longitudinal Data"
+  author:
+  - Niek Den Teuling
+  - Steffen Pauws
+  - Edwin van den Heuvel
+  pages:
+  - 108
+  - 135
+- slug: RJ-2025-007
+  title: "Structured Bayesian Regression Tree Models for Estimating Distributed Lag Effects: The R Package dlmtree"
+  author:
+  - Seongwon Im
+  - Ander Wilson
+  - Daniel Mork
+  pages:
+  - 136
+  - 159
+- slug: RJ-2025-008
+  title: "CDsampling: An R Package for Constrained D-Optimal Sampling in Paid Research Studies"
+  author:
+  - Yifei Huang
+  - Liping Tong
+  - Jie Yang
+  pages:
+  - 160
+  - 179
+- slug: RJ-2025-009
+  title: "panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R"
+  author:
+  - Carles Bretó
+  - Jesse Wheeler
+  - Aaron A. King
+  - Edward L. Ionides
+  pages:
+  - 180
+  - 199
+- slug: RJ-2025-010
+  title: "SimEngine: A Modular Framework for Statistical Simulations in R"
+  author:
+  - Avi Kenny
+  - Charles J. Wolock
+  pages:
+  - 200
+  - 220
+- heading: News and Notes
+- slug: RJ-2025-1-cran
+  title: Changes on CRAN
+  author:
+  - Kurt Hornik
+  - Uwe Ligges
+  - Achim Zeileis
+  pages:
+  - 221
+  - 222
+- slug: RJ-2025-1-rfoundation
+  title: R Foundation News
+  author:
+  - Torsten Hothorn
+  pages: 223

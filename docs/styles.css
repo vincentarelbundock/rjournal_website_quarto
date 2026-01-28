@@ -1,0 +1,76 @@
+.paper-card {
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto;
+  padding: 1rem 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.paper-links {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.paper-links a {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+.paper-links a:hover {
+  border-bottom-color: transparent;
+}
+
+.paper-citation {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.paper-bibtex summary {
+  cursor: pointer;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.paper-bibtex pre {
+  margin: 0.5rem 0 0 0;
+}
+
+.paper-reader {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.paper-reader iframe,
+.paper-reader embed {
+  width: 100%;
+  height: 900px;
+  border: 0;
+  display: block;
+}
+
+.full-bleed {
+  display: block;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  border-radius: 0;
+}
+
+.paper-reader.full-bleed {
+  width: 100vw;
+}
+
+.paper-card.full-bleed {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}

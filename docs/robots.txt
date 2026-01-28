@@ -1,0 +1,1 @@
+Sitemap: https://journal.r-project.org/sitemap.xml

@@ -1,0 +1,10 @@
+---
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2001-2-core.pdf" type="application/pdf" height="955px" width="100%">
+</div>

@@ -1,0 +1,40 @@
+---
+title: "Volume 1, Issue 3"
+date: "2001-01-01"
+page-layout: full
+title-block-banner: true
+toc: true
+---
+
+<div class="paper-card full-bleed">
+  <p class="paper-links">
+    <i class="fa-regular fa-file-pdf"></i>
+    <a href="2001-3.pdf">Download Complete Issue (PDF)</a>
+  </p>
+  <div class="paper-citation">Published September 2001</div>
+</div>
+
+## Table of Contents
+
+### Contributed Research Articles
+
+[Porting R to Darwin/X11 and Mac OS X](../../articles/RN-2001-018/) (pp. 2-4)<br>*Jan, Leeuw*
+
+[RPVM: Cluster statistical computing in R](../../articles/RN-2001-019/) (pp. 4-7)<br>*Michael Na, Li, A. J., Rossini*
+
+[Strucchange: Testing for structural change in linear regression relationships](../../articles/RN-2001-020/) (pp. 8-11)<br>*Achim, Zeileis*
+
+[Programmer’s Niche: Macros in R](../../articles/RN-2001-021/) (pp. 11-13)<br>*Thomas, Lumley*
+
+[More on spatial data](../../articles/RN-2001-022/) (pp. 13-17)<br>*Roger, Bivand*
+
+[Object-oriented programming in R](../../articles/RN-2001-023/) (pp. 17-19)<br>*John M., Chambers, Duncan Temple, Lang*
+
+[In search of C/C++ & FORTRAN routines](../../articles/RN-2001-024/) (pp. 20-23)<br>*Duncan Temple, Lang*
+
+[Support vector machines](../../articles/RN-2001-025/) (pp. 23-26)<br>*David, Meyer*
+
+[A primer on the R-Tcl/Tk package](../../articles/RN-2001-026/) (pp. 27-31)<br>*Peter, Dalgaard*
+
+[Wle: A package for robust statistics using weighted likelihood](../../articles/RN-2001-027/) (pp. 32-38)<br>*Claudio, Agostinelli*
+
