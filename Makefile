@@ -8,7 +8,7 @@ help: ## Display this help screen
 all: subset news article issue render ## Refresh subset, pages, render, preview
 
 deploy: ## deploy _site/ to docs/
-	find _site/articles -type f ! -name "*.html" -delete
+	find _site/articles -type f ! -name "*.html" ! -name "*.pdf" -delete
 	rm -rf docs/
 	mv _site docs
 
