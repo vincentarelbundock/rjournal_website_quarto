@@ -5,6 +5,13 @@ The *R Journal* website uses the `distill` package to create and manage its cont
 1. This package is no longer actively developed: there has been no commit on Github for 2.5 years, despite 145 open issues on the ticket tracker.
 2. AFAICT, it does not include useful features like search. 
 
+
+Notes from mitch:
+
+> There is search, but it doesn't work well enough for us to deploy it. I believe Quarto's search features are much better.
+
+> I believe distill includes some code that looks into the rendered html of each webpage to see if the Rmd needs rendering again. If I remember correctly, this is done with file datetimes (or datetimes included in html metadata?)
+
 ### Proposed solution 
 
 Migrate the website to `Quarto`.
