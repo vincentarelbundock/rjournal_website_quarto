@@ -170,42 +170,8 @@ BibTeX
 </details>
 </div>
 <div class="paper-reader full-bleed">
-<p><iframe class="paper-frame" src="RJ-2023-006.html" title="RJ-2023-006" loading="lazy"></iframe></p>
+<p><embed src="RJ-2023-006.pdf" type="application/pdf" height="955px" width="100%"></p>
 </div>
-<script>
-  (function() {
-    var iframe = document.querySelector('.paper-frame');
-    if (!iframe) return;
-    var resize = function() {
-      var doc = iframe.contentDocument || iframe.contentWindow.document;
-      if (!doc) return;
-      var body = doc.body;
-      var html = doc.documentElement;
-      var height = Math.max(
-        body ? body.scrollHeight : 0,
-        body ? body.offsetHeight : 0,
-        html ? html.scrollHeight : 0,
-        html ? html.offsetHeight : 0
-      );
-      if (height > 0) {
-        iframe.style.height = height + 'px';
-      }
-    };
-    iframe.addEventListener('load', function() {
-      resize();
-      var doc = iframe.contentDocument || iframe.contentWindow.document;
-      if (!doc) return;
-      if ('ResizeObserver' in window) {
-        var ro = new ResizeObserver(resize);
-        ro.observe(doc.documentElement);
-        if (doc.body) ro.observe(doc.body);
-      } else {
-        setInterval(resize, 500);
-      }
-    });
-    window.addEventListener('resize', resize);
-  })();
-</script>
 
 
 

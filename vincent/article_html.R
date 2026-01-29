@@ -9,6 +9,13 @@
 source("vincent/helpers.R", local = TRUE)
 
 article_dirs <- list.dirs("articles", recursive = FALSE, full.names = TRUE)
+
+# Skip articles that open interactive graphics windows (e.g., XQuartz) during render
+skip_articles <- c(
+  "RJ-2023-014"  # uses rgl which opens XQuartz windows
+)
+article_dirs <- article_dirs[!basename(article_dirs) %in% skip_articles]
+
 article_dirs <- sort(article_dirs, decreasing = TRUE)
 
 # Configure parallelism

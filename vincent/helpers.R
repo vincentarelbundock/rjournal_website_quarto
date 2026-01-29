@@ -10,6 +10,10 @@ library(mirai)
 library(rmarkdown)
 library(yaml)
 
+# otherwise rmarkdown::render() opens some graphics windows
+Sys.setenv(RSTUDIO = "0", DISPLAY = "")
+options(device = "png", viewer = NULL, browser = NULL)
+
 # ============================================================================
 # Parallelization
 # ============================================================================

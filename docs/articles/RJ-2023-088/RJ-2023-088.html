@@ -1139,11 +1139,11 @@ practice, this pre-aggregation step is done by running
 <code>simplify = FALSE</code>. The individual observations to be
 aggregated are then included as lists. In this example, the reduced
 input data is:</p>
-<pre><code>    age    eu       value             geo
-1   old    EU 120.3, 20.2 Spain, Portugal
-2 young    EU  66.9, 11.6 Spain, Portugal
-3   old nonEU         1.5         Iceland
-4 young nonEU         1.8         Iceland</code></pre>
+<pre><code>    age    eu       value          geo
+1   old    EU 120.3, 20.2 Spain, P....
+2 young    EU  66.9, 11.6 Spain, P....
+3   old nonEU         1.5      Iceland
+4 young nonEU         1.8      Iceland</code></pre>
 <p>The corresponding model matrix is:</p>
 <pre><code>     Total-Total old-Total young-Total Total-EU Total-nonEU
 [1,]           1         1           .        1           .

@@ -1286,7 +1286,7 @@ function retrieves any properties containing the specified keywords.</p>
   )
 )
 retrieve(props, .combine.all = TRUE, .to.data.frame = TRUE)</code></pre>
-<pre><code>## # A tibble: 17 × 6
+<pre><code>## # A tibble: 16 × 6
 ##    Identifier   CID MolecularFormula MolecularWeight ExactMass  MonoisotopicMass
 ##         &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;           &lt;chr&gt;      &lt;chr&gt;           
 ##  1       2244  2244 C9H8O4           180.16          180.04225… 180.04225873    
@@ -1296,16 +1296,15 @@ retrieve(props, .combine.all = TRUE, .to.data.frame = TRUE)</code></pre>
 ##  5       2248  2248 C17H35N5O6       405.5           405.25873… 405.25873385    
 ##  6       2249  2249 C14H22N2O3       266.34          266.16304… 266.16304257    
 ##  7       2250  2250 C33H35FN2O5      558.6           558.25300… 558.25300038    
-##  8       2251  2251 C10H13N5O13P3-3  504.16          503.97227… 503.97227148    
-##  9       2252  2252 C10H16N2O4       228.24          228.11100… 228.11100700    
-## 10       2253  2253 C10H16N2O4       228.24          228.11100… 228.11100700    
-## 11       2254  2254 C30H44O16S2-2    724.8           724.20707… 724.20707766    
-## 12       2255  2255 C30H46O16S2      726.8           726.22272… 726.22272772    
-## 13       2256  2256 C8H14ClN5        215.68          215.09377… 215.0937732     
-## 14       2257  2257 C22H20N3O9+3     470.4           470.11995… 470.11995422    
-## 15       2258  2258 C22H17N3O9       467.4           467.09647… 467.09647913    
-## 16       2259  2259 C22H14O9         422.3           422.06378… 422.06378202    
-## 17       2260  2260 C44H62N2O12      811.0           810.43027… 810.43027542</code></pre>
+##  8       2252  2252 C10H16N2O4       228.24          228.11100… 228.11100700    
+##  9       2253  2253 C10H16N2O4       228.24          228.11100… 228.11100700    
+## 10       2254  2254 C30H44O16S2-2    724.8           724.20707… 724.20707766    
+## 11       2255  2255 C30H46O16S2      726.8           726.22272… 726.22272772    
+## 12       2256  2256 C8H14ClN5        215.68          215.09377… 215.0937732     
+## 13       2257  2257 C22H20N3O9+3     470.4           470.11995… 470.11995422    
+## 14       2258  2258 C22H17N3O9       467.4           467.09647… 467.09647913    
+## 15       2259  2259 C22H14O9         422.3           422.06378… 422.06378202    
+## 16       2260  2260 C44H62N2O12      811.0           810.43027… 810.43027542</code></pre>
 <p>Moreover, we can extract properties that start or end with specific
 strings. In the following example, we fetch properties that start with
 the word “molecular.” Here, the <code>type</code> parameter is set to
@@ -1321,25 +1320,26 @@ to <code>TRUE</code> to make the search case-insensitive.</p>
   )
 )
 retrieve(props, .combine.all = TRUE, .to.data.frame = TRUE)</code></pre>
-<pre><code>## # A tibble: 16 × 4
+<pre><code>## # A tibble: 17 × 4
 ##    Identifier   CID MolecularFormula MolecularWeight
 ##         &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;          
 ##  1       2244  2244 C9H8O4           180.16         
 ##  2       2245  2245 C21H27N5O7S      493.5          
-##  3       2247  2247 C28H31FN4O       458.6          
-##  4       2248  2248 C17H35N5O6       405.5          
-##  5       2249  2249 C14H22N2O3       266.34         
-##  6       2250  2250 C33H35FN2O5      558.6          
-##  7       2251  2251 C10H13N5O13P3-3  504.16         
-##  8       2252  2252 C10H16N2O4       228.24         
-##  9       2253  2253 C10H16N2O4       228.24         
-## 10       2254  2254 C30H44O16S2-2    724.8          
-## 11       2255  2255 C30H46O16S2      726.8          
-## 12       2256  2256 C8H14ClN5        215.68         
-## 13       2257  2257 C22H20N3O9+3     470.4          
-## 14       2258  2258 C22H17N3O9       467.4          
-## 15       2259  2259 C22H14O9         422.3          
-## 16       2260  2260 C44H62N2O12      811.0</code></pre>
+##  3       2246  2246 C40H52O4         596.8          
+##  4       2247  2247 C28H31FN4O       458.6          
+##  5       2248  2248 C17H35N5O6       405.5          
+##  6       2249  2249 C14H22N2O3       266.34         
+##  7       2250  2250 C33H35FN2O5      558.6          
+##  8       2251  2251 C10H13N5O13P3-3  504.16         
+##  9       2252  2252 C10H16N2O4       228.24         
+## 10       2253  2253 C10H16N2O4       228.24         
+## 11       2254  2254 C30H44O16S2-2    724.8          
+## 12       2255  2255 C30H46O16S2      726.8          
+## 13       2256  2256 C8H14ClN5        215.68         
+## 14       2257  2257 C22H20N3O9+3     470.4          
+## 15       2258  2258 C22H17N3O9       467.4          
+## 16       2259  2259 C22H14O9         422.3          
+## 17       2260  2260 C44H62N2O12      811.0</code></pre>
 <p>This output indicates that “MolecularFormula” and “MolecularWeight”
 are the properties available in PubChem that start with the word
 “molecular.”</p>
