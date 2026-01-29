@@ -1,6 +1,5 @@
 ---
-title: "All News"
-description: "All news published in the R Journal."
+title: "News"
 page-layout: full
 title-block-banner: true
 listing:
@@ -8,4 +7,5 @@ listing:
   type: table
   sort: "date desc"
   fields: [date, title, author]
+  date-format: "YYYY-MM-DD"
 ---

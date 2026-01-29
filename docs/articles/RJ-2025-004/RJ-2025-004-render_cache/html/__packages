@@ -1,5 +1,6 @@
 knitr
 rmarkdown
+yaml
 cluster
 magrittr
 imager

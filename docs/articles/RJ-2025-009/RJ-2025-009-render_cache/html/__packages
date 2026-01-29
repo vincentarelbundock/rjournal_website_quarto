@@ -7,6 +7,7 @@ graphics
 stats
 knitr
 rmarkdown
+yaml
 cluster
 magrittr
 imager

@@ -5,6 +5,15 @@ format:
     toc: false
 ---
 
+<div class="paper-card full-bleed">
+  <p class="paper-links">
+    <i class="fa-regular fa-file-pdf"></i>
+    <a href="RJ-2025-028.pdf">Download PDF</a>
+  </p>
+  <p class="paper-links">
+    <i class="fa-regular fa-bookmark"></i>
+    <a href="../../issues/2025-3/">Volume 17, Issue 3</a>
+  </p>
 <div class="paper-citation">Paul Murrell, "Rendering LaTeX in R", R Journal, 2025, 17(3), 162-187, https://doi.org/10.32614/RJ-2025-028</div>
 <details class="paper-bibtex">
   <summary>BibTeX</summary>
@@ -21,6 +30,8 @@ format:
 }
   </code></pre>
 </details>
-<div class="paper-reader">
-  <embed src="RJ-2025-028.pdf" type="application/pdf">
+</div>
+
+<div class="paper-reader full-bleed">
+  <embed src="RJ-2025-028.pdf" type="application/pdf" height="955px" width="100%">
 </div>

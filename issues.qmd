@@ -1,14 +1,11 @@
 ---
 title: "Issues"
-description: "All issues of the R Journal."
 page-layout: full
 title-block-banner: true
 listing:
   contents: "issues/*/index.qmd"
   type: table
   sort: "date desc"
-  fields: [date, title]
-  field-display-names:
-    date: "Date"
-    title: "Title"
+  fields: [date, title, categories]
+  date-format: "YYYY-MM-DD"
 ---

@@ -129,10 +129,12 @@ generate_issue_qmd <- function(issue_dir) {
   }
 
   # --- Header ---
+  publication <- if (prefix == "RN") "R News" else "R Journal"
   qmd_lines <- c(
     "---",
     sprintf('title: "Volume %s, Issue %s"', vol, iss),
     sprintf('date: "%s"', date_str),
+    sprintf('categories: ["%s"]', publication),
     "page-layout: full",
     "title-block-banner: true",
     "toc: true",
