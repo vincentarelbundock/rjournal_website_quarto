@@ -1,0 +1,13 @@
+---
+title: "Resistor networks R: Introducing the ResistorArray package"
+author: "Robin K. S. Hankin"
+date: "2006-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-2-resistor-networks-r.pdf" type="application/pdf" height="955px" width="100%">
+</div>

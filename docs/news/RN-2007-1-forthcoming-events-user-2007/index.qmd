@@ -1,0 +1,13 @@
+---
+title: "Forthcoming Events: useR! 2007"
+author: "Dianne Cook"
+date: "2007-04-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2007-1-forthcoming-events-user-2007.pdf" type="application/pdf" height="955px" width="100%">
+</div>

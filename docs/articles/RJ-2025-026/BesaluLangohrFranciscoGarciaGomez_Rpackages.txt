@@ -1,6 +1,0 @@
-## M. Besalú, K. Langohr, M. Francisco, A. Garcia, G. Gómez Melis:
-## Goodness-of-Fit for Right-Censored Data: Package GofCens
-## ===============================================================
-## List of R packages needed to run examples of the manuscript
-GofCens
-rms

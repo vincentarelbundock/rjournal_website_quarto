@@ -1,0 +1,13 @@
+---
+title: "R Foundation News"
+author: "Bettina Grün"
+date: "2004-06-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2004-1-foundation.pdf" type="application/pdf" height="955px" width="100%">
+</div>

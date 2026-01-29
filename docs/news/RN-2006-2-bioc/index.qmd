@@ -1,0 +1,13 @@
+---
+title: "News from the Bioconductor Project"
+author: "Seth Falcon"
+date: "2006-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-2-bioc.pdf" type="application/pdf" height="955px" width="100%">
+</div>

@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>The R Journal</title>
+<link>https://journal.r-project.org/issues.html</link>
+<atom:link href="https://journal.r-project.org/issues.xml" rel="self" type="application/rss+xml"/>
+<description>The R Journal is a peer-reviewed, open-access scientific journal, published by The R Foundation.</description>
+<generator>quarto-1.8.24</generator>
+<lastBuildDate>Mon, 01 Sep 2025 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Volume 17, Issue 3</title>
+  <link>https://journal.r-project.org/issues/2025-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2025-3.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published September 2025
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2025-3-editorial/">Editorial</a> (p.&nbsp;3)<br><em>Rob J Hyndman</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2025-021/">lsirm12pl: An R Package for the Latent Space Item Response Model</a> (pp.&nbsp;4-29)<br><em>Dongyoung Go, Gwanghee Kim, Jina Park, Junyong Park, Minjeong Jeon, Ick Hoon Jin</em></p>
+<p><a href="../../articles/RJ-2025-022/">Converting LaTeX Legacy R Journal Articles into R Markdown Articles using texor and rebib</a> (pp.&nbsp;30-42)<br><em>Abhishek Ulayil, Dianne Cook, Heather Turner, Mitchell O’Hara-Wild, Christophe Dervieux</em></p>
+<p><a href="../../articles/RJ-2025-023/">Feature-Based Time-Series Analysis in R using the Theft Ecosystem</a> (pp.&nbsp;43-68)<br><em>Trent Henderson, Ben D. Fulcher</em></p>
+<p><a href="../../articles/RJ-2025-024/">QTE.RD: An R Package for Quantile Treatment Effects in Regression-Discontinuity Designs</a> (pp.&nbsp;69-88)<br><em>Zhongjun Qu, Jungmo Yoon</em></p>
+<p><a href="../../articles/RJ-2025-025/">BoundaryStats: An R Package to Calculate Boundary Overlap Statistics</a> (pp.&nbsp;89-99)<br><em>Amy Luo</em></p>
+<p><a href="../../articles/RJ-2025-026/">R package GofCens: Goodness-of-Fit Methods for Right-Censored Data</a> (pp.&nbsp;100-124)<br><em>Mireia Besalú, Klaus Langohr, Matilde Francisco, Arnau Garcia-Fernández, Guadalupe Gómez Melis</em></p>
+<p><a href="../../articles/RJ-2025-031/">moonboot: An R Package Implementing m-out-of-n Bootstrap Methods</a> (pp.&nbsp;125-137)<br><em>Christoph Dalitz, Felix Lögler</em></p>
+<p><a href="../../articles/RJ-2025-027/">Rgof and R2sample: Testing and Benchmarking for the Univariate Goodness-of-Fit and Two-Sample Problems</a> (pp.&nbsp;138-161)<br><em>Wolfgang Rolke</em></p>
+<p><a href="../../articles/RJ-2025-028/">Rendering LaTeX in R</a> (pp.&nbsp;162-187)<br><em>Paul Murrell</em></p>
+<p><a href="../../articles/RJ-2025-029/">lqmix: an R Package for Longitudinal Data Analysis via Linear Quantile Mixtures</a> (pp.&nbsp;188-211)<br><em>Marco Alfó, Maria Francesca Marino, Maria Giovanna Ranalli, Nicola Salvati</em></p>
+<p><a href="../../articles/RJ-2025-030/">Exploring Image Analysis in R: Applications and Advancements</a> (pp.&nbsp;212-260)<br><em>Tim Brauckhoff, Julius Rublack, Stefan Rödiger</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2025-3-cran/">Changes on CRAN</a> (pp.&nbsp;261-262)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2025-3-rfoundation/">R Foundation News</a> (p.&nbsp;263)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2025-3/</guid>
+  <pubDate>Mon, 01 Sep 2025 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 17, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2025-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2025-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2025
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2025-2-editorial/">Editorial</a> (p.&nbsp;3)<br><em>Rob J Hyndman</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2025-011/">The CRAN Task View Initiative</a> (pp.&nbsp;4-14)<br><em>Achim Zeileis, Roger Bivand, Dirk Eddelbuettel, Kurt Hornik, Julia Piaskowski, Nathalie Vialaneix</em></p>
+<p><a href="../../articles/RJ-2025-012/">boinet: An R Package for Bayesian Optimal Interval Design for Dose Finding Based on Both Efficacy and Toxicity Outcomes</a> (pp.&nbsp;15-34)<br><em>Yusuke Yamaguchi, Kentaro Takeda, Kazushi Maruo</em></p>
+<p><a href="../../articles/RJ-2025-013/">Partitioned Local Depth (PaLD) Community Analyses in R</a> (pp.&nbsp;35-55)<br><em>Lucy D’Agostino McGowan, Katherine Moore, Kenneth S. Berenhaut</em></p>
+<p><a href="../../articles/RJ-2025-014/">Student t-Lévy regression model in yuima</a> (pp.&nbsp;56-83)<br><em>Hiroki Masuda, Lorenzo Mercuri, Yuma Uehara</em></p>
+<p><a href="../../articles/RJ-2025-015/">Sfislands: An R Package for Accommodating Islands and Disjoint Zones in Areal Spatial Modelling</a> (pp.&nbsp;84-108)<br><em>Kevin Horan, Katarina Domijan, Chris Brunsdon</em></p>
+<p><a href="../../articles/RJ-2025-016/">rPDBapi: A Comprehensive R Package Interface for Accessing the Protein Data Bank</a> (pp.&nbsp;109-145)<br><em>Selcuk Korkmaz, Bilge Eren Yamasan</em></p>
+<p><a href="../../articles/RJ-2025-017/">rqPen: An R Package for Penalized Quantile Regression</a> (pp.&nbsp;146-175)<br><em>Ben Sherwood, Shaobo Li, Adam Maidman</em></p>
+<p><a href="../../articles/RJ-2025-019/">bartcs: An R Package for Bayesian Nonparametric Adjustment for Confounding</a> (pp.&nbsp;176-206)<br><em>Yeonghoon Yoo, Chanmin Kim (corresponding author)</em></p>
+<p><a href="../../articles/RJ-2025-020/">MSmix: An R Package for clustering partial rankings via mixtures of Mallows Models with Spearman distance</a> (pp.&nbsp;206-231)<br><em>Marta Crispino, Cristina Mollica, Lucia Modugno</em></p>
+<p><a href="../../articles/RJ-2025-018/">CvmortalityMult: Cross-Validation for Multi-Population Mortality Models</a> (pp.&nbsp;231-258)<br><em>David Atance, Ana Debón</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2025-2-bioconductor/">Bioconductor Notes, September 2025</a> (pp.&nbsp;258-261)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2025-2-cran/">Changes on CRAN</a> (pp.&nbsp;262-263)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2025-2-rfoundation/">R Foundation News</a> (p.&nbsp;264)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2025-2/</guid>
+  <pubDate>Sun, 01 Jun 2025 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 17, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2025-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2025-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published March 2025
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2025-1-editorial/">Editorial</a> (pp.&nbsp;3-4)<br><em>Rob J Hyndman</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2025-001/">SIREN: A Hybrid CFA-EFA R Package for Controlling Acquiescence in Restricted Factorial Solutions</a> (pp.&nbsp;5-23)<br><em>David Navarro-Gonzalez, Pere J. Ferrando, Fabia Morales-Vives, Ana Hernandez-Dorado</em></p>
+<p><a href="../../articles/RJ-2025-002/">Random Forests for Time-Fixed and Time-Dependent Predictors: The DynForest R Package</a> (pp.&nbsp;24-46)<br><em>Anthony Devaux, Cécile Proust-Lima, Robin Genuer</em></p>
+<p><a href="../../articles/RJ-2025-003/">LCCR: An R Package for Inference on Latent Class Models for Capture-Recapture Data with Covariates</a> (pp.&nbsp;47-66)<br><em>Francesco Bartolucci, Antonio Forcina</em></p>
+<p><a href="../../articles/RJ-2025-004/">spheresmooth: An R Package for Penalized Piecewise Geodesic Curve Fitting on a Sphere</a> (pp.&nbsp;67-87)<br><em>Jae-Hwan Jhong, Seyoung Lee, Ja-Yong Koo, Kwan-Young Bak</em></p>
+<p><a href="../../articles/RJ-2025-005/">Space-Time Smoothing of Survey Outcomes using the R Package SUMMER</a> (pp.&nbsp;88-107)<br><em>Zehang Richard Li, Bryan D Martin, Tracy Qi Dong, Geir-Arne Fuglstad, Jessica Godwin, John Paige, Andrea Riebler, Samuel J Clark, Jon Wakefield</em></p>
+<p><a href="../../articles/RJ-2025-006/">latrend: A Framework for Clustering Longitudinal Data</a> (pp.&nbsp;108-135)<br><em>Niek Den Teuling, Steffen Pauws, Edwin van den Heuvel</em></p>
+<p><a href="../../articles/RJ-2025-007/">Structured Bayesian Regression Tree Models for Estimating Distributed Lag Effects: The R Package dlmtree</a> (pp.&nbsp;136-159)<br><em>Seongwon Im, Ander Wilson, Daniel Mork</em></p>
+<p><a href="../../articles/RJ-2025-008/">CDsampling: An R Package for Constrained D-Optimal Sampling in Paid Research Studies</a> (pp.&nbsp;160-179)<br><em>Yifei Huang, Liping Tong, Jie Yang</em></p>
+<p><a href="../../articles/RJ-2025-009/">panelPomp: Analysis of Panel Data via Partially Observed Markov Processes in R</a> (pp.&nbsp;180-199)<br><em>Carles Bretó, Jesse Wheeler, Aaron A. King, Edward L. Ionides</em></p>
+<p><a href="../../articles/RJ-2025-010/">SimEngine: A Modular Framework for Statistical Simulations in R</a> (pp.&nbsp;200-220)<br><em>Avi Kenny, Charles J. Wolock</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2025-1-cran/">Changes on CRAN</a> (pp.&nbsp;221-222)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2025-1-rfoundation/">R Foundation News</a> (p.&nbsp;223)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2025-1/</guid>
+  <pubDate>Sat, 01 Mar 2025 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 16, Issue 4</title>
+  <link>https://journal.r-project.org/issues/2024-4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2024-4.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2024
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2024-4-editorial/">Editorial</a> (p.&nbsp;3)<br><em>Mark P.J. van der Loo</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2024-037/">survivalSL: an R Package for Predicting Survival by a Super Learner</a> (pp.&nbsp;4-22)<br><em>Camille Sabathe, Yohann Foucher</em></p>
+<p><a href="../../articles/RJ-2024-033/">IRTest: An R Package for Item Response Theory with Estimation of Latent Distribution</a> (pp.&nbsp;23-41)<br><em>Seewoo Li</em></p>
+<p><a href="../../articles/RJ-2024-034/">Splinets – Orthogonal Splines for Functional Data Analysis</a> (pp.&nbsp;42-61)<br><em>Rani Basna, Hiba Nassar, Krzysztof Podgórski</em></p>
+<p><a href="../../articles/RJ-2024-035/">Disaggregating Time-Series with Many Indicators: An Overview of the DisaggregateTS Package</a> (pp.&nbsp;62-73)<br><em>Luke Mosley, Kaveh Salehzadeh Nobari, Giuseppe Brandi, Alex Gibberd</em></p>
+<p><a href="../../articles/RJ-2024-036/">LMest: An R Package for Estimating Generalized Latent Markov Models</a> (pp.&nbsp;74-101)<br><em>Fulvia Pennoni, Silvia Pandolfi, Francesco Bartolucci</em></p>
+<p><a href="../../articles/RJ-2024-038/">Calculating Standardised Indices Using SEI</a> (pp.&nbsp;102-122)<br><em>Sam Allen, Noelia Otero</em></p>
+<p><a href="../../articles/RJ-2024-039/">MultiStatM: Multivariate Statistical Methods in R</a> (pp.&nbsp;123-140)<br><em>György Terdik, Emanuele Taufer</em></p>
+<p><a href="../../articles/RJ-2024-040/">Canonical Correlation Analysis of Survey Data: The SurveyCC R Package</a> (pp.&nbsp;141-157)<br><em>Raul Cruz-Cano, Aaron Cohen, Erin Mead-Morse</em></p>
+<p><a href="../../articles/RJ-2024-041/">GPUmatrix: Seamlessly harness the power of GPU computing in R</a> (pp.&nbsp;158-178)<br><em>César Lobato-Fernández, Juan A. Ferrer-Bonsoms, Angel Rubio</em></p>
+<p><a href="../../articles/RJ-2024-042/">UpAndDownPlots: An R Package for Displaying Absolute and Percentage Changes</a> (pp.&nbsp;179-193)<br><em>Antony Unwin</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2024-4-bioconductor/">Bioconductor Notes, December 2024</a> (pp.&nbsp;194-197)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2024-4-cran/">Changes on CRAN</a> (pp.&nbsp;198-199)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2024-4-rforwards/">News from the Forwards Taskforce</a> (pp.&nbsp;200-202)<br><em>Heather Turner</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2024-4/</guid>
+  <pubDate>Sun, 01 Dec 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 16, Issue 3</title>
+  <link>https://journal.r-project.org/issues/2024-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2024-3.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published September 2024
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2024-3-editorial/">Editorial</a> (p.&nbsp;3)<br><em>Mark P.J. van der Loo</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2024-023/">Validating and Extracting Information from National Identification Numbers in R: The Case of Finland and Sweden</a> (pp.&nbsp;4-14)<br><em>Pyry Kantanen, Erik Bülow, Aleksi Lahtinen, Måns Magnusson, Jussi Paananen, Leo Lahti</em></p>
+<p><a href="../../articles/RJ-2024-027/">GeoAdjust: Adjusting for Positional Uncertainty in Geostatistial Analysis of DHS Data</a> (pp.&nbsp;15-26)<br><em>Umut Altay, John Paige, Andrea Riebler, Geir-Arne Fuglstad</em></p>
+<p><a href="../../articles/RJ-2024-028/">SIHR: Statistical Inference in High-Dimensional Linear and Logistic Regression Models</a> (pp.&nbsp;27-45)<br><em>Prabrisha Rakshit, Zhenyu Wang, Tony Cai, Zijian Guo</em></p>
+<p><a href="../../articles/RJ-2024-029/">SNSeg: An R Package for Time Series Segmentation via Self-Normalization</a> (pp.&nbsp;46-66)<br><em>Shubo Sun, Zifeng Zhao, Feiyu Jiang, Xiaofeng Shao</em></p>
+<p><a href="../../articles/RJ-2024-024/">fmeffects: An R Package for Forward Marginal Effects</a> (pp.&nbsp;67-89)<br><em>Holger Löwe, Christian A. Scholbeck, Christian Heumann, Bernd Bischl, Giuseppe Casalicchio</em></p>
+<p><a href="../../articles/RJ-2024-025/">GSSTDA: Implementation in an R Package of the Progression of Disease with Survival Analysis (PAD-S) that Integrates Information on Genes Linked to Survival in the Mapper Filter Function</a> (pp.&nbsp;90-114)<br><em>Miriam Esteve, Raquel Bosch-Romeu, Antonio Falco, Jaume Fores, Joan Climent</em></p>
+<p><a href="../../articles/RJ-2024-026/">Kernel Heaping - Kernel Density Estimation from regional aggregates via measurement error model</a> (pp.&nbsp;115-133)<br><em>Lorena Gril, Laura Steinkemper, Marcus Groß, Ulrich Rendtel</em></p>
+<p><a href="../../articles/RJ-2024-030/">SLCARE: An R Package for Semiparametric Latent Class Analysis of Recurrent Events</a> (pp.&nbsp;134-149)<br><em>Qi Yu, Limin Peng</em></p>
+<p><a href="../../articles/RJ-2024-031/">PubChemR: An R Package for Accessing Chemical Data from PubChem</a> (pp.&nbsp;150-185)<br><em>Selcuk Korkmaz, Bilge Eren Yamasan, Dincer Goksuluk</em></p>
+<p><a href="../../articles/RJ-2024-032/">boiwsa: An R Package for Seasonal Adjustment of Weekly Data</a> (pp.&nbsp;186-197)<br><em>Tim Ginker</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2024-3-bioconductor/">Bioconductor Notes, September 2024</a> (pp.&nbsp;198-200)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2024-3-rfoundation/">R Foundation News</a> (p.&nbsp;201)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2024-3/</guid>
+  <pubDate>Sun, 01 Sep 2024 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 16, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2024-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2024-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2024
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2024-2-editorial/">Editorial</a> (p.&nbsp;3)<br><em>Mark P.J. van der Loo</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2024-012/">LUCIDus: An R Package For Implementing Latent Unknown Clustering By Integrating Multi-omics Data (LUCID) With Phenotypic Traits</a> (pp.&nbsp;4-27)<br><em>Yinqi Zhao, Qiran Jia, Jesse A. Goodrich, David V. Conti</em></p>
+<p><a href="../../articles/RJ-2024-013/">Current State and Prospects of R-Packages for the Design of Experiments</a> (pp.&nbsp;27-41)<br><em>Emi Tanaka, Dewi Amaliah</em></p>
+<p><a href="../../articles/RJ-2024-017/">BCClong: An R Package for Bayesian Consensus Clustering for Multiple Longitudinal Features</a> (pp.&nbsp;41-61)<br><em>Zhiwen Tan, Chang Shen, Zihang Lu</em></p>
+<p><a href="../../articles/RJ-2024-018/">reslr: An R Package for Relative Sea Level Modelling</a> (pp.&nbsp;61-81)<br><em>Maeve Upton, Andrew Parnell, Niamh Cahill</em></p>
+<p><a href="../../articles/RJ-2024-019/">Rfssa: An R Package for Functional Singular Spectrum Analysis</a> (pp.&nbsp;82-99)<br><em>Hossein Haghbin, Jordan Trinka, Mehdi Maadooliat</em></p>
+<p><a href="../../articles/RJ-2024-020/">mcmsupply: An R Package for Estimating Contraceptive Method Market Supply Shares</a> (pp.&nbsp;99-115)<br><em>Hannah Comiskey, Niamh Cahill</em></p>
+<p><a href="../../articles/RJ-2024-021/">Pomdp: A Computational Infrastructure for Partially Observable Markov Decision Processes</a> (pp.&nbsp;116-133)<br><em>Michael Hahsler, Anthony R. Cassandra</em></p>
+<p><a href="../../articles/RJ-2024-014/">pencal: an R Package for the Dynamic Prediction of Survival with Many Longitudinal Predictors</a> (pp.&nbsp;134-154)<br><em>Mirko Signorelli</em></p>
+<p><a href="../../articles/RJ-2024-015/">clarify: Simulation-Based Inference for Regression Models</a> (pp.&nbsp;154-174)<br><em>Noah Greifer, Steven Worthington, Stefano Iacus, Gary King</em></p>
+<p><a href="../../articles/RJ-2024-016/">FuzzySimRes: Epistemic Bootstrap – an Efficient Tool for Statistical Inference Based on Imprecise Data</a> (pp.&nbsp;175-191)<br><em>Maciej Romaniuk, Przemysław Grzegorzewski, Abbas Parchami</em></p>
+<p><a href="../../articles/RJ-2024-022/">Fast and Flexible Search for Homologous Biological Sequences with DECIPHER v3</a> (pp.&nbsp;191-200)<br><em>Erik S. Wright</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2024-2-bioconductor/">Bioconductor Notes, June 2024</a> (pp.&nbsp;201-202)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2024-2-cran/">Changes on CRAN</a> (pp.&nbsp;203-204)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2024-2-rcore/">Changes in R</a> (pp.&nbsp;205-210)<br><em>Tomas Kalibera, Sebastian Meyer</em></p>
+<p><a href="../../news/RJ-2024-2-rfoundation/">R Foundation News</a> (pp.&nbsp;211-212)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2024-2/</guid>
+  <pubDate>Sat, 01 Jun 2024 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 16, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2024-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2024-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published March 2024
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2024-1-editorial/">Editorial</a> (pp.&nbsp;3-4)<br><em>Mark P.J. van der Loo</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2024-001/">Remembering Friedrich “Fritz” Leisch</a> (pp.&nbsp;5-14)<br><em>Bettina Grün, Kurt Hornik, Torsten Hothorn, Theresa Scharl, Achim Zeileis</em></p>
+<p><a href="../../articles/RJ-2024-002/">ebmstate: An R Package For Disease Progression Analysis Under Empirical Bayes Cox Models</a> (pp.&nbsp;15-39)<br><em>Rui J. Costa, Moritz Gerstung</em></p>
+<p><a href="../../articles/RJ-2024-003/">bootCT: An R Package for Bootstrap Cointegration Tests in ARDL Models</a> (pp.&nbsp;39-67)<br><em>Gianmarco Vacca, Maria Zoia, Stefano Bertelli</em></p>
+<p><a href="../../articles/RJ-2024-004/">Prediction, Bootstrapping and Monte Carlo Analyses Based on Linear Mixed Models with QAPE 2.0 Package</a> (pp.&nbsp;67-83)<br><em>Alicja Wolny–Dominiak, Tomasz Ża̧dło</em></p>
+<p><a href="../../articles/RJ-2024-005/">text2sdg: An R Package to Monitor Sustainable Development Goals from Text</a> (pp.&nbsp;83-96)<br><em>Dominik S. Meier, Rui Mata, Dirk U. Wulff</em></p>
+<p><a href="../../articles/RJ-2024-006/">GenMarkov: Modeling Generalized Multivariate Markov Chains in R</a> (pp.&nbsp;96-113)<br><em>Carolina Vasconcelos, Bruno Damásio</em></p>
+<p><a href="../../articles/RJ-2024-007/">Fitting a Quantile Regression Model for Residual Life with the R Package qris</a> (pp.&nbsp;114-135)<br><em>Kyu Hyun Kim, Sangwook Kang, Sy Han Chiou</em></p>
+<p><a href="../../articles/RJ-2024-008/">nortsTest: An R Package for Assessing Normality of Stationary Processes</a> (pp.&nbsp;135-156)<br><em>Asael Alonzo Matamoros, Alicia Nieto-Reyes, Claudio Agostinelli</em></p>
+<p><a href="../../articles/RJ-2024-009/">shinymgr: A Framework for Building, Managing, and Stitching Shiny Modules into Reproducible Workflows</a> (pp.&nbsp;157-174)<br><em>Laurence A. Clarfeld, Caroline Tang, Therese Donovan</em></p>
+<p><a href="../../articles/RJ-2024-010/">Bayesian Model Selection with Latent Group-Based Effects and Variances with the R Package slgf</a> (pp.&nbsp;175-192)<br><em>Thomas A. Metzger, Christopher T. Franck</em></p>
+<p><a href="../../articles/RJ-2024-011/">BMRMM: An R Package for Bayesian Markov (Renewal) Mixed Models</a> (pp.&nbsp;192-212)<br><em>Yutong Wu, Abhra Sarkar</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2024-1-bioconductor/">Bioconductor Notes, March 2024</a> (pp.&nbsp;216-218)<br><em>Maria Doyle, Bioconductor Community Manager, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2024-1-cran/">Changes on CRAN</a> (pp.&nbsp;212-213)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2024-1-rfoundation/">R Foundation News</a> (pp.&nbsp;214-215)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2024-1/</guid>
+  <pubDate>Fri, 01 Mar 2024 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 15, Issue 4</title>
+  <link>https://journal.r-project.org/issues/2023-4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2023-4.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2023
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2023-4-editorial/">Editorial</a> (pp.&nbsp;3-4)<br><em>Simon Urbanek</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2023-080/">SIMEXBoost: An R package for Analysis of High-Dimensional Error-Prone Data Based on Boosting Method</a> (pp.&nbsp;5-20)<br><em>Li-Pang Chen, Bangxu Qiu</em></p>
+<p><a href="../../articles/RJ-2023-081/">binGroup2: Statistical Tools for Infection Identification via Group Testing</a> (pp.&nbsp;21-36)<br><em>Christopher R. Bilder, Brianna D. Hitt, Brad J. Biggerstaff, Joshua M. Tebbs, Christopher S. McMahan</em></p>
+<p><a href="../../articles/RJ-2023-082/">multiocc: An R Package for Spatio-Temporal Occupancy Models for Multiple Species</a> (pp.&nbsp;37-52)<br><em>Staci Hepler, Robert Erhardt</em></p>
+<p><a href="../../articles/RJ-2023-083/">Accessible Computation of Tight Symbolic Bounds on Causal Effects using an Intuitive Graphical Interface</a> (pp.&nbsp;53-68)<br><em>Gustav Jonzon, Michael C Sachs, Erin E Gabriel</em></p>
+<p><a href="../../articles/RJ-2023-084/">singR: An R Package for Simultaneous Non-Gaussian Component Analysis for Data Integration</a> (pp.&nbsp;69-83)<br><em>Liangkang Wang, Irina Gaynanova, Benjamin Risk</em></p>
+<p><a href="../../articles/RJ-2023-085/">RobustCalibration: Robust Calibration of Computer Models in R</a> (pp.&nbsp;84-105)<br><em>Mengyang Gu</em></p>
+<p><a href="../../articles/RJ-2023-086/">glmmPen: High Dimensional Penalized Generalized Linear Mixed Models</a> (pp.&nbsp;106-128)<br><em>Hillary M. Heiling, Naim U. Rashid, Quefeng Li, Joseph G. Ibrahim</em></p>
+<p><a href="../../articles/RJ-2023-087/">Unified ROC Curve Estimator for Diagnosis and Prognosis Studies: The sMSROC Package</a> (pp.&nbsp;129-149)<br><em>Susana Díaz-Coto, Pablo Martínez-Camblor, Norberto Corral-Blanco</em></p>
+<p><a href="../../articles/RJ-2023-088/">Sparse Model Matrices for Multidimensional Hierarchical Aggregation</a> (pp.&nbsp;150-166)<br><em>Øyvind Langsrud</em></p>
+<p><a href="../../articles/RJ-2023-089/">openalexR: An R-Tool for Collecting Bibliometric Data from OpenAlex</a> (pp.&nbsp;167-180)<br><em>Massimo Aria, Trang Le, Corrado Cuccurullo, Alessandra Belfiore, June Choe</em></p>
+<p><a href="../../articles/RJ-2023-090/">Computer Algebra in R Bridges a Gap Between Symbolic Mathematics and Data in the Teaching of Statistics and Data Science</a> (pp.&nbsp;181-197)<br><em>Mikkel Meyer Andersen, Søren Højsgaard</em></p>
+<p><a href="../../articles/RJ-2023-091/">A Comparison of R Tools for Nonlinear Least Squares Modeling</a> (pp.&nbsp;198-215)<br><em>John C. Nash, Arkajyoti Bhattacharjee</em></p>
+<p><a href="../../articles/RJ-2023-092/">exvatools: Value Added in Exports and Other Input-Output Table Analysis Tools</a> (pp.&nbsp;216-235)<br><em>Enrique Feás</em></p>
+<p><a href="../../articles/RJ-2023-093/">PLreg: An R Package for Modeling Bounded Continuous Data</a> (pp.&nbsp;236-254)<br><em>Francisco F. Queiroz, Silvia L.P. Ferrari</em></p>
+<p><a href="../../articles/RJ-2023-094/">Inference for Network Count Time Series with the R Package PNAR</a> (pp.&nbsp;255-269)<br><em>Mirko Armillotta, Michail Tsagris, Konstantinos Fokianos</em></p>
+<p><a href="../../articles/RJ-2023-095/">SUrvival Control Chart EStimation Software in R: the success Package</a> (pp.&nbsp;270-291)<br><em>Daniel Gomon, Marta Fiocco, Hein Putter, Mirko Signorelli</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2023-4-core/">Changes in R</a> (pp.&nbsp;292-294)<br><em>Tomas Kalibera, Sebastian Meyer</em></p>
+<p><a href="../../news/RJ-2023-4-cran/">Changes on CRAN</a> (pp.&nbsp;295-296)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2023-4-forwards/">News from the Forwards Taskforce</a> (pp.&nbsp;297-298)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2023-4-rf/">R Foundation News</a> (pp.&nbsp;299-302)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2023-4/</guid>
+  <pubDate>Fri, 01 Dec 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 15, Issue 3</title>
+  <link>https://journal.r-project.org/issues/2023-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2023-3.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published September 2023
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2023-3-editorial/">Editorial</a> (pp.&nbsp;3-4)<br><em>Simon Urbanek</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2023-060/">Variety and Mainstays of the R Developer Community</a> (pp.&nbsp;5-25)<br><em>Lijin Zhang, Xueyang Li, Zhiyong Zhang</em></p>
+<p><a href="../../articles/RJ-2023-061/">SSNbayes: An R Package for Bayesian Spatio-Temporal Modelling on Stream Networks</a> (pp.&nbsp;26-58)<br><em>Edgar Santos-Fernandez, Jay M. Ver Hoef, James McGree, Daniel J. Isaak, Kerrie Mengersen, Erin E. Peterson</em></p>
+<p><a href="../../articles/RJ-2023-062/">C443: An R package to See a Forest for the Trees</a> (pp.&nbsp;59-78)<br><em>Aniek Sies, Iven Van Mechelen, Kristof Meers</em></p>
+<p><a href="../../articles/RJ-2023-063/">TwoSampleTest.HD: An R Package for the Two-Sample Problem with High-Dimensional Data</a> (pp.&nbsp;79-92)<br><em>Marta Cousido-Rocha, Jacobo de Uña-Álvarez</em></p>
+<p><a href="../../articles/RJ-2023-064/">Statistical Models for Repeated Categorical Ratings: The R Package rater</a> (pp.&nbsp;93-118)<br><em>Jeffrey M. Pullin, Lyle C. Gurrin, Damjan Vukcevic</em></p>
+<p><a href="../../articles/RJ-2023-065/">GREENeR: An R Package to Estimate and Visualize Nutrients Pressures on Surface Waters</a> (pp.&nbsp;119-137)<br><em>Angel Udías, Bruna Grizzetti, Olga Vigiak, Alberto Aloe, Cesar Alfaro, Javier Gomez</em></p>
+<p><a href="../../articles/RJ-2023-066/">bayesassurance: An R Package for Calculating Sample Size and Bayesian Assurance</a> (pp.&nbsp;138-158)<br><em>Jane Pan, Sudipto Banerjee</em></p>
+<p><a href="../../articles/RJ-2023-067/">fasano.franceschini.test: An Implementation of a Multivariate KS Test in R</a> (pp.&nbsp;159-171)<br><em>Connor Puritz, Elan Ness-Cohn, Rosemary Braun</em></p>
+<p><a href="../../articles/RJ-2023-068/">Bayesian Inference for Multivariate Spatial Models with INLA</a> (pp.&nbsp;172-190)<br><em>Francisco Palmí-Perales, Virgilio Gómez-Rubio, Roger S. Bivand, Michela Cameletti, Håvard Rue</em></p>
+<p><a href="../../articles/RJ-2023-069/">Two-Stage Sampling Design and Sample Selection with the R Package R2BEAT</a> (pp.&nbsp;191-213)<br><em>Giulio Barcaroli, Andrea Fasulo, Alessio Guandalini, Marco D. Terribili</em></p>
+<p><a href="../../articles/RJ-2023-070/">fnets: An R Package for Network Estimation and Forecasting via Factor-Adjusted VAR Modelling</a> (pp.&nbsp;214-239)<br><em>Dom Owens, Haeran Cho, Matteo Barigozzi</em></p>
+<p><a href="../../articles/RJ-2023-071/">Coloring in R’s Blind Spot</a> (pp.&nbsp;240-256)<br><em>Achim Zeileis, Paul Murrell</em></p>
+<p><a href="../../articles/RJ-2023-072/">Updates to the R Graphics Engine: One Person’s Chart Junk is Another’s Chart Treasure</a> (pp.&nbsp;257-276)<br><em>Paul Murrell</em></p>
+<p><a href="../../articles/RJ-2023-073/">mathml: Translate R Expressions to MathML and LaTeX</a> (pp.&nbsp;277-291)<br><em>Matthias Gondan, Irene Alfarone</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2023-3-bioc/">News from Bioconductor</a> (pp.&nbsp;296-298)<br><em>Bioconductor Core Developers</em></p>
+<p><a href="../../news/RJ-2023-3-cran/">Changes on CRAN</a> (pp.&nbsp;292-293)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2023-3-rf/">R Foundation News</a> (pp.&nbsp;294-295)<br><em>Torsten Hothorn</em></p>
+<p><a href="../../news/RJ-2023-3-sprint/">R Project Sprint 2023</a> (pp.&nbsp;299-305)<br><em>Heather Turner, Gabriel Becker</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2023-3/</guid>
+  <pubDate>Fri, 01 Sep 2023 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 15, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2023-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2023-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2023
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2023-2-editorial/">Editorial</a> (pp.&nbsp;3-4)<br><em>Simon Urbanek</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2023-040/">nlstac: Non-Gradient Separable Nonlinear Least Squares Fitting</a> (pp.&nbsp;5-24)<br><em>J. A. F. Torvisco, R. Benítez, M. R. Arias, J. Cabello&nbsp;Sánchez</em></p>
+<p><a href="../../articles/RJ-2023-041/">hydrotoolbox, a Package for Hydrometeorological Data Management</a> (pp.&nbsp;25-38)<br><em>Ezequiel Toum, Pierre Pitte</em></p>
+<p><a href="../../articles/RJ-2023-042/">bqror: An R package for Bayesian Quantile Regression in Ordinal Models</a> (pp.&nbsp;39-55)<br><em>Prajual Maheshwari, Mohammad Arshad Rahman</em></p>
+<p><a href="../../articles/RJ-2023-043/">Gaussian Mixture Models in R</a> (pp.&nbsp;56-76)<br><em>Bastien Chassagnol, Antoine Bichat, Cheïma Boudjeniba, Pierre-Henri Wuillemin, Mickaël Guedj, David Gohel, Gregory Nuel, Etienne Becht</em></p>
+<p><a href="../../articles/RJ-2023-047/">mutualinf: An R Package for Computing and Decomposing the Mutual Information Index of Segregation</a> (pp.&nbsp;77-88)<br><em>Rafael Fuentealba-Chaura, Daniel Guinea-Martin, Ricardo Mora, Julio Rojas-Mora</em></p>
+<p><a href="../../articles/RJ-2023-055/">A Workflow for Estimating and Visualising Excess Mortality During the COVID-19 Pandemic</a> (pp.&nbsp;89-104)<br><em>Garyfallos Konstantinoudis, Virgilio Gómez-Rubio, Michela Cameletti, Monica Pirani, Gianluca Baio, Marta Blangiardo</em></p>
+<p><a href="../../articles/RJ-2023-056/">Generalized Estimating Equations using the new R package glmtoolbox</a> (pp.&nbsp;105-133)<br><em>L.H. Vanegas, L.M. Rondón, G.A. Paula</em></p>
+<p><a href="../../articles/RJ-2023-057/">clustAnalytics: An R Package for Assessing Stability and Significance of Communities in Networks</a> (pp.&nbsp;134-144)<br><em>Martí Renedo-Mirambell, Argimiro Arratia</em></p>
+<p><a href="../../articles/RJ-2023-044/">PINstimation: An R Package for Estimating Probability of Informed Trading Models</a> (pp.&nbsp;145-168)<br><em>Montasser Ghachem, Oguz Ersan</em></p>
+<p><a href="../../articles/RJ-2023-045/">EviewsR: An R Package for Dynamic and Reproducible Research Using EViews, R, R Markdown and Quarto</a> (pp.&nbsp;169-205)<br><em>Sagiru Mati, Irfan Civcir, S. I. Abba</em></p>
+<p><a href="../../articles/RJ-2023-046/">langevitour: Smooth Interactive Touring of High Dimensions, Demonstrated with scRNA-Seq Data</a> (pp.&nbsp;206-219)<br><em>Paul Harrison</em></p>
+<p><a href="../../articles/RJ-2023-048/">ggdensity: Improved Bivariate Density Visualization in R</a> (pp.&nbsp;220-236)<br><em>James Otto, David Kahle</em></p>
+<p><a href="../../articles/RJ-2023-049/">Three-Way Correspondence Analysis in R</a> (pp.&nbsp;237-262)<br><em>Rosaria Lombardo, Michel van de Velden, Eric J. Beh</em></p>
+<p><a href="../../articles/RJ-2023-050/">Estimating Heteroskedastic and Instrumental Variable Models for Binary Outcome Variables in R</a> (pp.&nbsp;263-293)<br><em>Mauricio Sarrias</em></p>
+<p><a href="../../articles/RJ-2023-051/">genpathmox: An R Package to Tackle Numerous Categorical Variables and Heterogeneity in Partial Least Squares Structural Equation Modeling</a> (pp.&nbsp;294-308)<br><em>Giuseppe Lamberti</em></p>
+<p><a href="../../articles/RJ-2023-052/">Taking the Scenic Route: Interactive and Performant Tour Animations</a> (pp.&nbsp;309-331)<br><em>Casper Hart, Earo Wang</em></p>
+<p><a href="../../articles/RJ-2023-053/">Identifying Counterfactual Queries with the R Package cfid</a> (pp.&nbsp;332-345)<br><em>Santtu Tikka</em></p>
+<p><a href="../../articles/RJ-2023-054/">vivid: An R package for Variable Importance and Variable Interactions Displays for Machine Learning Models</a> (pp.&nbsp;346-363)<br><em>Alan Inglis, Andrew Parnell, Catherine Hurley</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2023-2/</guid>
+  <pubDate>Thu, 01 Jun 2023 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 15, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2023-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2023-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published March 2023
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2023-1-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Simon Urbanek</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2023-021/">A Hexagon Tile Map Algorithm for Displaying Spatial Data</a> (pp.&nbsp;6-16)<br><em>Stephanie Kobakian, Dianne Cook, Earl Duncan</em></p>
+<p><a href="../../articles/RJ-2023-022/">A Clustering Algorithm to Organize Satellite Hotspot Data for the Purpose of Tracking Bushfires Remotely</a> (pp.&nbsp;17-33)<br><em>Weihao Li, Emily Dodwell, Dianne Cook</em></p>
+<p><a href="../../articles/RJ-2023-023/">asteRisk - Integration and Analysis of Satellite Positional Data in R</a> (pp.&nbsp;34-54)<br><em>Rafael Ayala, Daniel Ayala, Lara Sellés Vidal, David Ruiz</em></p>
+<p><a href="../../articles/RJ-2023-024/">gplsim: An R Package for Generalized Partially Linear Single-index Models</a> (pp.&nbsp;55-64)<br><em>Tianhai Zu, Yan Yu</em></p>
+<p><a href="../../articles/RJ-2023-025/">Non-Parametric Analysis of Spatial and Spatio-Temporal Point Patterns</a> (pp.&nbsp;65-82)<br><em>Jonatan A. González, Paula Moraga</em></p>
+<p><a href="../../articles/RJ-2023-026/">nlmeVPC: Visual Model Diagnosis for the Nonlinear Mixed Effect Model</a> (pp.&nbsp;83-100)<br><em>Eun-Hwa Kang, Myungji Ko, Eun-Kyung Lee</em></p>
+<p><a href="../../articles/RJ-2023-027/">Likelihood Ratio Test-Based Drug Safety Assessment using R Package </a> (pp.&nbsp;101-121)<br><em>Saptarshi Chakraborty, Marianthi Markatou, Robert Ball</em></p>
+<p><a href="../../articles/RJ-2023-028/">GCPBayes: An R package for studying Cross-Phenotype Genetic Associations with Group-level Bayesian Meta-Analysis</a> (pp.&nbsp;122-141)<br><em>Taban Baghfalaki, Pierre-Emmanuel Sugier, Yazdan Asgari, Thérèse Truong, Benoit Liquet</em></p>
+<p><a href="../../articles/RJ-2023-029/">rankFD: An R Software Package for Nonparametric Analysis of General Factorial Designs</a> (pp.&nbsp;142-158)<br><em>Frank Konietschke, Edgar Brunner</em></p>
+<p><a href="../../articles/RJ-2023-030/">The segmetric Package: Metrics for Assessing Segmentation Accuracy for Geospatial Data</a> (pp.&nbsp;159-172)<br><em>Rolf Simoes, Alber Sanchez, Michelle C. A. Picoli, Patrick Meyfroidt</em></p>
+<p><a href="../../articles/RJ-2023-031/">Onlineforecast: An R Package for Adaptive and Recursive Forecasting</a> (pp.&nbsp;173-194)<br><em>Peder Bacher, Hjörleifur G. Bergsteinsson, Linde Frölke, Mikkel L. Sørensen, Julian Lemos-Vinasco, Jon Liisberg, Jan Kloppenborg Møller, Henrik Aalborg Nielsen, Henrik Madsen</em></p>
+<p><a href="../../articles/RJ-2023-032/">markovMSM: An R Package for Checking the Markov Condition in Multi-State Survival Data</a> (pp.&nbsp;195-211)<br><em>Gustavo Soutinho, Luís Meira-Machado</em></p>
+<p><a href="../../articles/RJ-2023-033/">Robust&nbsp;Functional&nbsp;Linear&nbsp;Regression&nbsp;Models</a> (pp.&nbsp;212-233)<br><em>Ufuk Beyaztas, Han Lin Shang</em></p>
+<p><a href="../../articles/RJ-2023-034/">Fairness Audits and Debiasing Using 3fairness</a> (pp.&nbsp;234-253)<br><em>Florian Pfisterer, Siyi Wei, Sebastian Vollmer, Michel Lang, Bernd Bischl</em></p>
+<p><a href="../../articles/RJ-2023-035/">ClusROC: An R Package for ROC Analysis in Three-Class Classification Problems for Clustered Data</a> (pp.&nbsp;254-270)<br><em>Duc-Khanh To, Gianfranco Adimari, Monica Chiogna</em></p>
+<p><a href="../../articles/RJ-2023-036/">Resampling Fuzzy Numbers with Statistical Applications: FuzzyResampling Package</a> (pp.&nbsp;271-283)<br><em>Maciej Romaniuk, Przemysław Grzegorzewski</em></p>
+<p><a href="../../articles/RJ-2023-037/">combinIT: An R Package for Combining Interaction Tests for Unreplicated Two-Way Tables</a> (pp.&nbsp;284-296)<br><em>Mahmood Kharrati-Kopaei, Zahra Shenavari, Hossein Haghbin</em></p>
+<p><a href="../../articles/RJ-2023-038/">Estimating Causal Effects using Bayesian Methods with the R Package BayesCACE</a> (pp.&nbsp;297-315)<br><em>Jincheng Zhou, Jinhui Yang, James S. Hodges, Lifeng Lin, Haitao Chu</em></p>
+<p><a href="../../articles/RJ-2023-039/">A Framework for Producing Small Area Estimates Based on Area-Level Models in R</a> (pp.&nbsp;316-341)<br><em>Sylvia Harmening, Ann-Kristin Kreutzmann, Sören Schmidt, Nicola Salvati, Timo Schmid</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2023-1-cran/">Changes on CRAN</a> (pp.&nbsp;342-343)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2023-1-rfoundation/">R Foundation News</a> (p.&nbsp;344)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2023-1/</guid>
+  <pubDate>Wed, 01 Mar 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 14, Issue 4</title>
+  <link>https://journal.r-project.org/issues/2022-4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2022-4.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2022
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2022-4-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Catherine Hurley</em></p>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2022-4-bioconductor/">Bioconductor Notes</a> (pp.&nbsp;352-355)<br><em>Maria Doyle, Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2022-4-cran/">Changes on CRAN</a> (pp.&nbsp;356-357)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2022-4-forwards/">News from the Forwards Taskforce</a> (pp.&nbsp;358-360)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2022-4-rcore/">Changes in R</a> (pp.&nbsp;361-364)<br><em>Tomas Kalibera, Sebastian Meyer, Kurt Hornik</em></p>
+<p><a href="../../news/RJ-2022-4-rfoundation/">R Foundation News</a> (pp.&nbsp;365-366)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2022-4/</guid>
+  <pubDate>Thu, 01 Dec 2022 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 14, Issue 3</title>
+  <link>https://journal.r-project.org/issues/2022-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2022-3.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published September 2022
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2022-3-editorial/">Editorial</a> (p.&nbsp;4)<br><em>Catherine Hurley</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2022-041/">Introducing fastpos: A Fast R Implementation to Find the Critical Point of Stability for a Correlation</a> (pp.&nbsp;5-12)<br><em>Johannes Titz</em></p>
+<p><a href="../../articles/RJ-2022-043/">ICAOD: An R Package for Finding Optimal designs for Nonlinear Statistical Models by Imperialist Competitive Algorithm</a> (pp.&nbsp;20-45)<br><em>Ehsan Masoudi, Heinz Holling, Weng Kee Wong, Seongho Kim</em></p>
+<p><a href="../../articles/RJ-2022-057/">Analysis of the Results of Metadynamics Simulations by metadynminer and metadynminer3d</a> (pp.&nbsp;46-58)<br><em>Dalibor Trapl, Vojtech Spiwok</em></p>
+<p><a href="../../articles/RJ-2022-052/">casebase: An Alternative Framework for Survival Analysis and Comparison of Event Rates</a> (pp.&nbsp;59-79)<br><em>Sahir Rai Bhatnagar</em>, Maxime Turgeon<em>, Jesse Islam, James A. Hanley, Olli Saarela</em></p>
+<p><a href="../../articles/RJ-2022-044/">dbcsp: User-friendly R package for Distance-Based Common Spatial Patterns</a> (pp.&nbsp;80-94)<br><em>Itsaso Rodríguez, Itziar Irigoien, Basilio Sierra, Concepción Arenas</em></p>
+<p><a href="../../articles/RJ-2022-045/">The R Package HDSpatialScan for the Detection of Clusters of Multivariate and Functional Data using Spatial Scan Statistics</a> (pp.&nbsp;95-120)<br><em>Camille Frévent, Mohamed-Salem Ahmed, Julien Soula, Lionel Cucala, Zaineb Smida, Sophie Dabo-Niang, Michaël Genin</em></p>
+<p><a href="../../articles/RJ-2022-046/">HDiR: An R Package for Computation and Nonparametric Plug-in Estimation of Directional Highest Density Regions and General Level Sets</a> (pp.&nbsp;121-141)<br><em>Paula Saavedra-Nieves, Rosa M. Crujeiras</em></p>
+<p><a href="../../articles/RJ-2022-047/">metapack: An R Package for Bayesian Meta-Analysis and Network Meta-Analysis with a Unified Formula Interface</a> (pp.&nbsp;142-161)<br><em>Daeyoung Lim, Ming-Hui Chen, Joseph G. Ibrahim, Sungduk Kim, Arvind K. Shah, Jianxin Lin</em></p>
+<p><a href="../../articles/RJ-2022-048/">did2s: Two-Stage Difference-in-Differences</a> (pp.&nbsp;162-173)<br><em>Kyle Butts, John Gardner</em></p>
+<p><a href="../../articles/RJ-2022-049/">rbw: An R Package for Constructing Residual Balancing Weights</a> (pp.&nbsp;174-192)<br><em>Derick S. Baum, Xiang Zhou</em></p>
+<p><a href="../../articles/RJ-2022-050/">Tidy Data Neatly Resolves Mass-Spectrometry’s Ragged Arrays</a> (pp.&nbsp;193-202)<br><em>William Kumler, Anitra E. Ingalls</em></p>
+<p><a href="../../articles/RJ-2022-051/">Log Likelihood Ratios for Common Statistical Tests Using the likelihoodR Package</a> (pp.&nbsp;203-213)<br><em>Peter Cahusac</em></p>
+<p><a href="../../articles/RJ-2022-058/">CIMTx: An R Package for Causal Inference with Multiple Treatments using Observational Data</a> (pp.&nbsp;213-230)<br><em>Liangyuan Hu, Jiayi Ji</em></p>
+<p><a href="../../articles/RJ-2022-053/">logitFD: an R package for functional principal component logit regression</a> (pp.&nbsp;231-248)<br><em>Manuel Escabias, Ana M. Aguilera, Christian Acal</em></p>
+<p><a href="../../articles/RJ-2022-054/">eat: An R Package for fitting Efficiency Analysis Trees</a> (pp.&nbsp;249-281)<br><em>Miriam Esteve, Victor España, Juan Aparicio, Xavier Barber</em></p>
+<p><a href="../../articles/RJ-2022-055/">Will the Real Hopkins Statistic Please Stand Up?</a> (pp.&nbsp;282-292)<br><em>Kevin Wright</em></p>
+<p><a href="../../articles/RJ-2022-056/">Multivariate Subgaussian Stable Distributions in R</a> (pp.&nbsp;293-302)<br><em>Bruce J. Swihart, John P. Nolan</em></p>
+<p><a href="../../articles/RJ-2022-042/">WLinfer: Statistical Inference for Weighted Lindley Distribution</a><br><em>Yu-Hyeong Jang, SungBum Kim, Hyun-Ju Jung, Hyoung-Moon Kim (Corresponding author)</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2022-3-bioconductor/">Bioconductor Notes, Autumn 2022</a> (pp.&nbsp;303-304)<br><em>Bioconductor Core Developer Team</em></p>
+<p><a href="../../news/RJ-2022-3-cran/">Changes on CRAN</a> (pp.&nbsp;305-306)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2022-3/</guid>
+  <pubDate>Thu, 01 Sep 2022 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 14, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2022-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2022-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2022
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2022-2-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Catherine Hurley</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2022-023/">brolgar: An R package to BRowse Over Longitudinal Data Graphically and Analytically in R</a> (pp.&nbsp;6-25)<br><em>Nicholas Tierney, Dianne Cook, Tania Prvan</em></p>
+<p><a href="../../articles/RJ-2022-039/">The Concordance Test, an Alternative to Kruskal-Wallis Based on the Kendall-$ au$ Distance: An R Package</a> (pp.&nbsp;26-53)<br><em>Javier Alcaraz, Laura Anton-Sanchez, Juan Francisco Monge</em></p>
+<p><a href="../../articles/RJ-2022-024/">htestClust: A Package for Marginal Inference of Clustered Data Under Informative Cluster Size</a> (pp.&nbsp;54-66)<br><em>Mary Gregg, Somnath Datta, Douglas Lorenz</em></p>
+<p><a href="../../articles/RJ-2022-025/">akc: A Tidy Framework for Automatic Knowledge Classification in R</a> (pp.&nbsp;67-76)<br><em>Tian-Yuan Huang, Li Li, Liying Yang</em></p>
+<p><a href="../../articles/RJ-2022-026/">APCI: An R and Stata Package for Visualizing and Analyzing Age-Period-Cohort Data</a> (pp.&nbsp;77-95)<br><em>Jiahui Xu, Liying Luo</em></p>
+<p><a href="../../articles/RJ-2022-027/">shinybrms: Fitting Bayesian Regression Models Using a Graphical User Interface for the R Package brms</a> (pp.&nbsp;96-120)<br><em>Frank Weber, Katja Ickstadt, Änne Glass</em></p>
+<p><a href="../../articles/RJ-2022-028/">Quantifying Population Movement Using a Novel Implementation of Digital Image Correlation in the ICvectorfields Package</a> (pp.&nbsp;121-134)<br><em>Devin W. Goodsman</em></p>
+<p><a href="../../articles/RJ-2022-029/">Refreg: An R Package for Estimating Conditional Reference Regions</a> (pp.&nbsp;135-151)<br><em>Óscar Lado-Baleato, Javier Roca-Pardiñas, Carmen Cadarso-Suárez, Francisco Gude</em></p>
+<p><a href="../../articles/RJ-2022-030/">TensorTest2D: Fitting Generalized Linear Models with Matrix Covariates</a> (pp.&nbsp;152-163)<br><em>Ping-Yang Chen, Hsing-Ming Chang, Yu-Ting Chen, Jung-Ying Tzeng, Sheng-Mao Chang</em></p>
+<p><a href="../../articles/RJ-2022-031/">wavScalogram: An R Package with Wavelet Scalogram Tools for Time Series Analysis</a> (pp.&nbsp;164-185)<br><em>Vicente J. Bolós, Rafael Benı́tez</em></p>
+<p><a href="../../articles/RJ-2022-032/">ClusTorus: An R Package for Prediction and Clustering on the Torus by Conformal Prediction</a> (pp.&nbsp;186-207)<br><em>Seungki Hong, Sungkyu Jung</em></p>
+<p><a href="../../articles/RJ-2022-033/">kStatistics: Unbiased Estimates of Joint Cumulant Products from the Multivariate Faà Di Bruno’s Formula</a> (pp.&nbsp;208-228)<br><em>Elvira Di Nardo, Giuseppe Guarino</em></p>
+<p><a href="../../articles/RJ-2022-034/">iccCounts: An R Package to Estimate the Intraclass Correlation Coefficient for Assessing Agreement with Count Data</a> (pp.&nbsp;229-243)<br><em>Josep L. Carrasco</em></p>
+<p><a href="../../articles/RJ-2022-040/">R-miss-tastic: a unified platform for missing values methods and workflows</a> (pp.&nbsp;244-266)<br><em>Imke Mayer, Aude Sportisse, Julie Josse, Nicholas Tierney, Nathalie Vialaneix</em></p>
+<p><a href="../../articles/RJ-2022-035/">An Open-Source Implementation of the CMPS Algorithm for Assessing Similarity of Bullets</a> (pp.&nbsp;267-285)<br><em>Wangqian Ju, Heike Hofmann</em></p>
+<p><a href="../../articles/RJ-2022-036/">rassta: Raster-Based Spatial Stratification Algorithms</a> (pp.&nbsp;286-304)<br><em>Bryan A. Fuentes, Minerva J. Dorantes, John R. Tipton</em></p>
+<p><a href="../../articles/RJ-2022-037/">PDFEstimator: An R Package for Density Estimation and Analysis</a> (pp.&nbsp;305-319)<br><em>Jenny Farmer, Donald Jacobs</em></p>
+<p><a href="../../articles/RJ-2022-038/">reclin2: a Toolkit for Record Linkage and Deduplication</a> (pp.&nbsp;320-328)<br><em>D. Jan van der Laan</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2022-2-bioconductor/">News from the Bioconductor Project</a> (pp.&nbsp;329-331)<br><em>Bioconductor Core Team</em></p>
+<p><a href="../../news/RJ-2022-2-cran/">Changes on CRAN</a> (pp.&nbsp;332-333)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2022-2-forwards/">News from the Forwards Taskforce</a> (pp.&nbsp;334-335)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2022-2-rcore/">Changes in R</a> (pp.&nbsp;336-338)<br><em>Tomas Kalibera, Sebastian Meyer, Kurt Hornik</em></p>
+<p><a href="../../news/RJ-2022-2-rfoundation/">R Foundation News</a> (p.&nbsp;339)<br><em>Torsten Hothorn</em></p>
+<p><a href="../../news/RJ-2022-2-whyrturkey/">The Conference Report of Why R? Turkey 2022: The First R Conference with Call For Papers in Turkey</a> (pp.&nbsp;340-346)<br><em>Mustafa Cavus, Olgun Aydin, Ozan Evkaya, Derya Turfan, Filiz Karadag, Ozancan Ozdemir, Ugur Dar, Deniz Bezer</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2022-2/</guid>
+  <pubDate>Wed, 01 Jun 2022 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 14, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2022-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2022-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published March 2022
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2022-1-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Catherine Hurley</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2022-006/">A Computational Analysis of the Dynamics of R Style Based on 108 Million Lines of Code from All CRAN Packages in the Past 21 Years</a> (pp.&nbsp;6-21)<br><em>Chia-Yi Yen, Mia Huai-Wen Chang, Chung-hong Chan</em></p>
+<p><a href="../../articles/RJ-2022-007/">rmonad: pipelines you can compute on</a> (pp.&nbsp;22-33)<br><em>Zebulun Arendsee, Jennifer Chang, Eve Wurtele</em></p>
+<p><a href="../../articles/RJ-2022-008/">A Software Tool For Sparse Estimation Of A General Class Of High-dimensional GLMs</a> (pp.&nbsp;34-53)<br><em>Hassan Pazira, Luigi Augugliaro, Ernst C. Wit</em></p>
+<p><a href="../../articles/RJ-2022-009/">bayesanova: An R package for Bayesian Inference in the Analysis of Variance via Markov Chain Monte Carlo in Gaussian Mixture Models</a> (pp.&nbsp;54-78)<br><em>Riko Kelter</em></p>
+<p><a href="../../articles/RJ-2022-002/">tvReg: Time-varying Coefficients in Multi-Equation Regression in R</a> (pp.&nbsp;79-100)<br><em>Isabel Casas, Rubén Fernández-Casal</em></p>
+<p><a href="../../articles/RJ-2022-003/">RKHSMetaMod: An R Package to Estimate the Hoeffding Decomposition of a Complex Model by Solving RKHS Ridge Group Sparse Optimization Problem</a> (pp.&nbsp;101-122)<br><em>Halaleh Kamari, Sylvie Huet, Marie-Luce Taupin</em></p>
+<p><a href="../../articles/RJ-2022-004/">Measuring the Extent and Patterns of Urban Shrinkage for Small Towns Using R</a> (pp.&nbsp;123-136)<br><em>Cristiana Vîlcea, Liliana Popescu, Alin Clincea</em></p>
+<p><a href="../../articles/RJ-2022-001/">blindrecalc - An R Package for Blinded Sample Size Recalculation</a> (pp.&nbsp;137-145)<br><em>Lukas Baumann, Maximilian Pilz, Meinhard Kieser</em></p>
+<p><a href="../../articles/RJ-2022-010/">Revisiting Historical Bar Graphics on Epidemics in the Era of R ggplot2</a> (pp.&nbsp;146-166)<br><em>Sami Aldag, Dogukan Topcuoglu, Gul Inan</em></p>
+<p><a href="../../articles/RJ-2022-016/">spherepc: An R Package for Dimension Reduction on a Sphere</a> (pp.&nbsp;167-181)<br><em>Jongmin Lee, Jang-Hyun Kim, Hee-Seok Oh</em></p>
+<p><a href="../../articles/RJ-2022-017/">The smoots Package in R for Semiparametric Modeling of Trend Stationary Time Series</a> (pp.&nbsp;182-195)<br><em>Yuanhua Feng, Thomas Gries, Sebastian Letmathe, Dominik Schulz</em></p>
+<p><a href="../../articles/RJ-2022-005/">cpsurvsim: An R Package for Simulating Data from Change-Point Hazard Distributions</a> (pp.&nbsp;196-207)<br><em>PhD Camille J. Hochheimer, PhD Roy T. Sabo</em></p>
+<p><a href="../../articles/RJ-2022-018/">starvars: An R Package for Analysing Nonlinearities in Multivariate Time Series</a> (pp.&nbsp;208-226)<br><em>Andrea Bucci, Giulio Palomba, Eduardo Rossi</em></p>
+<p><a href="../../articles/RJ-2022-019/">fairmodels: a Flexible Tool for Bias Detection, Visualization, and Mitigation in Binary Classification Models</a> (pp.&nbsp;227-243)<br><em>Jakub Wiśniewski, Przemysław Biecek</em></p>
+<p><a href="../../articles/RJ-2022-020/">Palmer Archipelago Penguins Data in the palmerpenguins R Package - An Alternative to Anderson’s Irises</a> (pp.&nbsp;244-254)<br><em>Allison M. Horst, Alison Presmanes Hill, Kristen B. Gorman</em></p>
+<p><a href="../../articles/RJ-2022-021/">Advancing Reproducible Research by Publishing R Markdown Notebooks as Interactive Sandboxes Using the learnr Package</a> (pp.&nbsp;255-263)<br><em>Chak Hau Michael Tso, Michael Hollaway, Rebecca Killick, Peter Henrys, Don Monteith, John Watkins, Gordon Blair</em></p>
+<p><a href="../../articles/RJ-2022-022/">Power and Sample Size for Longitudinal Models in R – The longpower Package and Shiny App</a> (pp.&nbsp;264-282)<br><em>Samuel Iddi, Michael C Donohue</em></p>
+<p><a href="../../articles/RJ-2022-011/">PSweight: An R Package for Propensity Score Weighting Analysis</a> (pp.&nbsp;282-300)<br><em>Tianhui Zhou, Guangyu Tong, Fan Li, Laine E. Thomas, Fan Li</em></p>
+<p><a href="../../articles/RJ-2022-012/">RFpredInterval: An R Package for Prediction Intervals with Random Forests and Boosted Forests</a> (pp.&nbsp;300-320)<br><em>Cansu Alakus, Denis Larocque, Aurélie Labbe</em></p>
+<p><a href="../../articles/RJ-2022-013/">etrm: Energy Trading and Risk Management in R</a> (pp.&nbsp;320-341)<br><em>Anders D. Sleire</em></p>
+<p><a href="../../articles/RJ-2022-014/">fcaR, Formal Concept Analysis with R</a> (pp.&nbsp;341-361)<br><em>Pablo Cordero, Manuel Enciso, Domingo López-Rodríguez, Ángel Mora</em></p>
+<p><a href="../../articles/RJ-2022-015/">FMM: An R Package for Modeling Rhythmic Patterns in Oscillatory Systems</a> (pp.&nbsp;361-380)<br><em>Itziar Fernández, Alejandro Rodríguez-Collado, Yolanda Larriba, Adrián Lamela, Christian Canedo, Cristina Rueda</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2022-1-cran/">Changes on CRAN</a> (pp.&nbsp;380-382)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2022-1-RFoundation/">R Foundation News</a> (pp.&nbsp;382-383)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2022-1/</guid>
+  <pubDate>Tue, 01 Mar 2022 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 13, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2021-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2021-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2021
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2021-2-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Dianne Cook</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2021-108/">Software Engineering and R Programming: A Call for Research</a> (p.&nbsp;6)<br><em>Melina Vidoni</em></p>
+<p><a href="../../articles/RJ-2021-109/">We Need Trustworthy R Packages</a> (p.&nbsp;15)<br><em>William Michael Landau</em></p>
+<p><a href="../../articles/RJ-2021-110/">The R Developer Community Does Have a Strong Software Engineering Culture</a> (p.&nbsp;18)<br><em>Maëlle Salmon, Karthik Ram</em></p>
+<p><a href="../../articles/RJ-2021-111/">The R Quest: from Users to Developers</a> (p.&nbsp;22)<br><em>Simon Urbanek</em></p>
+<p><a href="../../articles/RJ-2021-112/">Rejoinder: Software Engineering and R Programming</a> (p.&nbsp;25)<br><em>Melina Vidoni</em></p>
+<p><a href="../../articles/RJ-2021-064/">g2f as a Novel Tool to Find and Fill Gaps in Metabolic Networks</a> (p.&nbsp;28)<br><em>Daniel Osorio, Kelly Botero, Andrés Pinzón Velasco, Nicolás Mendoza-Mejía, Felipe Rojas- Rodríguez, George Barreto, Janneth González</em></p>
+<p><a href="../../articles/RJ-2021-079/">lg: An R package for Local Gaussian Approximations</a> (p.&nbsp;38)<br><em>Håkon Otneim</em></p>
+<p><a href="../../articles/RJ-2021-069/">Estimating Social Influence Effects in Networks Using A Latent Space Adjusted Approach in R</a> (p.&nbsp;57)<br><em>Ran Xu</em></p>
+<p><a href="../../articles/RJ-2021-070/">survidm: An R package for Inference and Prediction in an Illness-Death Model</a> (p.&nbsp;70)<br><em>Gustavo Soutinho, Marta Sestelo, Luís Meira-Machado</em></p>
+<p><a href="../../articles/RJ-2021-080/">Multiple Imputation and Synthetic Data Generation with NPBayesImputeCat</a> (p.&nbsp;90)<br><em>Jingchen Hu, Olanrewaju Akande, Quanli Wang</em></p>
+<p><a href="../../articles/RJ-2021-096/">msae: An R Package of Multivariate Fay-Herriot Models for Small Area Estimation</a> (p.&nbsp;111)<br><em>Novia Permatasari, Azka Ubaidillah</em></p>
+<p><a href="../../articles/RJ-2021-091/">cat.dt: An R package for fast construction of accurate Computerized Adaptive Tests using Decision Trees</a> (p.&nbsp;123)<br><em>Javier Rodríguez-Cuadrado, Juan C. Laria, David Delgado-Gómez</em></p>
+<p><a href="../../articles/RJ-2021-081/">A GUIded tour of Bayesian regression</a> (p.&nbsp;135)<br><em>Andrés Ramírez–Hassan, Mateo Graciano-Londoño</em></p>
+<p><a href="../../articles/RJ-2021-039/">StratigrapheR: Concepts for Litholog Generation in R</a> (p.&nbsp;153)<br><em>Sébastien Wouters, Anne-Christine Da Silva, Frédéric Boulvain, Xavier Devleeschouwer</em></p>
+<p><a href="../../articles/RJ-2021-071/">dad: an R Package for Visualisation, Classification and Discrimination of Multivariate Groups Modelled by their Densities</a> (p.&nbsp;179)<br><em>Rachid Boumaza, Pierre Santagostini, Smail Yousfi, Sabine Demotes-Mainard</em></p>
+<p><a href="../../articles/RJ-2021-087/">NGSSEML: Non-Gaussian State Space with Exact Marginal Likelihood</a> (p.&nbsp;208)<br><em>Thiago R. Santos, Glaura C. Franco, Dani Gamerman</em></p>
+<p><a href="../../articles/RJ-2021-097/">BayesSenMC: an R package for Bayesian Sensitivity Analysis of Misclassification</a> (p.&nbsp;228)<br><em>Jinhui Yang, Lifeng Lin, Haitao Chu</em></p>
+<p><a href="../../articles/RJ-2021-088/">PAsso: an R Package for Assessing Partial Association between Ordinal Variables</a> (p.&nbsp;239)<br><em>Shaobo Li, Xiaorui Zhu, Yuejie Chen, Dungang Liu</em></p>
+<p><a href="../../articles/RJ-2021-083/">bcmixed: A Package for Median Inference on Longitudinal Data with the Box–Cox Transformation</a> (p.&nbsp;253)<br><em>Kazushi Maruo, Ryota Ishii, Yusuke Yamaguchi, Masahiko Gosho</em></p>
+<p><a href="../../articles/RJ-2021-072/">diproperm: An R Package for the DiProPerm Test</a> (p.&nbsp;266)<br><em>Andrew G. Allmon, J.S. Marron, Michael G. Hudgens</em></p>
+<p><a href="../../articles/RJ-2021-048/">A Unifying Framework for Parallel and Distributed Processing in R using Futures</a> (p.&nbsp;273)<br><em>Henrik Bengtsson</em></p>
+<p><a href="../../articles/RJ-2021-073/">MatchThem:: Matching and Weighting after Multiple Imputation</a> (p.&nbsp;292)<br><em>Farhad Pishgar, Noah Greifer, Clémence Leyrat, Elizabeth Stuart</em></p>
+<p><a href="../../articles/RJ-2021-098/">EMSS: New EM-type algorithms for the Heckman selection model in R</a> (p.&nbsp;306)<br><em>Kexuan Yang, Sang Kyu Lee, Jun Zhao, Hyoung-Moon Kim</em></p>
+<p><a href="../../articles/RJ-2021-099/">Analysis of Corneal Data in R with the rPACI Package</a> (p.&nbsp;321)<br><em>Darío Ramos-López, Ana D. Maldonado</em></p>
+<p><a href="../../articles/RJ-2021-074/">MAINT.Data: Modelling and Analysing Interval Data in R</a> (p.&nbsp;336)<br><em>A. Pedro Duarte Silva, Paula Brito, Peter Filzmoser, José G. Dias</em></p>
+<p><a href="../../articles/RJ-2021-089/">Robust and Efficient Optimization Using a Marquardt- Levenberg Algorithm with R Package marqLevAlg</a> (p.&nbsp;365)<br><em>Viviane Philipps, Boris P. Hejblum, Mélanie Prague, Daniel Commenges, Cécile Proust-Lima</em></p>
+<p><a href="../../articles/RJ-2021-100/">DRHotNet: An R package for detecting differential risk hotspots on a linear network</a> (p.&nbsp;380)<br><em>Álvaro Briz-Redón, Francisco Martínez-Ruiz, Francisco Montes</em></p>
+<p><a href="../../articles/RJ-2021-075/">tramME: Mixed-Effects Transformation Models Using Template Model Builder</a> (p.&nbsp;398)<br><em>Bálint Tamási, Torsten Hothorn</em></p>
+<p><a href="../../articles/RJ-2021-082/">miRecSurv Package: Prentice-Williams-Peterson Models with Multiple Imputation of Unknown Number of Previous Episodes</a> (p.&nbsp;419)<br><em>David Moriña, Gilma Hernández-Herrera, Albert Navarro</em></p>
+<p><a href="../../articles/RJ-2021-090/">An R package for Non-Normal Multivariate Distributions: Simulation and Probability Calculations from Multivariate Lomax (Pareto Type II) and Other Related Distributions</a> (p.&nbsp;427)<br><em>Zhixin Lun, Ravindra Khattree</em></p>
+<p><a href="../../articles/RJ-2021-076/">CompModels: A Suite of Computer Model Test Functions for Bayesian Optimization</a> (p.&nbsp;441)<br><em>Tony Pourmohamad</em></p>
+<p><a href="../../articles/RJ-2021-085/">spfilteR: An R package for Semiparametric Spatial Filtering with Eigenvectors in (Generalized) Linear Models</a> (p.&nbsp;450)<br><em>Sebastian Juhl</em></p>
+<p><a href="../../articles/RJ-2021-092/">SIQR: An R Package for Single-index Quantile Regression</a> (p.&nbsp;460)<br><em>Tianhai Zu, Yan Yu</em></p>
+<p><a href="../../articles/RJ-2021-093/">mgee2: An R package for marginal analysis of longitudinal ordinal data with misclassified responses and covariates</a> (p.&nbsp;471)<br><em>Yuliang Xu, Shuo Shuo Liu, Grace Y. Yi</em></p>
+<p><a href="../../articles/RJ-2021-067/">A New Versatile Discrete Distribution</a> (p.&nbsp;485)<br><em>Rolf Turner</em></p>
+<p><a href="../../articles/RJ-2021-101/">Automatic Time Series Forecasting with Ata Method in R: ATAforecasting Package</a> (p.&nbsp;507)<br><em>Ali Sabri Taylan, Güçkan Yapar, Hanife Taylan Selamlar</em></p>
+<p><a href="../../articles/RJ-2021-094/">PASSED: Calculate Power and Sample Size for Two Sample Tests</a> (p.&nbsp;542)<br><em>Jinpu Li, Ryan P. Knigge, Kaiyi Chen, Emily V. Leary</em></p>
+<p><a href="../../articles/RJ-2021-102/">spNetwork: A Package for Network Kernel Density Estimation</a> (p.&nbsp;561)<br><em>Jeremy Gelb</em></p>
+<p><a href="../../articles/RJ-2021-103/">bssm: Bayesian Inference of Non-linear and Non-Gaussian State Space Models in R</a> (p.&nbsp;578)<br><em>Jouni Helske, Matti Vihola</em></p>
+<p><a href="../../articles/RJ-2021-095/">openSkies - Integration of Aviation Data into the R Ecosystem</a> (p.&nbsp;590)<br><em>Rafael Ayala, Daniel Ayala, Lara Sellés Vidal, David Ruiz</em></p>
+<p><a href="../../articles/RJ-2021-104/">Generalized Linear Randomized Response Modeling using GLMMRR</a> (p.&nbsp;600)<br><em>Jean-Paul Fox, Konrad Klotzke, Duco Veen</em></p>
+<p><a href="../../articles/RJ-2021-105/">Visual Diagnostics for Constrained Optimisation with Application to Guided Tours</a> (p.&nbsp;624)<br><em>H. Sherry Zhang, Dianne Cook, Ursula Laa, Nicolas Langrené, Patricia Menéndez</em></p>
+<p><a href="../../articles/RJ-2021-077/">volesti: Volume Approximation and Sampling for Convex Polytopes in R</a> (p.&nbsp;642)<br><em>Apostolos Chalkis, Vissarion Fisikopoulos</em></p>
+<p><a href="../../articles/RJ-2021-078/">Elliptical Symmetry Tests in R</a> (p.&nbsp;661)<br><em>Slad̄ana Babić, Christophe Ley, Marko Palangetić</em></p>
+<p><a href="../../articles/RJ-2021-086/">The vote Package: Single Transferable Vote and Other Electoral Systems in R</a> (p.&nbsp;673)<br><em>Adrian E. Raftery, Hana Ševčíková, Bernard W. Silverman</em></p>
+<p><a href="../../articles/RJ-2021-106/">RPESE: Risk and Performance Estimators Standard Errors with Serially Dependent Data</a> (p.&nbsp;697)<br><em>Anthony-Alexander Christidis, R. Douglas Martin</em></p>
+<p><a href="../../articles/RJ-2021-107/">RobustBF: An R Package for Robust Solution to the Behrens- Fisher Problem</a> (p.&nbsp;713)<br><em>Gamze Güven, Şükrü Acıtaş, Hatice Şamkar, Birdal Şenoğlu</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2021-2-bioc/">News from the Bioconductor Project</a> (p.&nbsp;741)<br><em>Bioconductor Core Team</em></p>
+<p><a href="../../news/RJ-2021-2-core/">Changes in R</a> (pp.&nbsp;734-737)<br><em>Tomas Kalibera, Sebastian Meyer, Kurt Hornik, Gennadiy Starostin, Luke Tierney</em></p>
+<p><a href="../../news/RJ-2021-2-cran/">Changes on CRAN</a> (pp.&nbsp;738-740)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2021-2-forwards-news/">News from the Forwards Taskforce</a> (pp.&nbsp;742-743)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2021-2-foundation/">R Foundation News</a> (pp.&nbsp;745-746)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2021-2/</guid>
+  <pubDate>Tue, 01 Jun 2021 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 13, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2021-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="2021-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2021
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2021-1-editorial/">Editorial</a> (pp.&nbsp;4-6)<br><em>Dianne Cook</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2021-026/">SEEDCCA: An Integrated R-Package for Canonical Correlation Analysis and Partial Least Squares</a> (p.&nbsp;7)<br><em>Bo-Young Kim, Yunju Im, Jae Keun Yoo</em></p>
+<p><a href="../../articles/RJ-2021-027/">npcure: An R Package for Nonparametric Inference in Mixture Cure Models</a> (p.&nbsp;21)<br><em>Ana López-Cheda, M. Amalia Jácome, Ignacio López-de- Ullibarri</em></p>
+<p><a href="../../articles/RJ-2021-056/">A Method for Deriving Information from Running R Code</a> (p.&nbsp;42)<br><em>Mark P.J. van der Loo</em></p>
+<p><a href="../../articles/RJ-2021-028/">JMcmprsk: An R Package for Joint Modelling of Longitudinal and Survival Data with Competing Risks</a> (p.&nbsp;53)<br><em>Hong Wang, Ning Li, Shanpeng Li, Gang Li</em></p>
+<p><a href="../../articles/RJ-2021-029/">Wide-to-tall Data Reshaping Using Regular Expressions and the nc Package</a> (p.&nbsp;69)<br><em>Toby Dylan Hocking</em></p>
+<p><a href="../../articles/RJ-2021-030/">Linear Regression with Stationary Errors: the R Package slm</a> (p.&nbsp;83)<br><em>Emmanuel Caron, Jérôme Dedecker, Bertrand Michel</em></p>
+<p><a href="../../articles/RJ-2021-031/">exPrior: An R Package for the Formulation of Ex-Situ Priors</a> (p.&nbsp;101)<br><em>Falk Heße, Karina Cucchi, Nura Kawa, Yoram Rubin</em></p>
+<p><a href="../../articles/RJ-2021-061/">penPHcure: Variable Selection in Proportional Hazards Cure Model with Time-Varying Covariates</a> (p.&nbsp;116)<br><em>Alessandro Beretta, Cédric Heuchenne</em></p>
+<p><a href="../../articles/RJ-2021-065/">The bdpar Package: Big Data Pipelining Architecture for R</a> (p.&nbsp;130)<br><em>Miguel Ferreiro-Díaz, Tomás R. Cotos-Yáñez, José R. Méndez, David Ruano-Ordás</em></p>
+<p><a href="../../articles/RJ-2021-062/">Unidimensional and Multidimensional Methods for Recurrence Quantification Analysis with crqa</a> (p.&nbsp;145)<br><em>Moreno I. Coco, Dan Mønster, Giuseppe Leonardi, Rick Dale, Sebastian Wallot</em></p>
+<p><a href="../../articles/RJ-2021-032/">clustcurv: An R Package for Determining Groups in Multiple Curves</a> (p.&nbsp;164)<br><em>Nora M. Villanueva, Marta Sestelo, Luis Meira-Machado, Javier Roca-Pardiñas</em></p>
+<p><a href="../../articles/RJ-2021-033/">Benchmarking R packages for Calculation of Persistent Homology</a> (p.&nbsp;184)<br><em>Eashwar V. Somasundaram, Shael E. Brown, Adam Litzler, Jacob G. Scott, Raoul R. Wadhwa</em></p>
+<p><a href="../../articles/RJ-2021-034/">Statistical Quality Control with the qcr Package</a> (p.&nbsp;194)<br><em>Miguel Flores, Rubén Fernández-Casal, Salvador Naya, Javier Tarrío-Saavedra</em></p>
+<p><a href="../../articles/RJ-2021-035/">pdynmc: A Package for Estimating Linear Dynamic Panel Data Models Based on Nonlinear Moment Conditions</a> (p.&nbsp;218)<br><em>Markus Fritsch, Andrew Adrian Yu Pua, Joachim Schnurbus</em></p>
+<p><a href="../../articles/RJ-2021-036/">DChaos: An R Package for Chaotic Time Series Analysis</a> (p.&nbsp;232)<br><em>Julio E. Sandubete, Lorenzo Escot</em></p>
+<p><a href="../../articles/RJ-2021-038/">IndexNumber: An R Package for Measuring the Evolution of Magnitudes</a> (p.&nbsp;253)<br><em>Alejandro Saavedra-Nieves, Paula Saavedra-Nieves</em></p>
+<p><a href="../../articles/RJ-2021-057/">garchx: Flexible and Robust GARCH-X Modeling</a> (p.&nbsp;276)<br><em>Genaro Sucarrat</em></p>
+<p><a href="../../articles/RJ-2021-040/">ROBustness In Network (robin): an R Package for Comparison and Validation of Communities</a> (p.&nbsp;292)<br><em>Valeria Policastro, Dario Righelli, Annamaria Carissimo, Luisa Cutillo, Italia De Feis</em></p>
+<p><a href="../../articles/RJ-2021-041/">Finding Optimal Normalizing Transformations via bestNormalize</a> (p.&nbsp;310)<br><em>Ryan A. Peterson</em></p>
+<p><a href="../../articles/RJ-2021-042/">Package wsbackfit for Smooth Backfitting Estimation of Generalized Structured Models</a> (p.&nbsp;330)<br><em>Javier Roca-Pardiñas, María Xosé Rodríguez-Álvarez, Stefan Sperlich</em></p>
+<p><a href="../../articles/RJ-2021-043/">RLumCarlo: Simulating Cold Light using Monte Carlo Methods</a> (p.&nbsp;351)<br><em>Sebastian Kreutzer, Johannes Friedrich, Vasilis Pagonis, Christian Laag, Ena Rajovic, Christoph Schmidt</em></p>
+<p><a href="../../articles/RJ-2021-044/">OneStep : Le Cam’s One-step Estimation Procedure</a> (p.&nbsp;366)<br><em>Alexandre Brouste, Christophe Dutang, Darel Noutsa Mieniedou</em></p>
+<p><a href="../../articles/RJ-2021-059/">The HBV.IANIGLA Hydrological Model</a> (p.&nbsp;378)<br><em>Ezequiel Toum, Mariano H. Masiokas, Ricardo Villalba, Pierre Pitte, Lucas Ruiz</em></p>
+<p><a href="../../articles/RJ-2021-045/">The R Package smicd: Statistical Methods for Interval- Censored Data</a> (p.&nbsp;396)<br><em>Paul Walter</em></p>
+<p><a href="../../articles/RJ-2021-046/">krippendorffsalpha: An R Package for Measuring Agreement Using Krippendorff’s Alpha Coefficient</a> (p.&nbsp;413)<br><em>John Hughes</em></p>
+<p><a href="../../articles/RJ-2021-047/">Working with CRSP/COMPUSTAT in R: Reproducible Empirical Asset Pricing</a> (p.&nbsp;426)<br><em>Majeed Simaan</em></p>
+<p><a href="../../articles/RJ-2021-055/">distr6: R6 Object-Oriented Probability Distributions Interface in R</a> (p.&nbsp;444)<br><em>Raphael Sonabend, Franz J. Király</em></p>
+<p><a href="../../articles/RJ-2021-060/">gofCopula: Goodness-of-Fit Tests for Copulae</a> (p.&nbsp;467)<br><em>Ostap Okhrin, Simon Trimborn, Martin Waltz</em></p>
+<p><a href="../../articles/RJ-2021-049/">Analyzing Dependence between Point Processes in Time Using IndTestPP</a> (p.&nbsp;499)<br><em>Ana C. Cebrián, Jesús Asín</em></p>
+<p><a href="../../articles/RJ-2021-050/">Conversations in Time: Interactive Visualization to Explore Structured Temporal Data</a> (p.&nbsp;516)<br><em>Earo Wang, Dianne Cook</em></p>
+<p><a href="../../articles/RJ-2021-066/">ROCnReg: An R Package for Receiver Operating Characteristic Curve Inference With and Without Covariates</a> (p.&nbsp;525)<br><em>María Xosé Rodríguez-Álvarez, Vanda Inácio</em></p>
+<p><a href="../../articles/RJ-2021-051/">Automating Reproducible, Collaborative Clinical Trial Document Generation with the listdown Package</a> (p.&nbsp;556)<br><em>Michael Kane, Xun Jiang, Simon Urbanek</em></p>
+<p><a href="../../articles/RJ-2021-052/">Towards a Grammar for Processing Clinical Trial Data</a> (p.&nbsp;563)<br><em>Michael J. Kane</em></p>
+<p><a href="../../articles/RJ-2021-053/">Reproducible Summary Tables with the gtsummary Package</a> (p.&nbsp;570)<br><em>Daniel D. Sjoberg, Karissa Whiting, Michael Curry, Jessica A. Lavery, Joseph Larmarange</em></p>
+<p><a href="../../articles/RJ-2021-054/">Regularized Transformation Models: The tramnet Package</a> (p.&nbsp;581)<br><em>Lucas Kook, Torsten Hothorn</em></p>
+<p><a href="../../articles/RJ-2021-068/">BayesSPsurv: An R Package to Estimate Bayesian (Spatial) Split-Population Survival Models</a> (p.&nbsp;595)<br><em>Brandon Bolte, Nicolás Schmidt, Sergio Béjar, Nguyen Huynh, Bumba Mukherjee</em></p>
+<p><a href="../../articles/RJ-2021-063/">stratamatch: Prognostic Score Stratification Using a Pilot Design</a> (p.&nbsp;614)<br><em>Rachael C. Aikens, Joseph Rigdon, Justin Lee, Michael Baiocchi, Andrew B. Goldstone, Peter Chiu, Y. Joseph Woo, Jonathan H. Chen</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2021-1-bioc/">News from the Bioconductor Project</a> (pp.&nbsp;631-632)<br><em>Bioconductor Core Team</em></p>
+<p><a href="../../news/RJ-2021-1-core/">Core</a></p>
+<p><a href="../../news/RJ-2021-1-cran/">Changes on CRAN</a> (pp.&nbsp;633-635)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2021-1-forwards-news/">Forwards News</a></p>
+<p><a href="../../news/RJ-2021-1-forwardsnews/">News from the Forwards Taskforce</a> (pp.&nbsp;636-637)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2021-1-foundation/">Foundation</a></p>
+<p><a href="../../news/RJ-2021-1-rcore/">Changes in R 4.0–4.1</a> (pp.&nbsp;638-640)<br><em>Tomas Kalibera, Sebastian Meyer, Kurt Hornik</em></p>
+<p><a href="../../news/RJ-2021-1-rfoundation/">R Foundation News</a> (p.&nbsp;641)<br><em>Torsten Hothorn</em></p>
+<p><a href="../../news/RJ-2021-1-rmed2020/">R Medicine 2020: The Power of Going Virtual</a> (pp.&nbsp;642-647)<br><em>Elizabeth J. Atkinson, Peter D. Higgins, Denise Esserman, Michael J. Kane, Steven J. Schwager, Joseph B. Rickert, Daniella Mark, Mara Alexeev, Stephan Kadauke</em></p>
+<p><a href="../../news/RJ-2021-1-whyr2021/">Whyr2021</a></p>
+<p><a href="../../news/RJ-2021-1-whyrturkey2021conferencereport/">Conference Report of Why R? Turkey 2021</a> (pp.&nbsp;648-653)<br><em>Mustafa Cavus, Olgun Aydın, Ozan Evkaya, Ozancan Ozdemir, Deniz Bezer, Ugur Dar</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2021-1/</guid>
+  <pubDate>Mon, 01 Mar 2021 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 12, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2020-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="RJ-2020-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2020
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2020-2-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Michael J. Kane</em></p>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2020-2-bioc/">News from the Bioconductor Project</a> (p.&nbsp;410)<br><em>Bioconductor Core Team</em></p>
+<p><a href="../../news/RJ-2020-2-core/">Changes in R 3.6–4.0</a> (pp.&nbsp;402-406)<br><em>Tomas Kalibera, Sebastian Meyer, Kurt Hornik</em></p>
+<p><a href="../../news/RJ-2020-2-cran/">Changes on CRAN</a> (pp.&nbsp;407-409)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2020-2-erum/">e-Rum2020: how we turned a physical conference into a successful virtual event</a> (pp.&nbsp;416-425)<br><em>Mariachiara Fortuna, Francesca Vitalini, Mirko Signorelli, Emanuela Furfaro, Federico Marini, Gert Janssenswillen, Riccardo Porreca, Riccardo L. Rossi, Andrea Guzzo, Roberta Sirovich, Andrea Melloncelli, Lorenzo Salvi, Serena Signorelli, Filippo Chiarello</em></p>
+<p><a href="../../news/RJ-2020-2-forwards-news/">News from the Forwards Taskforce</a> (pp.&nbsp;411-412)<br><em>Heather Turner</em></p>
+<p><a href="../../news/RJ-2020-2-foundation/">R Foundation News</a> (pp.&nbsp;413-415)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2020-2/</guid>
+  <pubDate>Mon, 01 Jun 2020 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 12, Issue 1</title>
+  <link>https://journal.r-project.org/issues/2020-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="RJ-2020-1.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published June 2020
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2020-1-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Michael J. Kane</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2020-010/">gk: An R Package for the g-and-k and Generalised g-and-h Distributions</a> (p.&nbsp;7)<br><em>Dennis Prangle</em></p>
+<p><a href="../../articles/RJ-2020-016/">NlinTS: An R Package For Causality Detection in Time Series</a> (p.&nbsp;21)<br><em>Youssef Hmamouche</em></p>
+<p><a href="../../articles/RJ-2020-001/">Mapping Smoothed Spatial Effect Estimates from Individual- Level Data: MapGAM</a> (p.&nbsp;32)<br><em>Lu Bai, Daniel L. Gillen, Scott M. Bartell, Verónica M. Vieira</em></p>
+<p><a href="../../articles/RJ-2020-002/">mudfold: An R Package for Nonparametric IRT Modelling of Unfolding Processes</a> (p.&nbsp;49)<br><em>Spyros E. Balafas, Wim P. Krijnen, Wendy J. Post, Ernst C. Wit</em></p>
+<p><a href="../../articles/RJ-2020-021/">tsmp: An R Package for Time Series with Matrix Profile</a> (p.&nbsp;76)<br><em>Francisco Bischoff, Pedro Pereira Rodrigues</em></p>
+<p><a href="../../articles/RJ-2020-020/">Individual-Level Modelling of Infectious Disease Data: EpiILM</a> (p.&nbsp;87)<br><em>Vineetha Warriyar K. V., Waleed Almutiry, Rob Deardon</em></p>
+<p><a href="../../articles/RJ-2020-018/">SurvBoost: An R Package for High-Dimensional Variable Selection in the Stratified Proportional Hazards Model via Gradient Boosting</a> (p.&nbsp;105)<br><em>Emily Morris, Kevin He, Yanming Li, Yi Li, Jian Kang</em></p>
+<p><a href="../../articles/RJ-2020-024/">CoxPhLb: An R Package for Analyzing Length Biased Data under Cox Model</a> (p.&nbsp;118)<br><em>Chi Hyun Lee, Heng Zhou, Jing Ning, Diane D. Liu, Yu Shen</em></p>
+<p><a href="../../articles/RJ-2020-006/">SortedEffects: Sorted Causal Effects in R</a> (p.&nbsp;131)<br><em>Shuowen Chen, Victor Chernozhukov, Iván Fernández-Val, Ye Luo</em></p>
+<p><a href="../../articles/RJ-2020-022/">npordtests: An R Package of Nonparametric Tests for Equality of Location Against Ordered Alternatives</a> (p.&nbsp;147)<br><em>Bulent Altunkaynak, Hamza Gamgam</em></p>
+<p><a href="../../articles/RJ-2020-005/">lspartition: Partitioning-Based Least Squares Regression</a> (p.&nbsp;172)<br><em>Matias D. Cattaneo, Max H. Farrell, Yingjie Feng</em></p>
+<p><a href="../../articles/RJ-2020-019/">Skew-t Expected Information Matrix Evaluation and Use for Standard Error Calculations</a> (p.&nbsp;188)<br><em>R. Douglas Martin, Chindhanai Uthaisaad, Daniel Z. Xia</em></p>
+<p><a href="../../articles/RJ-2020-012/">rcosmo: R Package for Analysis of Spherical, HEALPix and Cosmological Data</a> (p.&nbsp;206)<br><em>Daniel Fryer, Ming Li, Andriy Olenko</em></p>
+<p><a href="../../articles/RJ-2020-011/">Tools for Analyzing R Code the Tidy Way</a> (p.&nbsp;226)<br><em>Lucy D’Agostino McGowan, Sean Kross, Jeffrey Leek</em></p>
+<p><a href="../../articles/RJ-2020-027/">spinifex: An R Package for Creating a Manual Tour of Low- dimensional Projections of Multivariate Data</a> (p.&nbsp;243)<br><em>Nicholas Spyrison, Dianne Cook</em></p>
+<p><a href="../../articles/RJ-2020-023/">ari: The Automated R Instructor</a> (p.&nbsp;258)<br><em>Sean Kross, Jeffrey T. Leek, John Muschelli</em></p>
+<p><a href="../../articles/RJ-2020-025/">CopulaCenR: Copula based Regression Models for Bivariate Censored Data in R</a> (p.&nbsp;266)<br><em>Tao Sun, Ying Ding</em></p>
+<p><a href="../../articles/RJ-2020-003/">mistr: A Computational Framework for Mixture and Composite Distributions</a> (p.&nbsp;283)<br><em>Lukas Sablica, Kurt Hornik</em></p>
+<p><a href="../../articles/RJ-2020-014/">difNLR: Generalized Logistic Regression Models for DIF and DDF Detection</a> (p.&nbsp;300)<br><em>Adéla Hladká, Patrícia Martinková</em></p>
+<p><a href="../../articles/RJ-2020-026/">BayesMallows: An R Package for the Bayesian Mallows Model</a> (p.&nbsp;324)<br><em>Øystein Sørensen, Marta Crispino, Qinghua Liu, Valeria Vitelli</em></p>
+<p><a href="../../articles/RJ-2020-013/">Variable Importance Plots—An Introduction to the vip Package</a> (p.&nbsp;343)<br><em>Brandon M. Greenwell, Bradley C. Boehmke</em></p>
+<p><a href="../../articles/RJ-2020-017/">SimilaR: R Code Clone and Plagiarism Detection</a> (p.&nbsp;367)<br><em>Maciej Bartoszuk, Marek Gagolewski</em></p>
+<p><a href="../../articles/RJ-2020-008/">Linear Fractional Stable Motion with the rlfsm R Package</a> (p.&nbsp;386)<br><em>Stepan Mazur, Dmitry Otryakhin</em></p>
+<p><a href="../../articles/RJ-2020-015/">The R package NonProbEst for estimation in non-probability surveys</a> (p.&nbsp;406)<br><em>M. Rueda, R. Ferri-García, L. Castro</em></p>
+<p><a href="../../articles/RJ-2020-009/">ProjectManagement: an R Package for Managing Projects</a> (p.&nbsp;419)<br><em>Juan Carlos Gonçalves-Dosantos1, Ignacio García-Jurado, Julián Costa</em></p>
+<p><a href="../../articles/RJ-2020-007/">The Rockerverse: Packages and Applications for Containerisation with R</a> (p.&nbsp;437)<br><em>Daniel Nüst, Dirk Eddelbuettel, Dom Bennett, Robrecht Cannoodt, Dav Clark, Gergely Daróczi, Mark Edmondson, Colin Fay, Ellis Hughes, Lars Kjeldgaard, Sean Lopp, Ben Marwick, Heather Nolis, Jacqueline Nolis, Hong Ooi, Karthik Ram, Noam Ross, Lori Shepherd, Péter Sólymos, Tyson Lee Swetnam, Nitesh Turaga, Charlotte Van Petegem, Jason Williams, Craig Willis, Nan Xiao</em></p>
+<p><a href="../../articles/RJ-2020-028/">S, R, and Data Science</a> (p.&nbsp;462)<br><em>John M. Chambers</em></p>
+<p><a href="../../articles/RJ-2020-029/">Provenance of R’s Gradient Optimizers</a> (p.&nbsp;477)<br><em>John C. Nash</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2020-1-cran/">Changes on CRAN</a> (pp.&nbsp;485-497)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2020-1-foundation/">R Foundation News</a> (p.&nbsp;498)<br><em>Torsten Hothorn</em></p>
+<p><a href="../../news/RJ-2020-1-whyR/">Conference Report: Why R? 2019</a> (pp.&nbsp;484-494)<br><em>Michał Burdukiewicz, Filip Pietluch, Jarosław Chilimoniuk, Katarzyna Sidorczuk, Dominik Rafacz, Leon Eyrich Jessen, Stefan Rödiger, Marcin Kosiński, Piotr Wójcik</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2020-1/</guid>
+  <pubDate>Sun, 01 Mar 2020 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Volume 11, Issue 2</title>
+  <link>https://journal.r-project.org/issues/2019-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="paper-card full-bleed">
+<p class="paper-links">
+<i class="fa-regular fa-file-pdf"></i> <a href="RJ-2019-2.pdf">Download Complete Issue (PDF)</a>
+</p>
+<div class="paper-citation">
+Published December 2019
+</div>
+</div>
+<section id="table-of-contents" class="level2">
+<h2 class="anchored" data-anchor-id="table-of-contents">Table of Contents</h2>
+<p><a href="../../news/RJ-2019-2-editorial/">Editorial</a> (pp.&nbsp;4-5)<br><em>Michael J. Kane</em></p>
+<section id="contributed-research-articles" class="level3">
+<h3 class="anchored" data-anchor-id="contributed-research-articles">Contributed Research Articles</h3>
+<p><a href="../../articles/RJ-2019-041/">Using Web Services to Work with Geodata in R</a> (p.&nbsp;6)<br><em>Jan-Philipp Kolb</em></p>
+<p><a href="../../articles/RJ-2019-006/">orthoDr: Semiparametric Dimension Reduction via Orthogonality Constrained Optimization</a> (p.&nbsp;24)<br><em>Ruoqing Zhu, Jiyang Zhang, Ruilin Zhao, Peng Xu, Wenzhuo Zhou, Xin Zhang</em></p>
+<p><a href="../../articles/RJ-2019-042/">coxed: An R Package for Computing Duration-Based Quantities from the Cox Proportional Hazards Model</a> (p.&nbsp;38)<br><em>Jonathan Kropko, Jeffrey J. Harden</em></p>
+<p><a href="../../articles/RJ-2019-007/">Modeling regimes with extremes: the bayesdfa package for identifying and forecasting common trends and anomalies in multivariate time-series data</a> (p.&nbsp;46)<br><em>Eric J. Ward, Sean C. Anderson, Luis A. Damiano, Mary E. Hunsicker, Michael A. Litzow</em></p>
+<p><a href="../../articles/RJ-2019-044/">Fitting Tails by the Empirical Residual Coefficient of Variation: The ercv Package</a> (p.&nbsp;56)<br><em>Joan del Castillo, Isabel Serra, Maria Padilla, David Moriña</em></p>
+<p><a href="../../articles/RJ-2019-045/">biclustermd: An R Package for Biclustering with Missing Values</a> (p.&nbsp;69)<br><em>John Reisner, Hieu Pham, Sigurdur Olafsson, Stephen Vardeman, Jing Li</em></p>
+<p><a href="../../articles/RJ-2019-036/">auditor: an R Package for Model-Agnostic Visual Validation and Diagnostics</a> (p.&nbsp;85)<br><em>Alicja Gosiewska, Przemysław Biecek</em></p>
+<p><a href="../../articles/RJ-2019-054/">The R Package trafo for Transforming Linear Regression Models</a> (p.&nbsp;99)<br><em>Lily Medina, Ann-Kristin Kreutzmann, Natalia Rojas- Perilla, Piedad Castro</em></p>
+<p><a href="../../articles/RJ-2019-055/">BondValuation: An R Package for Fixed Coupon Bond Analysis</a> (p.&nbsp;124)<br><em>Wadim Djatschenko</em></p>
+<p><a href="../../articles/RJ-2019-021/">ConvergenceClubs: A Package for Performing the Phillips and Sul’s Club Convergence Clustering Procedure</a> (p.&nbsp;142)<br><em>Roberto Sichera, Pietro Pizzuto</em></p>
+<p><a href="../../articles/RJ-2019-046/">PPCI: an R Package for Cluster Identification using Projection Pursuit</a> (p.&nbsp;152)<br><em>David P. Hofmeyr, Nicos G. Pavlidis</em></p>
+<p><a href="../../articles/RJ-2019-003/">dr4pl: A Stable Convergence Algorithm for the 4 Parameter Logistic Model</a> (p.&nbsp;171)<br><em>Hyowon An, Justin T. Landis, Aubrey G. Bailey, James S. Marron, Dirk P. Dittmer</em></p>
+<p><a href="../../articles/RJ-2019-027/">cvcrand: A Package for Covariate-constrained Randomization and the Clustered Permutation Test for Cluster Randomized Trials</a> (p.&nbsp;191)<br><em>Hengshi Yu, Fan Li, John A. Gallis, Elizabeth L. Turner</em></p>
+<p><a href="../../articles/RJ-2019-028/">jomo: A Flexible Package for Two-level Joint Modelling Multiple Imputation</a> (p.&nbsp;205)<br><em>Matteo Quartagno, Simon Grund, James Carpenter</em></p>
+<p><a href="../../articles/RJ-2019-004/">Time Series Forecasting with KNN in R: the tsfknn Package</a> (p.&nbsp;229)<br><em>Francisco Martínez, María P. Frías, Francisco Charte, Antonio J. Rivera</em></p>
+<p><a href="../../articles/RJ-2019-005/">rollmatch: An R Package for Rolling Entry Matching</a> (p.&nbsp;243)<br><em>Kasey Jones, Rob Chew, Allison Witman, Yiyan Liu</em></p>
+<p><a href="../../articles/RJ-2019-048/">Associative Classification in R: arc, arulesCBA, and rCBA</a> (p.&nbsp;254)<br><em>Michael Hahsler, Ian Johnson, Tomáš Kliegr, Jaroslav Kuchař</em></p>
+<p><a href="../../articles/RJ-2019-032/">roahd Package: Robust Analysis of High Dimensional Data</a> (p.&nbsp;291)<br><em>Francesca Ieva, Anna Maria Paganoni, Juan Romo, Nicholas Tarabelloni</em></p>
+<p><a href="../../articles/RJ-2019-043/">The IDSpatialStats R Package: Quantifying Spatial Dependence of Infectious Disease Spread</a> (p.&nbsp;308)<br><em>John R. Giles, Henrik Salje, Justin Lessler</em></p>
+<p><a href="../../articles/RJ-2019-050/">Comparing namedCapture with other R packages for regular expressions</a> (p.&nbsp;328)<br><em>Toby Dylan Hocking</em></p>
+<p><a href="../../articles/RJ-2019-033/">The Landscape of R Packages for Automated Exploratory Data Analysis</a> (p.&nbsp;347)<br><em>Mateusz Staniak, Przemysław Biecek</em></p>
+<p><a href="../../articles/RJ-2019-057/">HCmodelSets: An R Package for Specifying Sets of Well- fitting Models in High Dimensions</a> (p.&nbsp;370)<br><em>Henrique Hoeltgebaum, Heather Battey</em></p>
+<p><a href="../../articles/RJ-2019-051/">black Resampling-Based Analysis of Multivariate Data and Repeated Measures Designs with the R Package MANOVA.RM</a> (p.&nbsp;380)<br><em>Sarah Friedrich, Frank Konietschke, Markus Pauly</em></p>
+<p><a href="../../articles/RJ-2019-053/">spGARCH: An R-Package for Spatial and Spatiotemporal ARCH and GARCH models</a> (p.&nbsp;401)<br><em>Philipp Otto</em></p>
+<p><a href="../../articles/RJ-2019-052/">lpirfs: An R Package to Estimate Impulse Response Functions by Local Projections</a> (p.&nbsp;421)<br><em>Philipp Adämmer</em></p>
+</section>
+<section id="news-and-notes" class="level3">
+<h3 class="anchored" data-anchor-id="news-and-notes">News and Notes</h3>
+<p><a href="../../news/RJ-2019-2-bioc/">News from the Bioconductor Project</a> (p.&nbsp;447)<br><em>Bioconductor Core Team</em></p>
+<p><a href="../../news/RJ-2019-2-ch/">CHANGES IN R 3.6.2</a> (pp.&nbsp;448-554)<br><em>R Core Team</em></p>
+<p><a href="../../news/RJ-2019-2-conectaR/">Conference Report: ConectaR 2019</a> (pp.&nbsp;439-442)<br><em>Marcela Alfaro Córdoba, Agustín Gómez Meléndez, Frans van Dunné, Jacob van Etten</em></p>
+<p><a href="../../news/RJ-2019-2-cran/">Changes on CRAN</a> (pp.&nbsp;444-446)<br><em>Kurt Hornik, Uwe Ligges, Achim Zeileis</em></p>
+<p><a href="../../news/RJ-2019-2-foundation/">R Foundation News</a> (p.&nbsp;443)<br><em>Torsten Hothorn</em></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>R Journal</category>
+  <guid>https://journal.r-project.org/issues/2019-2/</guid>
+  <pubDate>Sat, 01 Jun 2019 04:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

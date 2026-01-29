@@ -4,9 +4,29 @@
 # Libraries
 # ============================================================================
 
+library(bibtex)
 library(knitr)
+library(mirai)
 library(rmarkdown)
 library(yaml)
+
+# ============================================================================
+# Parallelization
+# ============================================================================
+
+# Setup mirai daemons for parallel processing.
+# Returns the number of workers started.
+# Caller should add: on.exit(daemons(0), add = TRUE)
+setup_parallel <- function() {
+  daemon_target <- as.integer(Sys.getenv("RJOURNAL_MIRAI_DAEMONS", ""))
+  if (is.na(daemon_target) || daemon_target < 1) {
+    cores <- parallel::detectCores(logical = TRUE)
+    if (is.na(cores)) cores <- 1L
+    daemon_target <- max(1L, cores - 1L)
+  }
+  daemons(daemon_target)
+  daemon_target
+}
 
 # ============================================================================
 # Constants
@@ -526,28 +546,40 @@ build_article_card <- function(ref) {
   )
 }
 
-render_embed_html <- function(root_dir, slug, rmd_file) {
+render_embed_html <- function(root_dir, slug, rmd_file, timeout = 10) {
   html_file <- file.path(root_dir, paste0(slug, ".html"))
   temp_rmd <- file.path(root_dir, paste0(slug, "-render.Rmd"))
 
   lines <- readLines(rmd_file, warn = FALSE)
   lines <- normalize_yaml_booleans(lines)
   writeLines(lines, temp_rmd)
+  on.exit(unlink(temp_rmd), add = TRUE)
 
   output_format <- rmarkdown::html_document(self_contained = TRUE)
-  rmarkdown::render(
-    input = temp_rmd,
-    output_format = output_format,
-    output_file = paste0(slug, ".html"),
-    output_dir = root_dir,
-    quiet = TRUE
-  )
+
+  # Set timeout for rendering
+  setTimeLimit(elapsed = timeout, transient = TRUE)
+  on.exit(setTimeLimit(elapsed = Inf, transient = FALSE), add = TRUE)
+
+  tryCatch(
+    rmarkdown::render(
+      input = temp_rmd,
+      output_format = output_format,
+      output_file = paste0(slug, ".html"),
+      output_dir = root_dir,
+      quiet = TRUE
+    ),
+    error = function(e) {
+      if (grepl("reached elapsed time limit", e$message)) {
+        stop(sprintf("render timed out after %ds", timeout))
+      }
+      stop(e$message)
+    })
 
   if (!file.exists(html_file)) {
     stop("rmarkdown render failed")
   }
 
-  unlink(temp_rmd)
   TRUE
 }
 

@@ -80,8 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
+      valueNames: ['listing-date','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      page: 30,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
@@ -132,7 +133,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles.css">
-</head>
+<link rel="alternate" type="application/rss+xml" title="The R Journal" href="issues.xml" data-external="1"></head>
 
 <body class="nav-fixed quarto-light">
 
@@ -193,13 +194,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
+    <div class="quarto-title column-page-left">
       <h1 class="title">Issues</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-left">
 
       
     
@@ -210,9 +211,11 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(64)</span></div><div class="category" data-category="UiUyMEpvdXJuYWw=">R Journal <span class="quarto-category-count">(41)</span></div><div class="category" data-category="UiUyME5ld3M=">R News <span class="quarto-category-count">(23)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
 
 
@@ -235,9 +238,6 @@ window.Quarto = {
       <option value="listing-date-sort" data-direction="desc">
         Date - Newest
       </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
     </select>
   </div>
     <div class="input-group input-group-sm quarto-listing-filter">
@@ -254,7 +254,7 @@ window.Quarto = {
 </th>
 
 <th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+Issue
 </th>
 
 <th>
@@ -265,12 +265,12 @@ Categories
 </thead>
 <tbody class="list">
 
-<tr data-index="0" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1756699200000" data-listing-file-modified-sort="1769645287670" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227" data-listing-title-sort="Volume 17, Issue 3" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1756699200000" data-listing-file-modified-sort="1769663129519" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="227" data-listing-description-sort="Volume 17, Issue 3">
 <td>
 <span class="listing-date">2025-09-01</span>
 </td>
 <td>
-<a href="./issues/2025-3/index.html" class="title listing-title">Volume 17, Issue 3</a>
+<a href="./issues/2025-3/index.html" class="description listing-description">Volume 17, Issue 3</a>
 </td>
 <td>
 <span class="listing-categories">R Journal</span>
@@ -278,12 +278,12 @@ Categories
 
 </tr>
 
-<tr data-index="1" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769645287668" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233" data-listing-title-sort="Volume 17, Issue 2" data-listing-filename-sort="index.qmd">
+<tr data-index="1" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1748750400000" data-listing-file-modified-sort="1769663129518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233" data-listing-description-sort="Volume 17, Issue 2">
 <td>
 <span class="listing-date">2025-06-01</span>
 </td>
 <td>
-<a href="./issues/2025-2/index.html" class="title listing-title">Volume 17, Issue 2</a>
+<a href="./issues/2025-2/index.html" class="description listing-description">Volume 17, Issue 2</a>
 </td>
 <td>
 <span class="listing-categories">R Journal</span>
@@ -291,12 +291,12 @@ Categories
 
 </tr>
 
-<tr data-index="2" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1740805200000" data-listing-file-modified-sort="1769645287667" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="252" data-listing-title-sort="Volume 17, Issue 1" data-listing-filename-sort="index.qmd">
+<tr data-index="2" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1740805200000" data-listing-file-modified-sort="1769663129516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="252" data-listing-description-sort="Volume 17, Issue 1">
 <td>
 <span class="listing-date">2025-03-01</span>
 </td>
 <td>
-<a href="./issues/2025-1/index.html" class="title listing-title">Volume 17, Issue 1</a>
+<a href="./issues/2025-1/index.html" class="description listing-description">Volume 17, Issue 1</a>
 </td>
 <td>
 <span class="listing-categories">R Journal</span>
@@ -304,12 +304,350 @@ Categories
 
 </tr>
 
-<tr data-index="3" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769645287665" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="266" data-listing-title-sort="Volume 6, Issue 2" data-listing-filename-sort="index.qmd">
+<tr data-index="3" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1733029200000" data-listing-file-modified-sort="1769663129515" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="212" data-listing-description-sort="Volume 16, Issue 4">
+<td>
+<span class="listing-date">2024-12-01</span>
+</td>
+<td>
+<a href="./issues/2024-4/index.html" class="description listing-description">Volume 16, Issue 4</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1725163200000" data-listing-file-modified-sort="1769663129513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="263" data-listing-description-sort="Volume 16, Issue 3">
+<td>
+<span class="listing-date">2024-09-01</span>
+</td>
+<td>
+<a href="./issues/2024-3/index.html" class="description listing-description">Volume 16, Issue 3</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1717214400000" data-listing-file-modified-sort="1769663129511" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="257" data-listing-description-sort="Volume 16, Issue 2">
+<td>
+<span class="listing-date">2024-06-01</span>
+</td>
+<td>
+<a href="./issues/2024-2/index.html" class="description listing-description">Volume 16, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1709269200000" data-listing-file-modified-sort="1769663129509" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="258" data-listing-description-sort="Volume 16, Issue 1">
+<td>
+<span class="listing-date">2024-03-01</span>
+</td>
+<td>
+<a href="./issues/2024-1/index.html" class="description listing-description">Volume 16, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1701406800000" data-listing-file-modified-sort="1769663129507" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="339" data-listing-description-sort="Volume 15, Issue 4">
+<td>
+<span class="listing-date">2023-12-01</span>
+</td>
+<td>
+<a href="./issues/2023-4/index.html" class="description listing-description">Volume 15, Issue 4</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1693540800000" data-listing-file-modified-sort="1769663129505" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="309" data-listing-description-sort="Volume 15, Issue 3">
+<td>
+<span class="listing-date">2023-09-01</span>
+</td>
+<td>
+<a href="./issues/2023-3/index.html" class="description listing-description">Volume 15, Issue 3</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1685592000000" data-listing-file-modified-sort="1769663129503" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="331" data-listing-description-sort="Volume 15, Issue 2">
+<td>
+<span class="listing-date">2023-06-01</span>
+</td>
+<td>
+<a href="./issues/2023-2/index.html" class="description listing-description">Volume 15, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1677646800000" data-listing-file-modified-sort="1769663129501" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="391" data-listing-description-sort="Volume 15, Issue 1">
+<td>
+<span class="listing-date">2023-03-01</span>
+</td>
+<td>
+<a href="./issues/2023-1/index.html" class="description listing-description">Volume 15, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1669870800000" data-listing-file-modified-sort="1769663129498" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71" data-listing-description-sort="Volume 14, Issue 4">
+<td>
+<span class="listing-date">2022-12-01</span>
+</td>
+<td>
+<a href="./issues/2022-4/index.html" class="description listing-description">Volume 14, Issue 4</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1662004800000" data-listing-file-modified-sort="1769663129497" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371" data-listing-description-sort="Volume 14, Issue 3">
+<td>
+<span class="listing-date">2022-09-01</span>
+</td>
+<td>
+<a href="./issues/2022-3/index.html" class="description listing-description">Volume 14, Issue 3</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1654056000000" data-listing-file-modified-sort="1769663129495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="424" data-listing-description-sort="Volume 14, Issue 2">
+<td>
+<span class="listing-date">2022-06-01</span>
+</td>
+<td>
+<a href="./issues/2022-2/index.html" class="description listing-description">Volume 14, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1646110800000" data-listing-file-modified-sort="1769663129491" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="483" data-listing-description-sort="Volume 14, Issue 1">
+<td>
+<span class="listing-date">2022-03-01</span>
+</td>
+<td>
+<a href="./issues/2022-1/index.html" class="description listing-description">Volume 14, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1622520000000" data-listing-file-modified-sort="1769663129489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="845" data-listing-description-sort="Volume 13, Issue 2">
+<td>
+<span class="listing-date">2021-06-01</span>
+</td>
+<td>
+<a href="./issues/2021-2/index.html" class="description listing-description">Volume 13, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1614574800000" data-listing-file-modified-sort="1769663129483" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="729" data-listing-description-sort="Volume 13, Issue 1">
+<td>
+<span class="listing-date">2021-03-01</span>
+</td>
+<td>
+<a href="./issues/2021-1/index.html" class="description listing-description">Volume 13, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1590984000000" data-listing-file-modified-sort="1769663129478" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="114" data-listing-description-sort="Volume 12, Issue 2">
+<td>
+<span class="listing-date">2020-06-01</span>
+</td>
+<td>
+<a href="./issues/2020-2/index.html" class="description listing-description">Volume 12, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1583038800000" data-listing-file-modified-sort="1769663129477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="556" data-listing-description-sort="Volume 12, Issue 1">
+<td>
+<span class="listing-date">2020-03-01</span>
+</td>
+<td>
+<a href="./issues/2020-1/index.html" class="description listing-description">Volume 12, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1559361600000" data-listing-file-modified-sort="1769663129473" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="527" data-listing-description-sort="Volume 11, Issue 2">
+<td>
+<span class="listing-date">2019-06-01</span>
+</td>
+<td>
+<a href="./issues/2019-2/index.html" class="description listing-description">Volume 11, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1551416400000" data-listing-file-modified-sort="1769663129470" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="478" data-listing-description-sort="Volume 11, Issue 1">
+<td>
+<span class="listing-date">2019-03-01</span>
+</td>
+<td>
+<a href="./issues/2019-1/index.html" class="description listing-description">Volume 11, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1527825600000" data-listing-file-modified-sort="1769663129467" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="699" data-listing-description-sort="Volume 10, Issue 2">
+<td>
+<span class="listing-date">2018-06-01</span>
+</td>
+<td>
+<a href="./issues/2018-2/index.html" class="description listing-description">Volume 10, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="22" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1519880400000" data-listing-file-modified-sort="1769663129462" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="649" data-listing-description-sort="Volume 10, Issue 1">
+<td>
+<span class="listing-date">2018-03-01</span>
+</td>
+<td>
+<a href="./issues/2018-1/index.html" class="description listing-description">Volume 10, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="23" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1496289600000" data-listing-file-modified-sort="1769663129458" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="712" data-listing-description-sort="Volume 9, Issue 2">
+<td>
+<span class="listing-date">2017-06-01</span>
+</td>
+<td>
+<a href="./issues/2017-2/index.html" class="description listing-description">Volume 9, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="24" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1488344400000" data-listing-file-modified-sort="1769663129453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="663" data-listing-description-sort="Volume 9, Issue 1">
+<td>
+<span class="listing-date">2017-03-01</span>
+</td>
+<td>
+<a href="./issues/2017-1/index.html" class="description listing-description">Volume 9, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="25" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1464753600000" data-listing-file-modified-sort="1769663129449" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="621" data-listing-description-sort="Volume 8, Issue 2">
+<td>
+<span class="listing-date">2016-06-01</span>
+</td>
+<td>
+<a href="./issues/2016-2/index.html" class="description listing-description">Volume 8, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="26" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1456808400000" data-listing-file-modified-sort="1769663129445" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="493" data-listing-description-sort="Volume 8, Issue 1">
+<td>
+<span class="listing-date">2016-03-01</span>
+</td>
+<td>
+<a href="./issues/2016-1/index.html" class="description listing-description">Volume 8, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="27" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1433131200000" data-listing-file-modified-sort="1769663129441" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="390" data-listing-description-sort="Volume 7, Issue 2">
+<td>
+<span class="listing-date">2015-06-01</span>
+</td>
+<td>
+<a href="./issues/2015-2/index.html" class="description listing-description">Volume 7, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="28" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1425186000000" data-listing-file-modified-sort="1769663129439" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278" data-listing-description-sort="Volume 7, Issue 1">
+<td>
+<span class="listing-date">2015-03-01</span>
+</td>
+<td>
+<a href="./issues/2015-1/index.html" class="description listing-description">Volume 7, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="29" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1401595200000" data-listing-file-modified-sort="1769663129436" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="305" data-listing-description-sort="Volume 6, Issue 2">
 <td>
 <span class="listing-date">2014-06-01</span>
 </td>
 <td>
-<a href="./issues/2014-2/index.html" class="title listing-title">Volume 6, Issue 2</a>
+<a href="./issues/2014-2/index.html" class="description listing-description">Volume 6, Issue 2</a>
 </td>
 <td>
 <span class="listing-categories">R Journal</span>
@@ -317,12 +655,12 @@ Categories
 
 </tr>
 
-<tr data-index="4" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1393650000000" data-listing-file-modified-sort="1769645287662" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="301" data-listing-title-sort="Volume 6, Issue 1" data-listing-filename-sort="index.qmd">
+<tr data-index="30" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1393650000000" data-listing-file-modified-sort="1769663129434" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="327" data-listing-description-sort="Volume 6, Issue 1">
 <td>
 <span class="listing-date">2014-03-01</span>
 </td>
 <td>
-<a href="./issues/2014-1/index.html" class="title listing-title">Volume 6, Issue 1</a>
+<a href="./issues/2014-1/index.html" class="description listing-description">Volume 6, Issue 1</a>
 </td>
 <td>
 <span class="listing-categories">R Journal</span>
@@ -330,12 +668,142 @@ Categories
 
 </tr>
 
-<tr data-index="5" data-categories="UiUyME5ld3M=" data-listing-date-sort="1212292800000" data-listing-file-modified-sort="1769645287660" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="126" data-listing-title-sort="Volume 8, Issue 2" data-listing-filename-sort="index.qmd">
+<tr data-index="31" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1370059200000" data-listing-file-modified-sort="1769663129431" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-description-sort="Volume 5, Issue 2">
+<td>
+<span class="listing-date">2013-06-01</span>
+</td>
+<td>
+<a href="./issues/2013-2/index.html" class="description listing-description">Volume 5, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="32" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1362114000000" data-listing-file-modified-sort="1769663129429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="376" data-listing-description-sort="Volume 5, Issue 1">
+<td>
+<span class="listing-date">2013-03-01</span>
+</td>
+<td>
+<a href="./issues/2013-1/index.html" class="description listing-description">Volume 5, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="33" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1338523200000" data-listing-file-modified-sort="1769663129426" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="134" data-listing-description-sort="Volume 4, Issue 2">
+<td>
+<span class="listing-date">2012-06-01</span>
+</td>
+<td>
+<a href="./issues/2012-2/index.html" class="description listing-description">Volume 4, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="34" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1330578000000" data-listing-file-modified-sort="1769663129425" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162" data-listing-description-sort="Volume 4, Issue 1">
+<td>
+<span class="listing-date">2012-03-01</span>
+</td>
+<td>
+<a href="./issues/2012-1/index.html" class="description listing-description">Volume 4, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="35" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1306900800000" data-listing-file-modified-sort="1769663129423" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="141" data-listing-description-sort="Volume 3, Issue 2">
+<td>
+<span class="listing-date">2011-06-01</span>
+</td>
+<td>
+<a href="./issues/2011-2/index.html" class="description listing-description">Volume 3, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="36" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1298955600000" data-listing-file-modified-sort="1769663129422" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233" data-listing-description-sort="Volume 3, Issue 1">
+<td>
+<span class="listing-date">2011-03-01</span>
+</td>
+<td>
+<a href="./issues/2011-1/index.html" class="description listing-description">Volume 3, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="37" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1275364800000" data-listing-file-modified-sort="1769663129420" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-description-sort="Volume 2, Issue 2">
+<td>
+<span class="listing-date">2010-06-01</span>
+</td>
+<td>
+<a href="./issues/2010-2/index.html" class="description listing-description">Volume 2, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="38" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1267419600000" data-listing-file-modified-sort="1769663129417" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152" data-listing-description-sort="Volume 2, Issue 1">
+<td>
+<span class="listing-date">2010-03-01</span>
+</td>
+<td>
+<a href="./issues/2010-1/index.html" class="description listing-description">Volume 2, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="39" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1243828800000" data-listing-file-modified-sort="1769663129416" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="195" data-listing-description-sort="Volume 1, Issue 2">
+<td>
+<span class="listing-date">2009-06-01</span>
+</td>
+<td>
+<a href="./issues/2009-2/index.html" class="description listing-description">Volume 1, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="40" data-categories="UiUyMEpvdXJuYWw=" data-listing-date-sort="1235883600000" data-listing-file-modified-sort="1769663129414" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165" data-listing-description-sort="Volume 1, Issue 1">
+<td>
+<span class="listing-date">2009-03-01</span>
+</td>
+<td>
+<a href="./issues/2009-1/index.html" class="description listing-description">Volume 1, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R Journal</span>
+</td>
+
+</tr>
+
+<tr data-index="41" data-categories="UiUyME5ld3M=" data-listing-date-sort="1212292800000" data-listing-file-modified-sort="1769663129413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="126" data-listing-description-sort="Volume 8, Issue 2">
 <td>
 <span class="listing-date">2008-06-01</span>
 </td>
 <td>
-<a href="./issues/2008-2/index.html" class="title listing-title">Volume 8, Issue 2</a>
+<a href="./issues/2008-2/index.html" class="description listing-description">Volume 8, Issue 2</a>
 </td>
 <td>
 <span class="listing-categories">R News</span>
@@ -343,12 +811,12 @@ Categories
 
 </tr>
 
-<tr data-index="6" data-categories="UiUyME5ld3M=" data-listing-date-sort="1204347600000" data-listing-file-modified-sort="1769645287659" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-title-sort="Volume 8, Issue 1" data-listing-filename-sort="index.qmd">
+<tr data-index="42" data-categories="UiUyME5ld3M=" data-listing-date-sort="1204347600000" data-listing-file-modified-sort="1769663129412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140" data-listing-description-sort="Volume 8, Issue 1">
 <td>
 <span class="listing-date">2008-03-01</span>
 </td>
 <td>
-<a href="./issues/2008-1/index.html" class="title listing-title">Volume 8, Issue 1</a>
+<a href="./issues/2008-1/index.html" class="description listing-description">Volume 8, Issue 1</a>
 </td>
 <td>
 <span class="listing-categories">R News</span>
@@ -356,25 +824,12 @@ Categories
 
 </tr>
 
-<tr data-index="7" data-categories="UiUyME5ld3M=" data-listing-date-sort="999316800000" data-listing-file-modified-sort="1769645287658" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="120" data-listing-title-sort="Volume 1, Issue 3" data-listing-filename-sort="index.qmd">
+<tr data-index="43" data-categories="UiUyME5ld3M=" data-listing-date-sort="1188619200000" data-listing-file-modified-sort="1769663129411" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135" data-listing-description-sort="Volume 7, Issue 3">
 <td>
-<span class="listing-date">2001-09-01</span>
+<span class="listing-date">2007-09-01</span>
 </td>
 <td>
-<a href="./issues/2001-3/index.html" class="title listing-title">Volume 1, Issue 3</a>
-</td>
-<td>
-<span class="listing-categories">R News</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-categories="UiUyME5ld3M=" data-listing-date-sort="991368000000" data-listing-file-modified-sort="1769645287657" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="97" data-listing-title-sort="Volume 1, Issue 2" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">2001-06-01</span>
-</td>
-<td>
-<a href="./issues/2001-2/index.html" class="title listing-title">Volume 1, Issue 2</a>
+<a href="./issues/2007-3/index.html" class="description listing-description">Volume 7, Issue 3</a>
 </td>
 <td>
 <span class="listing-categories">R News</span>
@@ -382,12 +837,77 @@ Categories
 
 </tr>
 
-<tr data-index="9" data-categories="UiUyME5ld3M=" data-listing-date-sort="983422800000" data-listing-file-modified-sort="1769645287653" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="113" data-listing-title-sort="Volume 1, Issue 1" data-listing-filename-sort="index.qmd">
+<tr data-index="44" data-categories="UiUyME5ld3M=" data-listing-date-sort="1180670400000" data-listing-file-modified-sort="1769663129410" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="149" data-listing-description-sort="Volume 7, Issue 2">
 <td>
-<span class="listing-date">2001-03-01</span>
+<span class="listing-date">2007-06-01</span>
 </td>
 <td>
-<a href="./issues/2001-1/index.html" class="title listing-title">Volume 1, Issue 1</a>
+<a href="./issues/2007-2/index.html" class="description listing-description">Volume 7, Issue 2</a>
+</td>
+<td>
+<span class="listing-categories">R News</span>
+</td>
+
+</tr>
+
+<tr data-index="45" data-categories="UiUyME5ld3M=" data-listing-date-sort="1172725200000" data-listing-file-modified-sort="1769663129408" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="135" data-listing-description-sort="Volume 7, Issue 1">
+<td>
+<span class="listing-date">2007-03-01</span>
+</td>
+<td>
+<a href="./issues/2007-1/index.html" class="description listing-description">Volume 7, Issue 1</a>
+</td>
+<td>
+<span class="listing-categories">R News</span>
+</td>
+
+</tr>
+
+<tr data-index="46" data-categories="UiUyME5ld3M=" data-listing-date-sort="1164949200000" data-listing-file-modified-sort="1769663129406" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="144" data-listing-description-sort="Volume 6, Issue 4">
+<td>
+<span class="listing-date">2006-12-01</span>
+</td>
+<td>
+<a href="./issues/2006-4/index.html" class="description listing-description">Volume 6, Issue 4</a>
+</td>
+<td>
+<span class="listing-categories">R News</span>
+</td>
+
+</tr>
+
+<tr data-index="47" data-categories="UiUyME5ld3M=" data-listing-date-sort="1164949200000" data-listing-file-modified-sort="1769663129407" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="194" data-listing-description-sort="Volume 6, Issue 5">
+<td>
+<span class="listing-date">2006-12-01</span>
+</td>
+<td>
+<a href="./issues/2006-5/index.html" class="description listing-description">Volume 6, Issue 5</a>
+</td>
+<td>
+<span class="listing-categories">R News</span>
+</td>
+
+</tr>
+
+<tr data-index="48" data-categories="UiUyME5ld3M=" data-listing-date-sort="1157083200000" data-listing-file-modified-sort="1769663129404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="80" data-listing-description-sort="Volume 6, Issue 3">
+<td>
+<span class="listing-date">2006-09-01</span>
+</td>
+<td>
+<a href="./issues/2006-3/index.html" class="description listing-description">Volume 6, Issue 3</a>
+</td>
+<td>
+<span class="listing-categories">R News</span>
+</td>
+
+</tr>
+
+<tr data-index="49" data-categories="UiUyME5ld3M=" data-listing-date-sort="1149134400000" data-listing-file-modified-sort="1769663129404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="165" data-listing-description-sort="Volume 6, Issue 2">
+<td>
+<span class="listing-date">2006-06-01</span>
+</td>
+<td>
+<a href="./issues/2006-2/index.html" class="description listing-description">Volume 6, Issue 2</a>
 </td>
 <td>
 <span class="listing-categories">R News</span>
@@ -398,6 +918,9 @@ Categories
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -1,0 +1,13 @@
+---
+title: "The good, the bad, and the ugly—Review of Paul Murrell’s new book: “R Graphics”"
+author: "David Meyer"
+date: "2006-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-2-the-good-the-bad-and-the.pdf" type="application/pdf" height="955px" width="100%">
+</div>

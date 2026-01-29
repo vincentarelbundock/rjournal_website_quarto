@@ -1,0 +1,13 @@
+---
+title: "Changes in R 1.8.1"
+author: "R Core Team"
+date: "2003-12-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2003-3-changes-in-r-181.pdf" type="application/pdf" height="955px" width="100%">
+</div>

@@ -1,0 +1,13 @@
+---
+title: "Book Review of Julian J. Faraway: Linear Models with R"
+author: "Thomas Yee"
+date: "2005-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2005-1-book-review-of-julian-j.pdf" type="application/pdf" height="955px" width="100%">
+</div>

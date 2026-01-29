@@ -78,26 +78,6 @@ write_yml <- function(yml_data, output_file) {
   writeLines(lines, output_file)
 }
 
-should_regen_yml <- function(yml_file) {
-  if (!file.exists(yml_file)) {
-    return(TRUE)
-  }
-
-  lines <- readLines(yml_file, warn = FALSE)
-  articles_idx <- which(trimws(lines) == "articles:")
-  if (length(articles_idx) == 0) {
-    return(TRUE)
-  }
-
-  after <- lines[(articles_idx[1] + 1):length(lines)]
-  after <- after[trimws(after) != ""]
-  if (length(after) == 0) {
-    return(TRUE)
-  }
-
-  any(grepl("^\\s*-\\s+", after))
-}
-
 needs_news_slug_fix <- function(yml_file, year, issue_num) {
   if (!file.exists(yml_file)) {
     return(FALSE)
@@ -128,6 +108,30 @@ needs_news_slug_fix <- function(yml_file, year, issue_num) {
   FALSE
 }
 
+# Convert bibtex entry to normalized article data
+bib_entry_to_article <- function(entry) {
+  # Handle person objects from bibtex package
+
+  author <- entry$author
+  if (inherits(author, "person")) {
+    author <- format(author, include = c("given", "family"))
+  } else if (is.character(author)) {
+    author <- trimws(strsplit(author, " and ")[[1]])
+  } else {
+    author <- character(0)
+  }
+
+  list(
+    key = entry$key,
+    title = gsub("[{}]", "", entry$title %||% ""),
+    author = author,
+    pages = entry$pages,
+    volume = as.integer(gsub("[^0-9]", "", entry$volume %||% "")),
+    number = as.integer(gsub("[^0-9]", "", entry$number %||% "")),
+    year = as.integer(gsub("[^0-9]", "", entry$year %||% ""))
+  )
+}
+
 # ============================================================================
 # R News era (2001-2008) - reads from articles/RN-*.Rmd
 # ============================================================================
@@ -148,76 +152,40 @@ generate_rnews_yml <- function(year, issue_num) {
   articles_list <- list()
 
   if (length(matching_articles) > 0) {
-    # Read metadata from each article's .Rmd file
     article_entries <- list()
 
     for (art_id in matching_articles) {
       rmd_file <- file.path("articles", art_id, paste0(art_id, ".Rmd"))
-      if (!file.exists(rmd_file)) {
+      meta <- parse_front_matter(rmd_file)
+      if (is.null(meta)) next
+
+      meta_volume <- meta$volume %||% meta$journal$volume
+      meta_issue <- meta$issue %||% meta$journal$issue
+      if (is.null(meta_volume) || is.null(meta_issue)) next
+      if (as.integer(meta_volume) != vol || as.integer(meta_issue) != issue_num) {
         next
       }
 
-      tryCatch(
-        {
-          lines <- readLines(rmd_file, warn = FALSE)
-          yaml_end <- which(lines == "---")[2]
-          if (is.na(yaml_end) || yaml_end <= 2) {
-            next
-          }
+      # Use helpers for author and pages extraction
+      author_info <- normalize_authors(meta$author)
+      pages <- extract_pages(meta)
 
-          meta <- yaml.load(paste(lines[2:(yaml_end - 1)], collapse = "\n"))
+      first_page <- if (!is.null(meta$journal$firstpage)) {
+        as.integer(meta$journal$firstpage)
+      } else {
+        9999
+      }
 
-          meta_volume <- meta$volume %||% meta$journal$volume
-          meta_issue <- meta$issue %||% meta$journal$issue
-          if (is.null(meta_volume) || is.null(meta_issue)) {
-            next
-          }
-          if (
-            as.integer(meta_volume) != vol ||
-              as.integer(meta_issue) != issue_num
-          ) {
-            next
-          }
-
-          # Extract author
-          author <- NULL
-          if (!is.null(meta$author)) {
-            if (is.list(meta$author)) {
-              author <- sapply(meta$author, function(a) a$name %||% a)
-            } else {
-              author <- meta$author
-            }
-          }
-
-          # Extract pages
-          pages <- NULL
-          if (!is.null(meta$journal$firstpage)) {
-            if (
-              !is.null(meta$journal$lastpage) &&
-                meta$journal$lastpage != meta$journal$firstpage
-            ) {
-              pages <- list(meta$journal$firstpage, meta$journal$lastpage)
-            } else {
-              pages <- meta$journal$firstpage
-            }
-          }
-
-          # Get first page for sorting
-          first_page <- if (!is.null(meta$journal$firstpage)) {
-            as.integer(meta$journal$firstpage)
-          } else {
-            9999
-          }
-
-          article_entries[[length(article_entries) + 1]] <- list(
-            title = meta$title,
-            author = author,
-            slug = art_id,
-            pages = pages,
-            first_page = first_page
-          )
+      article_entries[[length(article_entries) + 1]] <- list(
+        title = meta$title,
+        author = if (nchar(author_info$display) > 0) {
+          strsplit(author_info$display, ", ")[[1]]
+        } else {
+          NULL
         },
-        error = function(e) NULL
+        slug = art_id,
+        pages = pages,
+        first_page = first_page
       )
     }
 
@@ -258,105 +226,24 @@ generate_rnews_yml <- function(year, issue_num) {
 # R Journal era (2009+) - reads from RJournal.bib and news/
 # ============================================================================
 
-# Parse RJournal.bib file
-parse_bib <- function(bib_file) {
-  lines <- readLines(bib_file, warn = FALSE)
-  articles <- list()
-  i <- 1
-
-  while (i <= length(lines)) {
-    line <- lines[i]
-    if (grepl("^@article\\{", line, ignore.case = TRUE)) {
-      key <- sub("^@article\\{([^,]+),.*", "\\1", line, ignore.case = TRUE)
-      entry <- list(key = key)
-      i <- i + 1
-
-      while (i <= length(lines) && !grepl("^\\}$", trimws(lines[i]))) {
-        field_line <- lines[i]
-        if (grepl("^\\s*\\w+\\s*=", field_line)) {
-          field_match <- regmatches(
-            field_line,
-            regexec("^\\s*(\\w+)\\s*=\\s*(.+)$", field_line)
-          )[[1]]
-          if (length(field_match) >= 3) {
-            field_name <- tolower(field_match[2])
-            field_value <- field_match[3]
-            field_value <- sub(",\\s*$", "", field_value)
-            field_value <- gsub("^\\{+|\\}+$", "", field_value)
-            field_value <- gsub("^\\{|\\}$", "", field_value)
-            field_value <- gsub('^\\"|\\\"$', "", field_value)
-            field_value <- trimws(field_value)
-            entry[[field_name]] <- field_value
-          }
-        }
-        i <- i + 1
-      }
-
-      if (!is.null(entry$volume)) {
-        entry$volume <- as.integer(gsub("[^0-9]", "", entry$volume))
-      }
-      if (!is.null(entry$number)) {
-        entry$number <- as.integer(gsub("[^0-9]", "", entry$number))
-      }
-      if (!is.null(entry$year)) {
-        entry$year <- as.integer(gsub("[^0-9]", "", entry$year))
-      }
-
-      articles[[length(articles) + 1]] <- entry
-    }
-    i <- i + 1
-  }
-  articles
-}
-
 # Read news item metadata from .Rmd
 read_news_meta <- function(news_id) {
   news_rmd <- file.path("news", news_id, paste0(news_id, ".Rmd"))
-  if (!file.exists(news_rmd)) {
-    return(NULL)
-  }
+  meta <- parse_front_matter(news_rmd)
+  if (is.null(meta)) return(NULL)
 
-  tryCatch(
-    {
-      lines <- readLines(news_rmd, warn = FALSE)
-      yaml_end <- which(lines == "---")[2]
-      if (is.na(yaml_end) || yaml_end <= 2) {
-        return(NULL)
-      }
+  author_info <- normalize_authors(meta$author)
+  pages <- extract_pages(meta)
 
-      meta <- yaml.load(paste(lines[2:(yaml_end - 1)], collapse = "\n"))
-
-      # Extract author
-      author <- NULL
-      if (!is.null(meta$author)) {
-        if (is.list(meta$author)) {
-          author <- sapply(meta$author, function(a) a$name %||% a)
-        } else {
-          author <- meta$author
-        }
-      }
-
-      # Extract pages
-      pages <- NULL
-      if (!is.null(meta$journal$firstpage)) {
-        if (
-          !is.null(meta$journal$lastpage) &&
-            meta$journal$lastpage != meta$journal$firstpage
-        ) {
-          pages <- list(meta$journal$firstpage, meta$journal$lastpage)
-        } else {
-          pages <- meta$journal$firstpage
-        }
-      }
-
-      list(
-        title = meta$title,
-        author = author,
-        slug = news_id,
-        pages = pages
-      )
+  list(
+    title = meta$title,
+    author = if (nchar(author_info$display) > 0) {
+      strsplit(author_info$display, ", ")[[1]]
+    } else {
+      NULL
     },
-    error = function(e) NULL
+    slug = news_id,
+    pages = pages
   )
 }
 
@@ -367,29 +254,21 @@ generate_rjournal_yml <- function(year, issue_num, bib_articles) {
   # Filter articles for this issue
   issue_arts <- Filter(
     function(a) {
-      !is.null(a$volume) &&
-        !is.null(a$number) &&
-        !is.null(a$year) &&
-        a$volume == vol &&
-        a$number == issue_num &&
-        a$year == year
+      !is.na(a$volume) && !is.na(a$number) && !is.na(a$year) &&
+        a$volume == vol && a$number == issue_num && a$year == year
     },
     bib_articles
   )
 
   issue_arts <- Filter(
-    function(a) {
-      !is.null(a$key) && grepl("^RJ-\\d{4}-\\d{3}$", a$key)
-    },
+    function(a) !is.null(a$key) && grepl("^RJ-\\d{4}-\\d{3}$", a$key),
     issue_arts
   )
 
   # Sort by pages
   if (length(issue_arts) > 0) {
     pages_num <- sapply(issue_arts, function(a) {
-      if (is.null(a$pages)) {
-        return(9999)
-      }
+      if (is.null(a$pages)) return(9999)
       as.numeric(sub("-.*", "", a$pages))
     })
     issue_arts <- issue_arts[order(pages_num)]
@@ -401,31 +280,13 @@ generate_rjournal_yml <- function(year, issue_num, bib_articles) {
   matching_news <- sort(all_news_dirs[grepl(news_pattern, all_news_dirs)])
 
   # Separate editorial from other news
-  editorial_ids <- matching_news[grepl(
-    "editorial",
-    matching_news,
-    ignore.case = TRUE
-  )]
-  other_news_ids <- matching_news[
-    !grepl("editorial", matching_news, ignore.case = TRUE)
-  ]
+  editorial_ids <- matching_news[grepl("editorial", matching_news, ignore.case = TRUE)]
+  other_news_ids <- matching_news[!grepl("editorial", matching_news, ignore.case = TRUE)]
 
   # Read .Rmd for date info
   rmd_file <- file.path("issues", issue_id, paste0(issue_id, ".Rmd"))
-  rmd_date <- NULL
-  if (file.exists(rmd_file)) {
-    tryCatch(
-      {
-        lines <- readLines(rmd_file, warn = FALSE)
-        yaml_end <- which(lines == "---")[2]
-        if (!is.na(yaml_end) && yaml_end > 2) {
-          rmd_meta <- yaml.load(paste(lines[2:(yaml_end - 1)], collapse = "\n"))
-          rmd_date <- rmd_meta$date
-        }
-      },
-      error = function(e) NULL
-    )
-  }
+  rmd_meta <- parse_front_matter(rmd_file)
+  rmd_date <- rmd_meta$date
 
   # Build articles list
   articles_list <- list()
@@ -449,16 +310,11 @@ generate_rjournal_yml <- function(year, issue_num, bib_articles) {
       heading = "Contributed Research Articles"
     )
 
-    # Add articles
     for (art in issue_arts) {
-      # Parse author string to list
-      author_str <- art$author %||% ""
-      authors <- trimws(strsplit(author_str, " and ")[[1]])
-
       articles_list[[length(articles_list) + 1]] <- list(
         slug = art$key,
-        title = gsub("\\{|\\}", "", art$title %||% art$key),
-        author = as.list(authors),
+        title = art$title,
+        author = as.list(art$author),
         pages = parse_pages(art$pages)
       )
     }
@@ -475,19 +331,13 @@ generate_rjournal_yml <- function(year, issue_num, bib_articles) {
       if (!is.null(news_meta)) {
         articles_list[[length(articles_list) + 1]] <- list(
           title = news_meta$title %||%
-            tools::toTitleCase(gsub(
-              "-",
-              " ",
-              gsub("^RJ-\\d+-\\d+-", "", news_id)
-            )),
+            tools::toTitleCase(gsub("-", " ", gsub("^RJ-\\d+-\\d+-", "", news_id))),
           author = news_meta$author,
           slug = news_id,
           pages = news_meta$pages
         )
       } else {
-        # Fallback
-        nice_title <- gsub("^RJ-\\d+-\\d+-", "", news_id)
-        nice_title <- tools::toTitleCase(gsub("-", " ", nice_title))
+        nice_title <- tools::toTitleCase(gsub("-", " ", gsub("^RJ-\\d+-\\d+-", "", news_id)))
         articles_list[[length(articles_list) + 1]] <- list(
           title = nice_title,
           slug = news_id
@@ -522,151 +372,76 @@ generate_rjournal_yml <- function(year, issue_num, bib_articles) {
 # Main
 # ============================================================================
 
+# Process a single issue with the given generator function
+process_issue <- function(issue_id, generator) {
+  yml_file <- file.path("issues", issue_id, paste0(issue_id, ".yml"))
+
+  if (!dir.exists(file.path("issues", issue_id))) {
+    message("  Skipping ", issue_id, " (no issue directory)")
+    return(invisible(NULL))
+  }
+
+  parts <- strsplit(issue_id, "-")[[1]]
+  year <- as.integer(parts[1])
+  issue_num <- as.integer(parts[2])
+
+  if (file.exists(yml_file) && !needs_news_slug_fix(yml_file, year, issue_num)) {
+    message("  Skipping ", issue_id, " (yml exists)")
+    return(invisible(NULL))
+  }
+
+  yml_data <- generator(year, issue_num)
+  write_yml(yml_data, yml_file)
+  message("  Generated: ", yml_file, " (", length(yml_data$articles), " entries)")
+}
+
 # Parse bib file once for R Journal era
 message("Parsing RJournal.bib...")
-bib_articles <- parse_bib("RJournal.bib")
+bib_raw <- read.bib("RJournal.bib")
+bib_articles <- lapply(bib_raw, bib_entry_to_article)
 message("Found ", length(bib_articles), " entries\n")
 
 # Define all issues
-# R News era: 2001-2008
 rnews_issues <- c(
-  "2001-1",
-  "2001-2",
-  "2001-3",
-  "2002-1",
-  "2002-2",
-  "2002-3",
-  "2003-1",
-  "2003-2",
-  "2003-3",
-  "2004-1",
-  "2004-2",
-  "2005-1",
-  "2005-2",
-  "2005-3",
-  "2006-1",
-  "2006-2",
-  "2006-3",
-  "2006-4",
-  "2006-5",
-  "2007-1",
-  "2007-2",
-  "2007-3",
-  "2008-1",
-  "2008-2"
+  "2001-1", "2001-2", "2001-3",
+  "2002-1", "2002-2", "2002-3",
+  "2003-1", "2003-2", "2003-3",
+  "2004-1", "2004-2",
+  "2005-1", "2005-2", "2005-3",
+  "2006-1", "2006-2", "2006-3", "2006-4", "2006-5",
+  "2007-1", "2007-2", "2007-3",
+  "2008-1", "2008-2"
 )
 
-# R Journal era: 2009-2025
 rjournal_issues <- c(
-  "2009-1",
-  "2009-2",
-  "2010-1",
-  "2010-2",
-  "2011-1",
-  "2011-2",
-  "2012-1",
-  "2012-2",
-  "2013-1",
-  "2013-2",
-  "2014-1",
-  "2014-2",
-  "2015-1",
-  "2015-2",
-  "2016-1",
-  "2016-2",
-  "2017-1",
-  "2017-2",
-  "2018-1",
-  "2018-2",
-  "2019-1",
-  "2019-2",
-  "2020-1",
-  "2020-2",
-  "2021-1",
-  "2021-2",
-  "2022-1",
-  "2022-2",
-  "2022-3",
-  "2022-4",
-  "2023-1",
-  "2023-2",
-  "2023-3",
-  "2023-4",
-  "2024-1",
-  "2024-2",
-  "2024-3",
-  "2024-4",
-  "2025-1",
-  "2025-2",
-  "2025-3"
+  "2009-1", "2009-2",
+  "2010-1", "2010-2",
+  "2011-1", "2011-2",
+  "2012-1", "2012-2",
+  "2013-1", "2013-2",
+  "2014-1", "2014-2",
+  "2015-1", "2015-2",
+  "2016-1", "2016-2",
+  "2017-1", "2017-2",
+  "2018-1", "2018-2",
+  "2019-1", "2019-2",
+  "2020-1", "2020-2",
+  "2021-1", "2021-2",
+  "2022-1", "2022-2", "2022-3", "2022-4",
+  "2023-1", "2023-2", "2023-3", "2023-4",
+  "2024-1", "2024-2", "2024-3", "2024-4",
+  "2025-1", "2025-2", "2025-3"
 )
 
-# Process R News issues
+# Process all issues
 message("Processing R News issues (2001-2008)...")
 for (issue_id in rnews_issues) {
-  yml_file <- file.path("issues", issue_id, paste0(issue_id, ".yml"))
-
-  # Check if issue directory exists
-  if (!dir.exists(file.path("issues", issue_id))) {
-    message("  Skipping ", issue_id, " (no issue directory)")
-    next
-  }
-
-  parts <- strsplit(issue_id, "-")[[1]]
-  year <- as.integer(parts[1])
-  issue_num <- as.integer(parts[2])
-
-  # Skip if yml already exists unless it needs regeneration
-  if (
-    file.exists(yml_file) && !needs_news_slug_fix(yml_file, year, issue_num)
-  ) {
-    message("  Skipping ", issue_id, " (yml exists)")
-    next
-  }
-
-  yml_data <- generate_rnews_yml(year, issue_num)
-  write_yml(yml_data, yml_file)
-  message(
-    "  Generated: ",
-    yml_file,
-    " (",
-    length(yml_data$articles),
-    " entries)"
-  )
+  process_issue(issue_id, generate_rnews_yml)
 }
 
-# Process R Journal issues
 message("\nProcessing R Journal issues (2009+)...")
 for (issue_id in rjournal_issues) {
-  yml_file <- file.path("issues", issue_id, paste0(issue_id, ".yml"))
-
-  # Check if issue directory exists
-  if (!dir.exists(file.path("issues", issue_id))) {
-    message("  Skipping ", issue_id, " (no issue directory)")
-    next
-  }
-
-  parts <- strsplit(issue_id, "-")[[1]]
-  year <- as.integer(parts[1])
-  issue_num <- as.integer(parts[2])
-
-  # Skip if yml already exists unless it needs regeneration
-  if (
-    file.exists(yml_file) && !needs_news_slug_fix(yml_file, year, issue_num)
-  ) {
-    message("  Skipping ", issue_id, " (yml exists)")
-    next
-  }
-
-  yml_data <- generate_rjournal_yml(year, issue_num, bib_articles)
-  write_yml(yml_data, yml_file)
-  message(
-    "  Generated: ",
-    yml_file,
-    " (",
-    length(yml_data$articles),
-    " entries)"
-  )
+  process_issue(issue_id, function(y, n) generate_rjournal_yml(y, n, bib_articles))
 }
 
 message("\nDone!")

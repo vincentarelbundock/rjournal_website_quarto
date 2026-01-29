@@ -1,0 +1,27 @@
+---
+title: "Conference Report of Why R? Turkey 2021"
+author: "Mustafa Cavus, Olgun Aydin, Ozan Evkaya, Ozancan Ozdemir, Deniz Bezer, Ugur Dar"
+date: "2021-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">Mustafa Cavus, Olgun Aydin, Ozan Evkaya, Ozancan Ozdemir, Deniz Bezer, Ugur Dar, "Conference Report of Why R? Turkey 2021", R Journal, 2021, 13(1), 648-653</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2021-1-whyr2021,
+  author = {Mustafa Cavus and Olgun Aydin and Ozan Evkaya and Ozancan Ozdemir and Deniz Bezer and Ugur Dar},
+  title = {Conference Report of Why R? Turkey 2021},
+  journal = {R Journal},
+  year = {2021},
+  volume = {13},
+  issue = {1},
+  pages = {648-653},
+  note = {https://journal.r-project.org/news/RJ-2021-1-whyr2021/}
+}
+  </code></pre>
+</details>
+<embed src="../../issues/2021-1/2021-1.pdf" type="application/pdf" height="955px" width="100%">

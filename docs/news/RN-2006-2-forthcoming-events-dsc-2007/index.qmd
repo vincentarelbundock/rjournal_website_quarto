@@ -1,0 +1,13 @@
+---
+title: "Forthcoming Events: DSC 2007"
+author: "Paul Murrell, Ross Ihaka, David Scott, Thomas Yee"
+date: "2006-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-2-forthcoming-events-dsc-2007.pdf" type="application/pdf" height="955px" width="100%">
+</div>

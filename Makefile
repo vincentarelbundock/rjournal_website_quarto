@@ -8,8 +8,9 @@ help: ## Display this help screen
 all: subset news article issue render ## Refresh subset, pages, render, preview
 
 deploy: ## deploy _site/ to docs/
+	find _site/articles -type f ! -name "*.html" -delete
 	rm -rf docs/
-	mv _site/ docs/
+	mv _site docs
 
 yml: ## Generate missing yml files for all eras
 	Rscript vincent/issue_yml.R
@@ -47,6 +48,6 @@ nuke: ## Replace articles/, issues/, and news/ from rjournal.github.io
 	cp -R "$(HOME)/Downloads/rjournal.github.io/_news" news
 
 subset: nuke ## Keep only 2001, 2008, 2014, 2025 in articles/, issues/, news/
-	find articles -mindepth 1 -maxdepth 1 -type d -not -name "RJ-2001-*" -not -name "RJ-2008-*" -not -name "RJ-2014-*" -not -name "RJ-2025-*" -not -name "RN-2001-*" -not -name "RN-2008-*" -not -name "RN-2014-*" -not -name "RN-2025-*" -exec rm -rf {} +
-	find issues -mindepth 1 -maxdepth 1 -type d -not -name "2001-*" -not -name "2008-*" -not -name "2014-*" -not -name "2025-*" -exec rm -rf {} +
-	find news -mindepth 1 -maxdepth 1 -type d -not -name "RJ-2001-*" -not -name "RJ-2008-*" -not -name "RJ-2014-*" -not -name "RJ-2025-*" -not -name "RN-2001-*" -not -name "RN-2008-*" -not -name "RN-2014-*" -not -name "RN-2025-*" -exec rm -rf {} +
+	# find articles -mindepth 1 -maxdepth 1 -type d -not -name "RJ-2001-*" -not -name "RJ-2008-*" -not -name "RJ-2014-*" -not -name "RJ-2025-*" -not -name "RN-2001-*" -not -name "RN-2008-*" -not -name "RN-2014-*" -not -name "RN-2025-*" -exec rm -rf {} +
+	# find issues -mindepth 1 -maxdepth 1 -type d -not -name "2001-*" -not -name "2008-*" -not -name "2014-*" -not -name "2025-*" -exec rm -rf {} +
+	# find news -mindepth 1 -maxdepth 1 -type d -not -name "RJ-2001-*" -not -name "RJ-2008-*" -not -name "RJ-2014-*" -not -name "RJ-2025-*" -not -name "RN-2001-*" -not -name "RN-2008-*" -not -name "RN-2014-*" -not -name "RN-2025-*" -exec rm -rf {} +

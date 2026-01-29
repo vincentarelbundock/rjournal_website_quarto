@@ -1,0 +1,12 @@
+---
+title: "Changes on CRAN"
+author: "Kurt Hornik, Uwe Ligges, Achim Zeileis"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RJ-2019-1-cran.pdf" type="application/pdf" height="955px" width="100%">
+</div>

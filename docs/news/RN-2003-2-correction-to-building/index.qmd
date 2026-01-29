@@ -1,0 +1,13 @@
+---
+title: "Correction to “Building Microsoft Windows Versions of R and R packages under Intel Linux”"
+author: "Jun Yan, A.J. Rossini"
+date: "2003-10-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2003-2-correction-to-building.pdf" type="application/pdf" height="955px" width="100%">
+</div>

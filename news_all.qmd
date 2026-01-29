@@ -8,4 +8,5 @@ listing:
   sort: "date desc"
   fields: [date, title, author]
   date-format: "YYYY-MM-DD"
+  max-items: 50
 ---

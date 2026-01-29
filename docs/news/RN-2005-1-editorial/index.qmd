@@ -1,0 +1,13 @@
+---
+title: "Editorial"
+author: "Douglas Bates"
+date: "2005-05-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2005-1-editorial.pdf" type="application/pdf" height="955px" width="100%">
+</div>

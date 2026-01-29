@@ -1,0 +1,12 @@
+---
+title: "Erratum"
+date: "2006-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-1-erratum.pdf" type="application/pdf" height="955px" width="100%">
+</div>

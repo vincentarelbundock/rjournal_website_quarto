@@ -1,0 +1,13 @@
+---
+title: "Fitting dose-response curves from bioassays and toxicity testing"
+author: "Johannes Ranke"
+date: "2006-08-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2006-3-fitting-doseresponse-curves.pdf" type="application/pdf" height="955px" width="100%">
+</div>

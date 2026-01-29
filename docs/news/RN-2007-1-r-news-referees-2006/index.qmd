@@ -1,0 +1,13 @@
+---
+title: "R News Referees 2006"
+author: "Torsten Hothorn"
+date: "2007-04-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2007-1-r-news-referees-2006.pdf" type="application/pdf" height="955px" width="100%">
+</div>

@@ -1,0 +1,315 @@
+---
+title: R Foundation News
+date: '2023-09-01'
+draft: no
+author:
+- name: Torsten Hothorn
+  affiliation: Universität Zürich
+  address: Switzerland
+  email: Torsten.Hothorn@R-project.org
+  orcid: 0000-0001-8301-0471
+output:
+  rjtools::rjournal_web_article:
+    self_contained: yes
+    toc: no
+volume: 15
+issue: 4
+slug: RJ-2023-4-rf
+journal:
+  lastpage: 302
+  firstpage: 299
+
+---
+
+# Donations and members
+
+\indent \indent Membership fees and donations received between 
+
+2023-10-20 and 2024-04-12.
+
+
+# Donations
+
+\indent \indent b-data GmbH (Switzerland)
+
+SAS EUREKA MER (France)
+
+Gilberto Camara (Brazil)
+
+Keith Chamberlain (United States)
+
+Giles Dickenson-Jones (Australia)
+
+Shalese Fitzgerald (United States)
+
+Roger Koenker (United Kingdom)
+
+Flavio Lombardo (Switzerland)
+
+Rudolph Martin (United States)
+
+Rees Morrison (United States)
+
+Quintessa Ltd (United Kingdom)
+
+Kem Phillips (United States)
+
+Alexandra Pippitt (United States)
+
+Bruno Rodrigues (Luxembourg)
+
+David Smith (United States)
+
+Rav Vaid (United States)
+
+Alejandro Verri Kozlowski (Argentina)
+
+Yihui Xie (China)
+
+ilustat, Lisbon (Portugal)
+
+Statistik Aargau, Aarau (Switzerland)
+
+
+
+# Supporting institutions
+
+
+
+
+
+\indent \indent Departement Klinische Forschung, Basel (Switzerland)
+
+Ef-prime, Inc., Tokyo (Japan)
+
+Institute of Botany of the Czech Academy of Sciences, Průhonice (Czechia)
+
+oikostat GmbH, Ettiswil (Switzerland)
+
+
+
+# Supporting members
+
+
+
+
+
+\indent \indent Richard Abdill (United States)
+
+Douglas Adamoski (Brazil)
+
+Mohammed Almozini (Saudi Arabia)
+
+Tim Appelhans (Germany)
+
+Tim Arbogast (United States)
+
+Michael Blanks (United States)
+
+Emmanuel Blondel (France)
+
+Gordon Blunt (United Kingdom)
+
+Riccardo Bonfichi (Italy)
+
+Tom Boulay (United States)
+
+Tamara Bozovic (New Zealand)
+
+Keith Chamberlain (United States)
+
+Cédric Chambru (Switzerland)
+
+John Chandler (United States)
+
+Michael Chirico (United States)
+
+Tom Clarke (United Kingdom)
+
+Gerard Conaghan (United Kingdom)
+
+Robin Crockett (United Kingdom)
+
+Alistair Cullum (United States)
+
+Brandon Dahl (United States)
+
+Robert Daly (Australia)
+
+Kevin DeMaio (United States)
+
+Anna Doizy (Réunion)
+
+Fraser Edwards (United Kingdom)
+
+Anthony Alan Egerton (Malaysia)
+
+Isaac Florence (United Kingdom)
+
+Neil Frazer (United States)
+
+David Freedman (United States)
+
+Bernd Fröhlich (Germany)
+
+Sven Garbade (Germany)
+
+Jan Marvin Garbuszus (Germany)
+
+Eduardo García Galea (Spain)
+
+Gabriel Gersztein (Brazil)
+
+SUJOY GHOSH (United States)
+
+Anne Catherine Gieshoff (Switzerland)
+
+Pavel Goriacko (United States)
+
+Brian Gramberg (Netherlands)
+
+Spencer Graves (United States)
+
+Krushi Gurudu (United States)
+
+Frank Hafner (United States)
+
+Hlynur Hallgrímsson (Iceland)
+
+Joe Harwood (United Kingdom)
+
+Bela Hausmann (Austria)
+
+Kieran Healy (United States)
+
+Philippe Heymans Smith (Costa Rica)
+
+Adam Hill (United States)
+
+Alexander Huelle (Germany)
+
+Heidi Imker (United States)
+
+Sebastian Jeworutzki (Germany)
+
+JUNE KEE KIM (Korea, Republic of)
+
+Ziyad Knio (United States)
+
+Sebastian Koehler (Germany)
+
+Chris Kuty (United States)
+
+Luca La Rocca (Italy)
+
+Vishal Lama (United States)
+
+Thierry Lecerf (Switzerland)
+
+Thomas Levine (United States)
+
+Eric Lim (United Kingdom)
+
+Baoxiao Liu (Netherlands)
+
+Joseph Luchman (United States)
+
+Mehrad Mahmoudian (Finland)
+
+Gilles Marodon (France)
+
+Daniel McNichol (United States)
+
+Philippe MICHEL (France)
+
+Bogdan-Alexandru Micu (Luxembourg)
+
+Ernst Molitor (Germany)
+
+David Monterde (Spain)
+
+Stefan Moog (Germany)
+
+Keon-Woong Moon (Korea, Republic of)
+
+Steffen Moritz (Germany)
+
+yoshinobu nakahashi (Japan)
+
+Tsubasa Narihiro (Japan)
+
+Maciej Nasinski (Poland)
+
+Dan Orsholits (Switzerland)
+
+Antonio Paez (Canada)
+
+Sermet Pekin (Turkey)
+
+Elgin Perry (United States)
+
+PierGianLuca Porta Mana (Norway)
+
+Fergus Reig Gracia (Spain)
+
+Peter Ruckdeschel (Germany)
+
+Ingo Ruczinski (United States)
+
+Choonghyun Ryu (Korea, Republic of)
+
+John Schmitt (United States)
+
+Raoul Schorer (Switzerland)
+
+Dejan Schuster (Germany)
+
+Ivan Scotti (France)
+
+David Sides (United States)
+
+Rachel Smith-Hunter (United States)
+
+Matteo Starri (Italy)
+
+Harald Sterly (Germany)
+
+Tobias Strapatsas (Germany)
+
+Kai Streicher (Switzerland)
+
+ROBERT Szabo (Sweden)
+
+Jan Tarabek (Czechia)
+
+Koray Tascilar (Germany)
+
+Chris Toney (United States)
+
+Robert van den Berg (Austria)
+
+Marcus Vollmer (Germany)
+
+Petr Waldauf (Czechia)
+
+Jaap Walhout (Netherlands)
+
+Sandra Ware (Australia)
+
+Fredrik Wartenberg (Sweden)
+
+Sam Waters (United States)
+
+Dieter Wilhelm (Germany)
+
+Nan Xiao (United States)
+
+Matti Zemack (Sweden)
+
+Vaidotas Zemlys-Balevičius (Lithuania)
+
+Lim Zhong Hao (Singapore)
+
+```{r echo=FALSE, results='asis'}
+if (!knitr::is_latex_output()) cat("广宇 曾 (China)") else cat("Guangyu Zeng (China)")
+```

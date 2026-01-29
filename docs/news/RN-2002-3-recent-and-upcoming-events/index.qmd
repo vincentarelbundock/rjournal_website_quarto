@@ -1,0 +1,13 @@
+---
+title: "Recent and Upcoming Events"
+author: "John Fox, Karl W. Broman, Friedrich Leisch, Stefano Iacus"
+date: "2002-12-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2002-3-recent-and-upcoming-events.pdf" type="application/pdf" height="955px" width="100%">
+</div>

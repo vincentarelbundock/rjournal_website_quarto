@@ -3,3 +3,7 @@
 news/
 issues/
 articles/
+article_html.log
+article_pdf.log
+news_html.log
+_freeze

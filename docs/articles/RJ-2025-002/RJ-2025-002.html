@@ -1045,12 +1045,18 @@ pbc2[1:5, c(
   &quot;id&quot;, &quot;time&quot;, &quot;serBilir&quot;, &quot;SGOT&quot;, &quot;albumin&quot;, &quot;alkaline&quot;,
   &quot;age&quot;, &quot;drug&quot;, &quot;sex&quot;, &quot;years&quot;, &quot;event&quot;
 )]</code></pre>
-<pre><code>##    id time serBilir  SGOT albumin alkaline age      drug    sex years event
-## 1   1 0.00     14.5 138.0     2.6     1718  59 D-penicil female  1.10     2
-## 2   1 0.53     21.3   6.2     2.9     1612  59 D-penicil female  1.10     2
-## 3  10 0.00     12.6 147.3     2.7      918  71   placebo female  0.14     2
-## 4 100 0.00      2.3 178.3     3.0      746  51   placebo   male  1.51     2
-## 5 100 0.47      2.5 189.1     2.9      836  51   placebo   male  1.51     2</code></pre>
+<pre><code>##    id      time serBilir  SGOT albumin alkaline      age      drug    sex
+## 1   1 0.0000000     14.5 138.0    2.60     1718 58.76684 D-penicil female
+## 2   1 0.5256817     21.3   6.2    2.94     1612 58.76684 D-penicil female
+## 3  10 0.0000000     12.6 147.3    2.74      918 70.56182   placebo female
+## 4 100 0.0000000      2.3 178.3    3.00      746 51.47027   placebo   male
+## 5 100 0.4681853      2.5 189.1    2.94      836 51.47027   placebo   male
+##       years event
+## 1 1.0951703     2
+## 2 1.0951703     2
+## 3 0.1396342     2
+## 4 1.5113350     2
+## 5 1.5113350     2</code></pre>
 <p>For the illustration, 4 time-dependent predictors
 (<code>serBilir</code>, <code>SGOT</code>, <code>albumin</code> and
 <code>alkaline</code>) and 3 predictors measured at enrollment
@@ -1160,7 +1166,7 @@ the death event). For the hyperparameters, we arbitrarily chose
 ## ---------------- 
 ## Computation time 
 ##  Number of cores used: 7 
-##  Time difference of 3.2 mins
+##  Time difference of 3.18191 mins
 ## ----------------</code></pre>
 <p>We executed the <code>dynforest()</code> function for a survival
 outcome with competing events. In this mode, we use the Fine &amp; Gray
@@ -1179,21 +1185,21 @@ displayed on summary output.</p>
 output using the <code>get_tree()</code> function with the following
 code (for tree 1):</p>
 <pre class="r"><code>head(get_tree(dynforest_obj = res_dyn, tree = 1))</code></pre>
-<pre><code>##           type id_node var_split feature threshold   N Nevent depth
-## 1 Longitudinal       1         3       1  -1.3e-01 129     51     1
-## 2      Numeric       2         1      NA   4.1e+01  39     27     2
-## 3 Longitudinal       3         4       1   1.5e+02  90     24     2
-## 4 Longitudinal       4         3       1   3.6e-11   8      3     3
-## 5 Longitudinal       5         2       1   5.9e+01  31     24     3
-## 6 Longitudinal       6         1       1   2.8e-01  63     12     3</code></pre>
+<pre><code>##           type id_node var_split feature     threshold   N Nevent depth
+## 1 Longitudinal       1         3       1 -1.272629e-01 129     51     1
+## 2      Numeric       2         1      NA  4.138210e+01  39     27     2
+## 3 Longitudinal       3         4       1  1.459346e+02  90     24     2
+## 4 Longitudinal       4         3       1  3.608271e-11   8      3     3
+## 5 Longitudinal       5         2       1  5.924123e+01  31     24     3
+## 6 Longitudinal       6         1       1  2.786575e-01  63     12     3</code></pre>
 <pre class="r"><code>tail(get_tree(dynforest_obj = res_dyn, tree = 1))</code></pre>
-<pre><code>##            type id_node var_split feature threshold N Nevent depth
-## 50         Leaf     174        NA      NA        NA 2      2     8
-## 51 Longitudinal     175         2       1  -1.9e-10 4      4     8
-## 52         Leaf     250        NA      NA        NA 5      1     8
-## 53         Leaf     251        NA      NA        NA 4      2     8
-## 54         Leaf     350        NA      NA        NA 2      2     9
-## 55         Leaf     351        NA      NA        NA 2      2     9</code></pre>
+<pre><code>##            type id_node var_split feature     threshold N Nevent depth
+## 50         Leaf     174        NA      NA            NA 2      2     8
+## 51 Longitudinal     175         2       1 -1.850322e-10 4      4     8
+## 52         Leaf     250        NA      NA            NA 5      1     8
+## 53         Leaf     251        NA      NA            NA 4      2     8
+## 54         Leaf     350        NA      NA            NA 2      2     9
+## 55         Leaf     351        NA      NA            NA 2      2     9</code></pre>
 <p>Looking at the head of the <code>get_tree()</code> function output,
 we see that subjects were split at node 1 (<code>id_node</code>) using
 the first random-effect (<code>feature</code> = 1) of the third
@@ -1240,7 +1246,7 @@ The overall OOB error for the random forest is obtained by averaging the
 individual specific OOB errors, and can be displayed using
 <code>print()</code> or directly by calling the object.</p>
 <pre class="r"><code>res_dyn_OOB</code></pre>
-<pre><code>## [1] 0.13</code></pre>
+<pre><code>## [1] 0.1265053</code></pre>
 <p>We obtain an IBS of 0.127 computed from time 0 to the maximum event
 time. The time range can be modified using <code>IBS.min</code> and
 <code>IBS.max</code> arguments to define the minimum and maximum,
@@ -1548,7 +1554,7 @@ random forest can be displayed using <code>summary()</code>:</p>
 ## ---------------- 
 ## Computation time 
 ##  Number of cores used: 7 
-##  Time difference of 2.9 mins
+##  Time difference of 2.87888 mins
 ## ----------------</code></pre>
 <p>In this illustration, we built the random forest using 150 subjects
 because we only kept the subjects still at risk at the landmark time at
@@ -1585,12 +1591,12 @@ pred_dyn &lt;- predict(
   proba = pred_dyn$pred_indiv_proba
 ))</code></pre>
 <pre><code>##     pred proba
-## 101    0  0.94
-## 104    0  0.79
-## 106    1  0.60
-## 108    0  0.94
-## 112    1  0.57
-## 114    0  0.65</code></pre>
+## 101    0 0.945
+## 104    0 0.790
+## 106    1 0.600
+## 108    0 0.945
+## 112    1 0.575
+## 114    0 0.650</code></pre>
 <p>As shown in this example, some predictions are made with varying
 confidence from 57.5% for subject 112 to 94.5% for subject 101. We
 predict, for instance, no event for subject 101 with a probability of

@@ -1,0 +1,27 @@
+---
+title: "R Foundation News"
+author: "Torsten Hothorn"
+date: "2021-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">Torsten Hothorn, "R Foundation News", R Journal, 2021, 13(1), 640-641</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2021-1-foundation,
+  author = {Torsten Hothorn},
+  title = {R Foundation News},
+  journal = {R Journal},
+  year = {2021},
+  volume = {13},
+  issue = {1},
+  pages = {640-641},
+  note = {https://journal.r-project.org/news/RJ-2021-1-foundation/}
+}
+  </code></pre>
+</details>
+<embed src="../../issues/2021-1/2021-1.pdf" type="application/pdf" height="955px" width="100%">

@@ -1,0 +1,12 @@
+---
+title: "Editorial"
+author: "Hadley Wickham"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RJ-2013-1-editorial.pdf" type="application/pdf" height="955px" width="100%">
+</div>

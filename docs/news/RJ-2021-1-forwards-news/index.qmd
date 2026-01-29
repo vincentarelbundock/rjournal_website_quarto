@@ -1,0 +1,27 @@
+---
+title: "News from the Forwards Taskforce"
+author: "Heather Turner"
+date: "2021-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">Heather Turner, "News from the Forwards Taskforce", R Journal, 2021, 13(1), 639</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2021-1-forwards-news,
+  author = {Heather Turner},
+  title = {News from the Forwards Taskforce},
+  journal = {R Journal},
+  year = {2021},
+  volume = {13},
+  issue = {1},
+  pages = {639},
+  note = {https://journal.r-project.org/news/RJ-2021-1-forwards-news/}
+}
+  </code></pre>
+</details>
+<embed src="../../issues/2021-1/2021-1.pdf" type="application/pdf" height="955px" width="100%">

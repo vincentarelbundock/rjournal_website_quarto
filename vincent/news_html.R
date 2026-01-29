@@ -1,43 +1,46 @@
 # Convert all news .Rmd files to embedded HTML pages
+#
+# Uses mirai for parallel processing. Set RJOURNAL_MIRAI_DAEMONS env var
+# to control worker count (defaults to cores - 1).
 
 source("vincent/helpers.R")
 
 news_dirs <- list.dirs("news", recursive = FALSE, full.names = TRUE)
 news_dirs <- news_dirs[grepl("^R[JN]-", basename(news_dirs))]
 news_dirs <- sort(news_dirs, decreasing = TRUE)
-errors <- character(0)
-converted <- 0
-skipped <- 0
-pdf_only <- 0
 
-for (news_dir in news_dirs) {
-  slug <- basename(news_dir)
-  rmd_file <- file.path(news_dir, paste0(slug, ".Rmd"))
-  if (!file.exists(rmd_file)) {
-    skipped <- skipped + 1
-    next
-  }
+# Configure parallelism
+n_workers <- setup_parallel()
+on.exit(daemons(0), add = TRUE)
 
-  html_file <- file.path(news_dir, paste0(slug, ".html"))
-  index_file <- file.path(news_dir, "index.qmd")
-  temp_rmd <- file.path(news_dir, paste0(slug, "-render.Rmd"))
+message("Processing ", length(news_dirs), " news items with ", n_workers, " workers...")
 
-  tryCatch(
-    {
-      message("Processing ", slug, "...")
-      created <- character(0)
+# Process all news in parallel
+map_results <- mirai_map(
+  news_dirs,
+  function(news_dir) {
+    source("vincent/helpers.R", local = TRUE)
+
+    slug <- basename(news_dir)
+    rmd_file <- file.path(news_dir, paste0(slug, ".Rmd"))
+
+    if (!file.exists(rmd_file)) {
+      return(list(slug = slug, status = "skipped", error = NULL))
+    }
+
+    tryCatch({
       if (!has_body_content(rmd_file)) {
-        message("  Empty Rmd: ", slug, " (using PDF embed)")
+        # Empty Rmd: use PDF embed
+        html_file <- file.path(news_dir, paste0(slug, ".html"))
+        index_file <- file.path(news_dir, "index.qmd")
         unlink(c(index_file, html_file)[file.exists(c(index_file, html_file))])
         if (create_pdf_index(news_dir, slug)) {
-          pdf_only <- pdf_only + 1
-        } else {
-          skipped <- skipped + 1
+          return(list(slug = slug, status = "pdf_only", error = NULL))
         }
-        next
+        return(list(slug = slug, status = "skipped", error = NULL))
       }
+
       render_embed_html(news_dir, slug, rmd_file)
-      created <- c(created, html_file)
 
       # Extract metadata for listing support
       meta <- parse_front_matter(rmd_file)
@@ -47,24 +50,49 @@ for (news_dir in news_dirs) {
       date <- clean_text(meta$date %||% "")
 
       write_iframe_index(news_dir, slug, title, author, date)
-      created <- c(created, index_file)
-      converted <- converted + 1
+      list(slug = slug, status = "converted", error = NULL)
     },
     error = function(e) {
-      message("  Error: ", slug, ": ", e$message)
-      cleanup <- c(created, temp_rmd)
-      if (length(cleanup) > 0) {
-        unlink(cleanup[file.exists(cleanup)], recursive = TRUE, force = TRUE)
-      }
-      errors <<- c(errors, slug)
+      # Cleanup on error
+      temp_rmd <- file.path(news_dir, paste0(slug, "-render.Rmd"))
+      html_file <- file.path(news_dir, paste0(slug, ".html"))
+      index_file <- file.path(news_dir, "index.qmd")
+      cleanup <- c(temp_rmd, html_file, index_file)
+      unlink(cleanup[file.exists(cleanup)], recursive = TRUE, force = TRUE)
+      list(slug = slug, status = "error", error = e$message)
     })
+  }
+)[.progress]
+
+# Collect results
+results <- list()
+errors <- character(0)
+error_messages <- character(0)
+
+for (item in map_results) {
+  results[[item$slug]] <- item$status
+  if (item$status == "error") {
+    errors <- c(errors, item$slug)
+    error_messages <- c(error_messages, sprintf("%s: %s", item$slug, item$error))
+  }
 }
 
+# Write error log
+log_file <- "news_html.log"
+if (length(error_messages) > 0) {
+  writeLines(error_messages, log_file)
+} else if (file.exists(log_file)) {
+  unlink(log_file)
+}
+
+# Report
+tab <- table(unlist(results))
 message("Done!")
-message("  Converted: ", converted)
-message("  PDF only:  ", pdf_only)
-message("  Skipped:   ", skipped)
+message("  Converted: ", tab["converted"] %||% 0)
+message("  PDF only:  ", tab["pdf_only"] %||% 0)
+message("  Skipped:   ", tab["skipped"] %||% 0)
 message("  Errors:    ", length(errors))
+
 if (length(errors) > 0) {
   message("  Failed:")
   for (slug in errors) {

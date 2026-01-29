@@ -1,0 +1,13 @@
+---
+title: "Changes in R 2.5.0"
+author: "R Core Team"
+date: "2007-04-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2007-1-changes-in-r-250.pdf" type="application/pdf" height="955px" width="100%">
+</div>

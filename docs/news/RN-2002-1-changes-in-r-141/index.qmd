@@ -1,0 +1,13 @@
+---
+title: "Changes in R 1.4.1"
+author: "R Core Team"
+date: "2002-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2002-1-changes-in-r-141.pdf" type="application/pdf" height="955px" width="100%">
+</div>

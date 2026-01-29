@@ -6,6 +6,14 @@ listing:
   contents: "issues/*/index.qmd"
   type: table
   sort: "date desc"
-  fields: [date, title, categories]
+  fields: [date, description, categories]
+  field-display-names:
+    description: "Issue"
   date-format: "YYYY-MM-DD"
+  filter-ui: true
+  sort-ui: true
+  categories: true
+  max-items: 50
+  feed: true
+  field-links: [description]
 ---

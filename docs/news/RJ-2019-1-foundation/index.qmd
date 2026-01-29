@@ -1,0 +1,12 @@
+---
+title: "R Foundation News"
+author: "Torsten Hothorn"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RJ-2019-1-foundation.pdf" type="application/pdf" height="955px" width="100%">
+</div>

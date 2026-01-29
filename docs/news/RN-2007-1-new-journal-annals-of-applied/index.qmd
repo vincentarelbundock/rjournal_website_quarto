@@ -1,0 +1,13 @@
+---
+title: "New Journal: Annals of Applied Statistics"
+author: "Bradley Efron"
+date: "2007-04-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2007-1-new-journal-annals-of-applied.pdf" type="application/pdf" height="955px" width="100%">
+</div>

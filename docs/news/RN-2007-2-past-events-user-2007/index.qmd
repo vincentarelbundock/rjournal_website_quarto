@@ -1,0 +1,13 @@
+---
+title: "Past Events: useR! 2007"
+author: "Duncan Murdoch, Martin Maechler"
+date: "2007-10-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2007-2-past-events-user-2007.pdf" type="application/pdf" height="955px" width="100%">
+</div>

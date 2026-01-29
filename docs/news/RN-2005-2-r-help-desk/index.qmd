@@ -1,0 +1,13 @@
+---
+title: "R Help Desk"
+author: "Uwe Ligges, Duncan Murdoch"
+date: "2005-11-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2005-2-r-help-desk.pdf" type="application/pdf" height="955px" width="100%">
+</div>

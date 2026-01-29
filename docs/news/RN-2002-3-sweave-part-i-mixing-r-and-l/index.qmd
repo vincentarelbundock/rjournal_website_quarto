@@ -1,0 +1,13 @@
+---
+title: "Sweave, Part I: Mixing R and L"
+author: "Friedrich Leisch"
+date: "2002-12-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2002-3-sweave-part-i-mixing-r-and-l.pdf" type="application/pdf" height="955px" width="100%">
+</div>

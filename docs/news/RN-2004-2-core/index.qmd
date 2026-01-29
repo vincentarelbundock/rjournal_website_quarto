@@ -1,0 +1,13 @@
+---
+title: "Changes in R"
+author: "R Core Team"
+date: "2004-09-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-reader full-bleed">
+  <embed src="RN-2004-2-core.pdf" type="application/pdf" height="955px" width="100%">
+</div>

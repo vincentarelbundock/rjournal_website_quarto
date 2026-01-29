@@ -1,0 +1,27 @@
+---
+title: "Changes in R 4.0–4.1"
+author: "Tomas Kalibera, Sebastian Meyer, Kurt Hornik"
+date: "2021-03-01"
+page-layout: full
+format:
+  html:
+    toc: false
+---
+
+<div class="paper-citation">Tomas Kalibera, Sebastian Meyer, Kurt Hornik, "Changes in R 4.0–4.1", R Journal, 2021, 13(1), 631-633</div>
+<details class="paper-bibtex">
+  <summary>BibTeX</summary>
+  <pre><code class="language-bibtex">
+@article{RJ-2021-1-core,
+  author = {Tomas Kalibera and Sebastian Meyer and Kurt Hornik},
+  title = {Changes in R 4.0–4.1},
+  journal = {R Journal},
+  year = {2021},
+  volume = {13},
+  issue = {1},
+  pages = {631-633},
+  note = {https://journal.r-project.org/news/RJ-2021-1-core/}
+}
+  </code></pre>
+</details>
+<embed src="../../issues/2021-1/2021-1.pdf" type="application/pdf" height="955px" width="100%">
